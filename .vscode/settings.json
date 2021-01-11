@@ -1,0 +1,6 @@
+{
+    "files.autoSave": "afterDelay",
+    "editor.fontFamily": "\"Victor mono\"",
+    "compile-hero.disable-compile-files-on-did-save-code": false,
+    "editor.fontSize": 18
+}
