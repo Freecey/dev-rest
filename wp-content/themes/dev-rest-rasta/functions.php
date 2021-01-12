@@ -1,4 +1,3 @@
-<!-- function.php -->
 <?php
 
 function devrest_supports()
@@ -6,6 +5,7 @@ function devrest_supports()
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
     add_theme_support('menus');
+    add_theme_support('html5');
     register_nav_menu('header', 'TOP NAVBAR');
     register_nav_menu('footer', 'FOOTER NAVBAR');
 }

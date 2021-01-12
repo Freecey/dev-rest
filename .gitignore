@@ -4,6 +4,7 @@ wp-config.php
 .vscode/
 wp-admin/
 .gitmsg
+.htaccess
 
 # ignore everything in the "wp-content" directory, except:
 # "mu-plugins", "plugins", "themes" directory
