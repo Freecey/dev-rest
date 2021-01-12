@@ -1,4 +1,3 @@
-<!-- function.php -->
 <?php
 
 function devrest_supports()
