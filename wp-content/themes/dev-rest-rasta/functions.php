@@ -31,5 +31,6 @@ function devrest_init(){
 
 add_action('init', 'devrest_init');
 add_action('after_setup_theme', 'devrest_supports');
+add_action('wp_enqueue_scripts', 'devrest_assets');
 
 ?>
