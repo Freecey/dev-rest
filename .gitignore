@@ -3,6 +3,7 @@
 wp-config.php
 .vscode/
 wp-admin/
+.gitmsg
 
 # ignore everything in the "wp-content" directory, except:
 # "mu-plugins", "plugins", "themes" directory
