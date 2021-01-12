@@ -23,8 +23,17 @@ function devrest_init(){
         'menu_position' => 4,
         'menu_icon' => 'dashicons-carrot',
         'supports' => ['title', 'editor', 'thumbnail'],
-        //'show_in_reste' => true,
+        //'show_in_rest' => true,
         'has_archive' => true,
+    ]);
+
+    register_post_type('admin', [
+        'label' => 'Admin',
+        'public' => true,
+        'menu_position' => 3,
+        'menu_icon' => 'dashicons-edit-large',
+        'supports' => ['title', 'editor'],
+        //'show_in_rest' => true,
     ]);
 }
 
