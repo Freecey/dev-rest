@@ -25,6 +25,14 @@ function devrest_init(){
         //'show_in_reste' => true,
         'has_archive' => true,
     ]);
+    register_taxonomy('category-recipe', 'recipes', [
+        'labels' => [
+            'name' => 'Category'
+        ],
+        'show_in_rest' => false,
+        'hierarchical' => true,
+        'show_admin_column' => true,
+    ]);
 }
 
 
