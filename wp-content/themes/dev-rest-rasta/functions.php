@@ -1,4 +1,3 @@
-<!-- function.php -->
 <?php
 
 function devrest_supports()
@@ -22,7 +21,7 @@ function devrest_init(){
         'public' => true,
         'menu_position' => 4,
         'menu_icon' => 'dashicons-carrot',
-        'supports' => ['title', 'editor', 'thumbnail'],
+        'supports' => ['title', 'thumbnail'],
         //'show_in_reste' => true,
         'has_archive' => true,
     ]);
