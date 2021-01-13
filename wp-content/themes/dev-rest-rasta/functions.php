@@ -5,6 +5,7 @@ function devrest_supports()
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
     add_theme_support('menus');
+    add_theme_support('html5');
     register_nav_menu('header', 'TOP NAVBAR');
     register_nav_menu('footer', 'FOOTER NAVBAR');
 }
@@ -21,19 +22,18 @@ function devrest_init(){
         'public' => true,
         'menu_position' => 4,
         'menu_icon' => 'dashicons-carrot',
-        'supports' => ['title', 'editor', 'thumbnail'],
-        //'show_in_rest' => true,
+        'supports' => ['title', 'thumbnail'],
+        //'show_in_reste' => true,
         'has_archive' => true,
     ]);
-
-    // register_post_type('rest_info', [
-    //     'label' => 'Rest info',
-    //     'public' => true,
-    //     'menu_position' => 3,
-    //     'menu_icon' => 'dashicons-edit-large',
-    //     'supports' => ['title'],
-    //     //'show_in_rest' => true,
-    // ]);
+    register_taxonomy('category-recipe', 'recipes', [
+        'labels' => [
+            'name' => 'Category'
+        ],
+        'show_in_rest' => false,
+        'hierarchical' => true,
+        'show_admin_column' => true,
+    ]);
 }
 
 
