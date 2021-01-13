@@ -6,9 +6,9 @@
     
     	<h1><?php the_title(); ?></h1>
 
-        
 
-        
+        <?= get_field('brieve_description'); ?>
+        <br>
     	<?= get_field('phone_number'); ?>
         <br>
         <?= get_field('street_and_number'); ?>
@@ -26,6 +26,10 @@
             <?= the_sub_field('opening_hours'); ?> <br>
 
         <?php endwhile; endif; ?>
+
+        <!-- Recup images Instagram -->
+
+        
 
 
 <?php endwhile; endif; ?>
