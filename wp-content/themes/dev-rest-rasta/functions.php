@@ -8,6 +8,8 @@ function devrest_supports()
     add_theme_support('html5');
     register_nav_menu('header', 'TOP NAVBAR');
     register_nav_menu('footer', 'FOOTER NAVBAR');
+    // register_nav_menu('archive-recipes', 'recipes-menu');
+
     add_image_size('recipe-thumbnail', 350, 215, true);
 }
 
@@ -48,26 +50,30 @@ function devrest_init()
     ]);
 }
 
-function the_image_recipe()
+// function the_image_recipe()
+// {
+//     $image = get_field('image');
+//     $size = 'medium';
+//     if ($image) {
+//         echo wp_get_attachment_image($image, $size);
+//     }
+// }
+
+// function get_the_terms_of_post($param)
+// {
+//     $terms = get_the_terms(get_the_ID(), $param);
+//     if ($terms != null) {
+//         foreach ($terms as $term) {
+//             echo $term->name;
+//         }
+//     }
+// }
+
+function custom_excerpt_length()
 {
-    $image = get_field('image');
-    $size = 'recipe-thumbnail'; // (thumbnail, medium, large, full or custom size)
-    if ($image) {
-        echo wp_get_attachment_image($image, $size);
-    }
+    return 20;
 }
 
-function get_the_terms_of_post($param)
-{
-    // Get terms for post
-    $terms = get_the_terms(get_the_ID(), $param );
-    // Loop over each item
-    if ($terms != null) {
-        foreach ($terms as $term) {
-            echo $term->name;
-        }
-    }
-}
 
 //filter to add/remove setting > post-type editor
 if (is_admin()) {
@@ -93,10 +99,6 @@ if (is_admin()) {
     });
 }
 
-function custom_excerpt_length($length)
-{
-    return 20;
-}
 
 
 
