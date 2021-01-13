@@ -9,7 +9,6 @@ function devrest_supports()
     register_nav_menu('header', 'TOP NAVBAR');
     register_nav_menu('footer', 'FOOTER NAVBAR');
     add_image_size('recipe-thumbnail', 350, 215, true);
-
 }
 
 function devrest_assets()
@@ -26,7 +25,7 @@ function devrest_init()
         'menu_position' => 4,
         'menu_icon' => 'dashicons-carrot',
         'supports' => ['title', 'editor', 'thumbnail'],
-        //'show_in_reste' => true,
+        //'show_in_rest' => true,
         'has_archive' => true,
     ]);
     register_taxonomy('category-recipe', 'recipes', [
@@ -39,12 +38,22 @@ function devrest_init()
     ]);
 }
 
-function the_image_recipe(){
+function the_image_recipe()
+{
     $image = get_field('image');
     $size = 'recipe-thumbnail'; // (thumbnail, medium, large, full or custom size)
     if ($image) {
         echo wp_get_attachment_image($image, $size);
     }
+
+    register_post_type('admin', [
+        'label' => 'Admin',
+        'public' => true,
+        'menu_position' => 3,
+        'menu_icon' => 'dashicons-edit-large',
+        'supports' => ['title', 'editor'],
+        //'show_in_rest' => true,
+    ]);
 }
 
 
