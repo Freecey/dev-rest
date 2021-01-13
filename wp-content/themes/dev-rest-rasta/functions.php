@@ -26,14 +26,14 @@ function devrest_init(){
         'has_archive' => true,
     ]);
 
-    register_post_type('admin', [
-        'label' => 'Admin',
-        'public' => true,
-        'menu_position' => 3,
-        'menu_icon' => 'dashicons-edit-large',
-        'supports' => ['title', 'editor'],
-        //'show_in_rest' => true,
-    ]);
+    // register_post_type('rest_info', [
+    //     'label' => 'Rest info',
+    //     'public' => true,
+    //     'menu_position' => 3,
+    //     'menu_icon' => 'dashicons-edit-large',
+    //     'supports' => ['title'],
+    //     //'show_in_rest' => true,
+    // ]);
 }
 
 
@@ -42,3 +42,4 @@ add_action('after_setup_theme', 'devrest_supports');
 add_action('wp_enqueue_scripts', 'devrest_assets');
 
 ?>
+
