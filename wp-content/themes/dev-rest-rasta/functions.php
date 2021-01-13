@@ -36,6 +36,15 @@ function devrest_init()
         'hierarchical' => true,
         'show_admin_column' => true,
     ]);
+    
+    register_post_type('admin', [
+        'label' => 'Admin',
+        'public' => true,
+        'menu_position' => 3,
+        'menu_icon' => 'dashicons-edit-large',
+        'supports' => ['title', 'editor'],
+        //'show_in_rest' => true,
+    ]);
 }
 
 function the_image_recipe()
