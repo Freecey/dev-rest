@@ -30,13 +30,14 @@ function devrest_init()
     ]);
     register_taxonomy('category-recipe', 'recipes', [
         'labels' => [
-            'name' => 'Category'
+            'name' => 'Categories'
         ],
         'show_in_rest' => false,
         'hierarchical' => true,
         'show_admin_column' => true,
+        'public' => true,
     ]);
-    
+
     register_post_type('admin', [
         'label' => 'Admin',
         'public' => true,
@@ -54,19 +55,19 @@ function the_image_recipe()
     if ($image) {
         echo wp_get_attachment_image($image, $size);
     }
-
-    register_post_type('admin', [
-        'label' => 'Admin',
-        'public' => true,
-        'menu_position' => 3,
-        'menu_icon' => 'dashicons-edit-large',
-        'supports' => ['title', 'editor'],
-        //'show_in_rest' => true,
-    ]);
 }
 
-
-
+function get_the_terms_of_post($param)
+{
+    // Get terms for post
+    $terms = get_the_terms(get_the_ID(), $param );
+    // Loop over each item
+    if ($terms != null) {
+        foreach ($terms as $term) {
+            echo $term->name;
+        }
+    }
+}
 
 //filter to add/remove setting > post-type editor
 if (is_admin()) {
@@ -92,9 +93,14 @@ if (is_admin()) {
     });
 }
 
+function custom_excerpt_length($length)
+{
+    return 20;
+}
 
 
 
 add_action('init', 'devrest_init');
 add_action('after_setup_theme', 'devrest_supports');
 add_action('wp_enqueue_scripts', 'devrest_assets');
+add_filter('excerpt_length', 'custom_excerpt_length', 999);
