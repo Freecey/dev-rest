@@ -27,4 +27,122 @@ Version: 1.0
     // font-weigth: medium
 
 
-    @import "ressources/scss/bootstrap.scss";
+    @import "ressources/scss/bootstrap-min.scss";
+
+
+
+
+    @font-face {
+        font-family: "Poppins";
+        src: url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+       }
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+    .flex-menu-section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: normal;
+        align-content: normal;
+      }
+      
+      .flex-menu-section-items:nth-child(1) {
+        display: block;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+        align-self: auto;
+        order: 0;
+        border-bottom: solid 3px black;
+        text-align: center;
+        width: 20%;
+        padding-bottom: 0.5rem;
+        margin-top: 4rem;
+        text-transform: uppercase;
+        font-size: 600;
+      }
+
+
+
+    .flex-menu-dish {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: normal;
+        align-content: normal;
+        padding-top: 1rem;
+        padding-bottom: 0.2rem;
+      }
+      
+      .flex-menu-dish-items:nth-child(1) {
+        display: block;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+        align-self: auto;
+        order: 0;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding-right: 0.3rem ;
+      }
+      
+      .flex-menu-dish-items:nth-child(2) {
+        display: block;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: auto;
+        align-self: auto;
+        order: 0;
+        border-bottom: dotted black 2px;
+        margin-bottom: 0.3rem;
+        
+      }
+      
+      .flex-menu-dish-items:nth-child(3) {
+        display: block;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+        align-self: auto;
+        order: 0;
+        font-weight: bold;
+        padding-left: 0.5rem;
+      }
+
+
+      
+      .flex-menu-dish-down {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: normal;
+        align-content: normal;
+
+      }
+
+      .flex-menu-dish-items-down:nth-child(1) {
+        display: block;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: auto;
+        align-self: auto;
+        order: 0;
+        width: 80%;
+      }
+      
+      .flex-menu-dish-items-down:nth-child(2) {
+        display: block;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+        align-self: auto;
+        order: 0;
+        width: 20%;
+      }
