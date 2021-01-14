@@ -41,12 +41,8 @@
                 </div>
             </div>
         <?php endwhile ?>
-        <div class="container-fluid d-flex justify-content-center">
-            <?php echo paginate_links([
-                'prev_text' => '&#8592',
-                'next_text' => '&#8594',
-            ]); ?>
-        </div>
+
+        <?php get_template_part('options/pagination');?>
 
     </div>
 <?php else : ?>

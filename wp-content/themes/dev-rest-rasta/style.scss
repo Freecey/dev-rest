@@ -26,8 +26,91 @@ Version: 1.0
 // font-size: 16px
 // font-weigth: medium
 
+
 @import "ressources/scss/bootstrap.scss";
 
-.page-numbers.current{
-    color: red;
+//style fonts
+@font-face {
+    font-family: "Poppins";
+    src: url("wp-content/themes/dev-rest-rasta/assets/fonts/Poppins-Light.ttf") format("ttf"),
+    url("wp-content/themes/dev-rest-rasta/assets/fonts/Poppins-Regular.ttf") format("ttf"),
+    url("wp-content/themes/dev-rest-rasta/assets/fonts/Poppins-Medium.ttf") format("ttf"),
+    url("wp-content/themes/dev-rest-rasta/assets/fonts/Poppins-SemiBold.ttf") format("ttf"),
+    url("wp-content/themes/dev-rest-rasta/assets/fonts/Poppins-Bold.ttf") format("ttf"),
+}
+
+*{
+    font-family: 'Poppins';
+}
+
+// font size in page
+@mixin font-title-page(){
+    font-size: 42px;
+    font-weight: regular;
+}
+@mixin font-subtitle-page(){
+    font-size: 42px;
+    font-weight: bold;
+}
+// font size in top
+@mixin font-title-top(){
+    font-size: 100px;
+    font-weight: semi-bold;
+}
+@mixin font-subtitle-top(){
+    font-size: 60px;
+    font-weight: regular;
+}
+// font size in menu
+@mixin font-title-menu(){
+    font-size: 16px;
+    font-weight: light;
+}
+
+
+
+body{
+    background-color:#F5F5F5;
+}
+
+///////// style 4 pagination >
+$pag-gray: #c0c0c0;
+
+.page-numbers {
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    border: 0.5px solid $pag-gray;
+    border-radius: 5px;
+    text-align: center;
+    background-color: lighten(#F5F5F5, 10);
+    color: $pag-gray;
+    transition: all 0.2s;
+    &:hover {
+        text-decoration: none;
+        color: darken($pag-gray, 20);
+        font-weight: bold;
+    }
+    &.current {
+        color: darken($pag-gray, 20);
+        font-weight: bold;
+    }
+    &.next {
+        color: $pag-gray;
+        border: 0;
+        background-color: #80808000;
+    }
+    &.prev {
+        @extend .next;
+    }
+}
+
+///////////style 4 nav-taxonomy >
+.nav-taxonomy {
+    @include font-title-menu();
+    color: black;
+    &::before{
+        content: url('wp-content/themes/dev-rest-rasta/assets/svg/cutelry.svg');
+        color: black;
+    }
 }

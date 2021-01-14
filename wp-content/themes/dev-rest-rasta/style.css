@@ -10809,7 +10809,57 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
+@font-face {
+  font-family: "Poppins";
+  src: url("wp-content/themes/dev-rest-rasta/assets/fonts/Poppins-Light.ttf") format("ttf"), url("wp-content/themes/dev-rest-rasta/assets/fonts/Poppins-Regular.ttf") format("ttf"), url("wp-content/themes/dev-rest-rasta/assets/fonts/Poppins-Medium.ttf") format("ttf"), url("wp-content/themes/dev-rest-rasta/assets/fonts/Poppins-SemiBold.ttf") format("ttf"), url("wp-content/themes/dev-rest-rasta/assets/fonts/Poppins-Bold.ttf") format("ttf");
+}
+
+* {
+  font-family: 'Poppins';
+}
+
+body {
+  background-color: #F5F5F5;
+}
+
+.page-numbers {
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+  border: 0.5px solid #c0c0c0;
+  border-radius: 5px;
+  text-align: center;
+  background-color: white;
+  color: #c0c0c0;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.page-numbers:hover {
+  text-decoration: none;
+  color: #8d8d8d;
+  font-weight: bold;
+}
+
 .page-numbers.current {
-  color: red;
+  color: #8d8d8d;
+  font-weight: bold;
+}
+
+.page-numbers.next, .page-numbers.prev {
+  color: #c0c0c0;
+  border: 0;
+  background-color: #80808000;
+}
+
+.nav-taxonomy {
+  font-size: 16px;
+  font-weight: light;
+  color: black;
+}
+
+.nav-taxonomy::before {
+  content: url("wp-content/themes/dev-rest-rasta/assets/svg/cutelry.svg");
+  color: black;
 }
 /*# sourceMappingURL=style.css.map */
