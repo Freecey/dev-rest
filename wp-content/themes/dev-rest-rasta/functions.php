@@ -32,7 +32,14 @@ function devrest_init()
     ]);
     register_taxonomy('category-recipe', 'recipes', [
         'labels' => [
-            'name' => 'Categories'
+            'name' => 'Recipe Categories',
+            'singular_name' => 'Recipe Category',
+            'search_items' => 'Search Recipe Categories',
+            'all_items' => 'All Recipes',
+            'edit_item' => 'Edit Recipe Category',
+            'view_item' => 'View Recipe Category',
+            'update_item' => 'Update Recipe Category',
+            'add_new_item' => 'Add New Recipe Category',
         ],
         'show_in_rest' => false,
         'hierarchical' => true,
@@ -49,25 +56,6 @@ function devrest_init()
         //'show_in_rest' => true,
     ]);
 }
-
-// function the_image_recipe()
-// {
-//     $image = get_field('image');
-//     $size = 'medium';
-//     if ($image) {
-//         echo wp_get_attachment_image($image, $size);
-//     }
-// }
-
-// function get_the_terms_of_post($param)
-// {
-//     $terms = get_the_terms(get_the_ID(), $param);
-//     if ($terms != null) {
-//         foreach ($terms as $term) {
-//             echo $term->name;
-//         }
-//     }
-// }
 
 function custom_excerpt_length()
 {
@@ -98,8 +86,6 @@ if (is_admin()) {
         }
     });
 }
-
-
 
 
 add_action('init', 'devrest_init');

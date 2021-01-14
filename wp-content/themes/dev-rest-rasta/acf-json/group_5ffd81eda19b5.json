@@ -4,8 +4,8 @@
     "fields": [
         {
             "key": "field_5ffdab0796a95",
-            "label": "Categories",
-            "name": "category-recipe",
+            "label": "Recipe cetegory",
+            "name": "recipe_cetegory",
             "type": "taxonomy",
             "instructions": "Select one or more categories",
             "required": 1,
@@ -125,5 +125,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1610557401
+    "modified": 1610613851
 }

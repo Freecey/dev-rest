@@ -1,11 +1,12 @@
 <?php get_header(); ?>
+<h1>taxonomy</h1>
 
 <?php $cat_recipes =  get_terms(['taxonomy' => 'category-recipe']); ?>
 <?php if (is_array($cat_recipes)) : ?>
     <ul class="nav nav-pills my-4">
         <?php foreach ($cat_recipes as $cat_recipe) : ?>
             <li class="nav-item">
-                <a href="<?= get_term_link($cat_recipe); ?>" class="nav-link <?php echo is_tax('category-recipe', $cat_recipe->term_id) ? ' active' : '' ?>"><?= $cat_recipe->name ?></a>
+                <a href="<?= get_term_link($cat_recipe); ?>" class="nav-link<?= is_tax('category-recipe', $cat_recipe->term_id) ? ' active' : '' ?>"><?= $cat_recipe->name ?></a>
             </li>
         <?php endforeach; ?>
     </ul>
