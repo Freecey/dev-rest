@@ -6169,8 +6169,25 @@ a.text-dark:hover, a.text-dark:focus {
   src: url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 }
 
+.page-title {
+  font-size: 46px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.page-subtitles {
+  font-size: 42px;
+  font-weight: normal;
+}
+
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+.container-dish {
+  padding: 0.2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .flex-menu-section {
@@ -6191,6 +6208,7 @@ body {
           align-items: normal;
   -ms-flex-line-pack: normal;
       align-content: normal;
+  margin-bottom: 1rem;
 }
 
 .flex-menu-section-items:nth-child(1) {
@@ -6211,10 +6229,11 @@ body {
   border-bottom: solid 3px black;
   text-align: center;
   width: 20%;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.3rem;
   margin-top: 4rem;
   text-transform: uppercase;
-  font-size: 600;
+  font-size: 16px !important;
+  font-weight: medium;
 }
 
 .flex-menu-dish {
@@ -6235,8 +6254,8 @@ body {
           align-items: normal;
   -ms-flex-line-pack: normal;
       align-content: normal;
-  padding-top: 1rem;
-  padding-bottom: 0.2rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
 }
 
 .flex-menu-dish-items:nth-child(1) {
@@ -6295,6 +6314,8 @@ body {
           order: 0;
   font-weight: bold;
   padding-left: 0.5rem;
+  margin-right: 0.5rem;
+  font-size: 20px;
 }
 
 .flex-menu-dish-down {
@@ -6315,6 +6336,7 @@ body {
           align-items: normal;
   -ms-flex-line-pack: normal;
       align-content: normal;
+  padding-bottom: 1rem;
 }
 
 .flex-menu-dish-items-down:nth-child(1) {
@@ -6333,6 +6355,8 @@ body {
       -ms-flex-order: 0;
           order: 0;
   width: 80%;
+  text-align: justify;
+  color: #727272 !important;
 }
 
 .flex-menu-dish-items-down:nth-child(2) {
@@ -6351,5 +6375,24 @@ body {
       -ms-flex-order: 0;
           order: 0;
   width: 20%;
+}
+
+.chef-select-label {
+  display: inline-block;
+  background-color: #e3c033;
+  color: white;
+  margin-right: auto;
+  font-size: 0.8rem;
+  margin: 0 !important;
+  padding: 0.2rem;
+  margin-top: 0.2rem !important;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.chef-select-cont {
+  border: #e3c033 2px solid;
+  margin: 0 !important;
+  margin-bottom: 0.2rem;
 }
 /*# sourceMappingURL=style.css.map */
