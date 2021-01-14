@@ -1,10 +1,3 @@
-/*
-Theme Name: dev-rest-rasta
-Description: projet wordpress dev-restaurant
-Author: Cedric Audrit, Gaetan Massart, Kevin Cassart
-Author URI: https://github.com/r-rocket-team
-Version: 1.0
-*/
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -10808,8 +10801,4 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
-
-.page-numbers.current {
-  color: red;
-}
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=bootstrap.css.map */

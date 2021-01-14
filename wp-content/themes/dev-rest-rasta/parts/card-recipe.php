@@ -10,7 +10,7 @@
                 <div class="row no-gutters" style="height: 22rem;">
                     <?php if ($counter % 2 == 0) { ?>
                         <div class="col-md-5">
-                            <div class="card-body">
+                            <div class="card-body ">
                                 <div class="card-text text-secondary mb-3"><?php echo get_the_date(); ?></div>
                                 <div class="card-text mb-3"><?php the_terms(get_the_ID(), 'category-recipe', '', ' '); ?></div>
                                 <h5 class="card-title mb-4"><?php the_title(); ?></h5>
@@ -41,6 +41,13 @@
                 </div>
             </div>
         <?php endwhile ?>
+        <div class="container-fluid d-flex justify-content-center">
+            <?php echo paginate_links([
+                'prev_text' => '&#8592',
+                'next_text' => '&#8594',
+            ]); ?>
+        </div>
+
     </div>
 <?php else : ?>
     <h1>There is no recipe for the moment.</h1>
