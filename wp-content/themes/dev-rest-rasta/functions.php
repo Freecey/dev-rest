@@ -37,9 +37,20 @@ function devrest_init(){
 }
 
 
+function add_links_themenu()
+{
+    add_menu_page( 'the_menu', 'The Menu', 'edit_posts', 'post.php?post=107&action=edit&classic-editor', '', 'dashicons-book-alt', 8 );
+    add_menu_page( 'restaurant_infos', 'Restaurant infos', 'edit_posts', 'post.php?post=224&action=edit&classic-editor', '', 'dashicons-store', 9 );
+}
+
+
 add_action('init', 'devrest_init');
 add_action('after_setup_theme', 'devrest_supports');
 add_action('wp_enqueue_scripts', 'devrest_assets');
+add_action('admin_menu', 'add_links_themenu');
+
+
+
 
 ?>
 
