@@ -10824,43 +10824,6 @@ a.text-dark:hover, a.text-dark:focus {
   background-color: #f5f5f5;
 }
 
-/* ====== style nav-taxonomy > */
-.nav-taxonomy {
-  margin-top: 2rem;
-  font-size: 16px;
-  font-weight: bold;
-  color: black;
-}
-
-.nav-taxonomy:hover {
-  color: black;
-}
-
-.nav-taxonomy::after {
-  content: "";
-  display: block;
-  width: 102%;
-  height: 1px;
-  background: black;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-}
-
-.nav-taxonomy:hover::after {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
-.terms-before {
-  width: 16px;
-  margin-right: 5px;
-  vertical-align: baseline;
-}
-
 /* ====== style card-recipe > */
 .post-recipe {
   -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.445);
@@ -10907,15 +10870,50 @@ a.text-dark:hover, a.text-dark:focus {
 
 .post-date {
   text-transform: uppercase;
-  color: #c0c0c0;
+  color: #808080;
   font-size: 12px;
 }
 
 .post-date-before {
   width: 12px;
   margin-right: 5px;
+}
+
+/* ====== style nav-taxonomy > */
+.nav-taxonomy {
+  margin-top: 2rem;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+}
+
+.nav-taxonomy:hover {
+  color: black;
+}
+
+.nav-taxonomy::after {
+  content: "";
+  display: block;
+  width: 102%;
+  height: 1px;
+  background: black;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.nav-taxonomy:hover::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.terms-before {
+  width: 16px;
+  margin-right: 5px;
   vertical-align: baseline;
-  fill: #c0c0c0;
 }
 
 /* ====== style 4 pagination > */
@@ -10927,30 +10925,30 @@ a.text-dark:hover, a.text-dark:focus {
   width: 25px;
   height: 25px;
   margin: 5px;
-  border: 0.5px solid #c0c0c0;
+  border: 0.5px solid #808080;
   border-radius: 5px;
   text-align: center;
   background-color: #f5f5f5;
-  color: #c0c0c0;
+  color: #808080;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
 .page-numbers:hover {
   text-decoration: none;
-  color: #8d8d8d;
+  color: #4d4d4d;
   font-weight: bold;
   background-color: white;
 }
 
 .page-numbers.current {
-  color: #8d8d8d;
+  color: #4d4d4d;
   font-weight: bold;
   background-color: white;
 }
 
 .page-numbers.next, .page-numbers.prev {
-  color: #c0c0c0;
+  color: #808080;
   border: 0;
   background-color: #80808000;
 }
