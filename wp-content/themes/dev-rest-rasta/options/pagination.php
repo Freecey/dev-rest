@@ -1,4 +1,4 @@
-<div class="container-fluid d-flex justify-content-center">
+<div class="container container-pagination d-flex justify-content-center">
     <?php echo paginate_links([
         'prev_text' => '<img class="arrow-pagination" src="/wp-content/themes/dev-rest-rasta/assets/svg/arrowleft.svg" alt="">
                 ',

@@ -27,6 +27,7 @@
         stroke-miterlimit="10"
         y1="24.704"
         stroke-width="6"
+        fill="#c0c0c0"
     />
 	<polygon
         points="25.219 6.284 25.219 44.606 1.266 23.69"
