@@ -18,18 +18,18 @@
  * @package WordPress
  */
 
-// ** MySQL settings - You can get this info from your web host ** //
+ // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'database_name_here' );
+define( 'DB_NAME', 'dev_restaurant' );
 
-/** MySQL database username */
-define( 'DB_USER', 'username_here' );
+/** Utilisateur de la base de données MySQL. */
+define( 'DB_USER', 'team-rasta-rocket' );
 
-/** MySQL database password */
-define( 'DB_PASSWORD', 'password_here' );
+/** Mot de passe de la base de données MySQL. */
+define( 'DB_PASSWORD', 'V2UJJ-VYEN9-Site..--' );
 
-/** MySQL hostname */
-define( 'DB_HOST', 'localhost' );
+/** Adresse de l’hébergement MySQL. */
+define( 'DB_HOST', 'db.neant.be' );
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
