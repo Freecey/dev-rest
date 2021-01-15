@@ -12,7 +12,9 @@ function devrest_supports()
 
 function devrest_assets()
 {
+    wp_register_style('normalize', get_template_directory_uri() . '/css/normalize.css');
     wp_register_style('Dev_Rest', get_template_directory_uri() . '/style.css');
+    wp_enqueue_style('normalize');
     wp_enqueue_style('Dev_Rest');
 }
 
