@@ -65,7 +65,8 @@
                             "name": "dish_name",
                             "type": "text",
                             "instructions": "",
-                            "required": 0,
+                            "required": 1,
+
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "20",
@@ -84,7 +85,7 @@
                             "name": "dish_description",
                             "type": "text",
                             "instructions": "",
-                            "required": 0,
+                            "required": 1,
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
@@ -103,7 +104,7 @@
                             "name": "dish_price",
                             "type": "number",
                             "instructions": "",
-                            "required": 0,
+                            "required": 1,
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "20",
@@ -117,6 +118,27 @@
                             "min": "",
                             "max": "",
                             "step": ""
+
+                        },
+                        {
+                            "key": "field_600001dadba8b",
+                            "label": "Chef Selection",
+                            "name": "chef_selection",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "10",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+
                         }
                     ]
                 }
@@ -154,5 +176,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1610468787
+    "modified": 1610629290
 }

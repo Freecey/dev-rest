@@ -15,7 +15,9 @@ function devrest_supports()
 
 function devrest_assets()
 {
+    wp_register_style('normalize', get_template_directory_uri() . '/css/normalize.css');
     wp_register_style('Dev_Rest', get_template_directory_uri() . '/style.css');
+    wp_enqueue_style('normalize');
     wp_enqueue_style('Dev_Rest');
 }
 
@@ -26,8 +28,8 @@ function devrest_init()
         'public' => true,
         'menu_position' => 4,
         'menu_icon' => 'dashicons-carrot',
-        'supports' => ['title', 'editor', 'thumbnail'],
-        //'show_in_rest' => true,
+        'supports' => ['title', 'thumbnail'],
+        //'show_in_reste' => true,
         'has_archive' => true,
     ]);
     register_taxonomy('category-recipe', 'recipes', [
@@ -47,13 +49,14 @@ function devrest_init()
         'public' => true,
     ]);
 
-    register_post_type('admin', [
-        'label' => 'Admin',
+    register_post_type('multisite_rest', [
+        'label' => 'Restaurants',
         'public' => true,
-        'menu_position' => 3,
-        'menu_icon' => 'dashicons-edit-large',
-        'supports' => ['title', 'editor'],
-        //'show_in_rest' => true,
+        'menu_position' => 4,
+        'menu_icon' => 'dashicons-admin-multisite',
+        'supports' => ['title', 'thumbnail'],
+        //'show_in_reste' => true,
+        'has_archive' => true,
     ]);
 }
 
@@ -87,7 +90,15 @@ if (is_admin()) {
     });
 }
 
+function add_links_themenu()
+{
+    add_menu_page( 'the_menu', 'The Menu', 'edit_posts', 'post.php?post=107&action=edit&classic-editor', '', 'dashicons-book-alt', 8 );
+    add_menu_page( 'restaurant_infos', 'Restaurant infos', 'edit_posts', 'post.php?post=224&action=edit&classic-editor', '', 'dashicons-store', 9 );
+}
+
+
 add_action('init', 'devrest_init');
 add_action('after_setup_theme', 'devrest_supports');
 add_action('wp_enqueue_scripts', 'devrest_assets');
 add_filter('excerpt_length', 'custom_excerpt_length', 999);
+add_action('admin_menu', 'add_links_themenu');
