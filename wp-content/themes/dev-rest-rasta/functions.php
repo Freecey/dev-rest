@@ -12,7 +12,9 @@ function devrest_supports()
 
 function devrest_assets()
 {
+    wp_register_style('normalize', get_template_directory_uri() . '/css/normalize.css');
     wp_register_style('Dev_Rest', get_template_directory_uri() . '/style.css');
+    wp_enqueue_style('normalize');
     wp_enqueue_style('Dev_Rest');
 }
 
@@ -34,6 +36,15 @@ function devrest_init(){
         'hierarchical' => true,
         'show_admin_column' => true,
     ]);
+    register_post_type('multisite_rest', [
+        'label' => 'Restaurants',
+        'public' => true,
+        'menu_position' => 4,
+        'menu_icon' => 'dashicons-admin-multisite',
+        'supports' => ['title', 'thumbnail'],
+        //'show_in_reste' => true,
+        'has_archive' => true,
+    ]);
 }
 
 
@@ -48,9 +59,3 @@ add_action('init', 'devrest_init');
 add_action('after_setup_theme', 'devrest_supports');
 add_action('wp_enqueue_scripts', 'devrest_assets');
 add_action('admin_menu', 'add_links_themenu');
-
-
-
-
-?>
-
