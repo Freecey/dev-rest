@@ -66,6 +66,7 @@
                             "type": "text",
                             "instructions": "",
                             "required": 1,
+
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "20",
@@ -117,6 +118,7 @@
                             "min": "",
                             "max": "",
                             "step": ""
+
                         },
                         {
                             "key": "field_600001dadba8b",
@@ -136,6 +138,7 @@
                             "ui": 1,
                             "ui_on_text": "",
                             "ui_off_text": ""
+
                         }
                     ]
                 }

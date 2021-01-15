@@ -1,7 +1,6 @@
 <!-- page-the-menu.php -->
 <?php get_header(); ?>
 
-
 <div class="rows">
 <div class="text-center page-subtitles my-4">Welcome</div>
 

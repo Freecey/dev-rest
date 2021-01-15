@@ -1,0 +1,129 @@
+{
+    "key": "group_5ffd81eda19b5",
+    "title": "New recipe",
+    "fields": [
+        {
+            "key": "field_5ffdab0796a95",
+            "label": "Recipe cetegory",
+            "name": "recipe_cetegory",
+            "type": "taxonomy",
+            "instructions": "Select one or more categories",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "category-recipe",
+            "field_type": "multi_select",
+            "allow_null": 0,
+            "add_term": 0,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "object",
+            "multiple": 0
+        },
+        {
+            "key": "field_5ffd8239c0be9",
+            "label": "Image",
+            "name": "image",
+            "type": "image",
+            "instructions": "Add a presentation image.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5ffd829dc0bea",
+            "label": "Ingredients",
+            "name": "ingredients",
+            "type": "wysiwyg",
+            "instructions": "Add the ingredients.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "visual",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5ffd8300c0beb",
+            "label": "Preparation",
+            "name": "preparation",
+            "type": "repeater",
+            "instructions": "Add the steps for making the recipe.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add a step",
+            "sub_fields": [
+                {
+                    "key": "field_5ffd838fc0bec",
+                    "label": "Step",
+                    "name": "step",
+                    "type": "wysiwyg",
+                    "instructions": "Add step.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "visual",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "recipes"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1610613851
+}
