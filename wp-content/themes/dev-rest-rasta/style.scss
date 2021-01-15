@@ -259,7 +259,54 @@ font-weight: normal;
 
 // =========== START dev-rest-infos ===========
 
+.rest-info-main {
+  width: 100%;
+  height: 100vh;
+  background-color: #2D2D2D;
+  color: #ffff;
+} 
 
+.rest-info-main-box {
+  padding-top: 30px;
+}
+
+// ==== NETWORKS ICONS ====
+.network-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 9999px;
+  margin: 10px 10px 10px 0px;
+  text-align: center;
+
+    &:nth-child(1){
+      background-color: #474A9A;
+    }
+    &:nth-child(2) {
+      background-color: #4285F4;
+    }
+    &:nth-child(3) {
+      background-color: #F1005C;
+    }
+    &:nth-child(4) {
+      background-color: #156CB6;
+    }
+
+    a {
+      line-height: 33px;
+    }
+
+}
+
+// ==== OPENING ====
+.opening img {
+  margin-right: 20px;
+}
+
+
+// ==== INSTAGRAM IMAGES ====
+.instagram-picture {  
+  margin: 5px;
+}
 
 // =========== END dev-rest-infos ===========
 
