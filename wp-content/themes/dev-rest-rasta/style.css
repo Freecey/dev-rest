@@ -10811,7 +10811,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 @font-face {
   font-family: "Poppins";
-  src: url("wp-content/themes/dev-rest-rasta/assets/fonts/Poppins-Light.ttf") format("ttf"), url("wp-content/themes/dev-rest-rasta/assets/fonts/Poppins-Regular.ttf") format("ttf"), url("wp-content/themes/dev-rest-rasta/assets/fonts/Poppins-Medium.ttf") format("ttf"), url("wp-content/themes/dev-rest-rasta/assets/fonts/Poppins-SemiBold.ttf") format("ttf"), url("wp-content/themes/dev-rest-rasta/assets/fonts/Poppins-Bold.ttf") format("ttf");
+  src: url("assets/fonts/Poppins-Light.ttf"), url("assets/fonts/Poppins-Regular.ttf"), url("assets/fonts/Poppins-Medium.ttf"), url("assets/fonts/Poppins-SemiBold.ttf"), url("assets/fonts/Poppins-Bold.ttf");
 }
 
 * {
@@ -11091,6 +11091,8 @@ a.text-dark:hover, a.text-dark:focus {
 
 .rest-info-main-box {
   padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: #ffff;
 }
 
 .network-icon {
@@ -11121,11 +11123,16 @@ a.text-dark:hover, a.text-dark:focus {
   line-height: 33px;
 }
 
+.opening {
+  margin-bottom: 5px;
+}
+
 .opening img {
   margin-right: 20px;
 }
 
 .instagram-picture {
   margin: 5px;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
