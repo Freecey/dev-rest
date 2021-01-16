@@ -20,7 +20,7 @@ function devrest_assets()
     wp_enqueue_style('normalize');
     wp_enqueue_style('Dev_Rest');
     if( is_singular( 'restaurants' )) {
-        wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAxKiIza1b2YSNe5OVIbxFnIpZJ1aMHYy8', array(), '3', true );
+        wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?key=${{ secrets.GOOGLEAPI }}', array(), '3', true );
         wp_enqueue_script( 'map', get_template_directory_uri() . '/js/map.js', array('google-map', 'jquery'), '0.1', true );
     };
 }
@@ -101,12 +101,12 @@ function add_links_themenu()
 }
 
 function my_acf_google_map_api( $api ){
-	$api['key'] = 'AIzaSyAxKiIza1b2YSNe5OVIbxFnIpZJ1aMHYy8';
+	$api['key'] = '${{ secrets.GOOGLEAPI }}';
 	return $api;
 }
 
 function my_acf_init() {
-	acf_update_setting('google_api_key', 'AIzaSyAxKiIza1b2YSNe5OVIbxFnIpZJ1aMHYy8');
+	acf_update_setting('google_api_key', '${{ secrets.GOOGLEAPI }}');
 }
 
 
