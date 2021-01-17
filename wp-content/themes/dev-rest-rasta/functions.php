@@ -10,6 +10,7 @@ function devrest_supports()
     register_nav_menu('footer', 'FOOTER NAVBAR');
     // register_nav_menu('archive-recipes', 'recipes-menu');
     add_image_size('rest700', 700, 700, true);
+    add_image_size('ourmenu280', 280, 280, true);
     add_image_size('recipe-thumbnail', 350, 215, true);
 }
 

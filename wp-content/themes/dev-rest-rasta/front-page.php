@@ -2,100 +2,231 @@
 <?php get_header(); ?>
 
 
-
-
-
-
-
 <!-- START BANNER TOP -->
-    <?php
-    if (have_rows('banner_top')) :
-      while (have_rows('banner_top')) : the_row();
-      $bannertop_img = get_sub_field('banner_image');
-    ?>
-        
-        <?= get_sub_field('subtitle'); ?> <br>
-        <?= get_sub_field('main_title'); ?> <br>
-        <?= $bannertop_img['url']; ?> <br>
-        
+<?php
+if (have_rows('banner_top')) :
+  while (have_rows('banner_top')) : the_row();
+    $bannertop_img = get_sub_field('banner_image');
+?>
+    <div class="banner-top" style="background-image: url(' <?= $bannertop_img['url']; ?> ');">
+      <div class="cont-banner">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+          <div class="font-subtitle-top"><?= get_sub_field('subtitle'); ?></div>
+          <div class="font-title-top"><?= get_sub_field('main_title'); ?></div>
+          <div class="banner-link">
+            <div class="link-barre"></div>
+            <div class="link-text">
+              Check our menu
+            </div>
+          </div>
+        </div>
 
-    <?php
-      endwhile;
-    else :
-    // no rows found
-    endif; ?>
+      </div>
+
+    </div>
+
+    <div class="banner-top-hash mt-n5"></div>
+
+    <div class=" text-center banner-card mx-auto">
+      <div class="d-flex justify-content-center flex-wrap flex-sm-wrap flex-md-wrap flex-lg-nowrap">
+
+        <?php if (have_rows('card_banner_1')) : while (have_rows('card_banner_1')) : the_row(); ?>
+            <div class="text-center card-intro mt-4 mt-lg-n5">
+              <div class="c-intro-img card-img1 mt-5 mb-3"></div>
+              <div class="c-intro-tt py-2"><?= get_sub_field('card_title'); ?></div>
+              <div class="c-intro-txt d-none d-sm-none d-md-block d-lg-block px-5  py-2">
+                <p><?= get_sub_field('card_text'); ?></p>
+              </div>
+            </div>
+        <?php endwhile;
+        endif; ?>
+
+        <?php if (have_rows('card_banner_2')) : while (have_rows('card_banner_2')) : the_row(); ?>
+            <div class="text-center card-intro mx-0 mx-lg-3  mt-0 mt-lg-n5">
+              <div class="c-intro-img card-img2 mt-5 mb-3"></div>
+              <div class="c-intro-tt py-2"><?= get_sub_field('card_title'); ?></div>
+              <div class="c-intro-txt d-none d-sm-none d-md-block d-lg-block  px-5  py-2"><?= get_sub_field('card_text'); ?></div>
+            </div>
+        <?php endwhile;
+        endif; ?>
+
+        <?php if (have_rows('card_banner_3')) : while (have_rows('card_banner_3')) : the_row(); ?>
+            <div class="text-center card-intro  mt-0 mt-lg-n5 ">
+              <div class="c-intro-img card-img3 mt-5 mb-3"></div>
+              <div class="c-intro-tt  py-2"><?= get_sub_field('card_title'); ?></div>
+              <div class="c-intro-txt d-none d-sm-none d-md-block d-lg-block  px-5  py-2"><?= get_sub_field('card_text'); ?></div>
+            </div>
+        <?php endwhile;
+        endif; ?>
+
+
+      </div>
+    </div>
+
+
+
+<?php
+  endwhile;
+else :
+// no rows found
+endif; ?>
 <!-- END BANNER TOP -->
+
+
 
 
 <!-- START INTRO -->
 <?php
-    if (have_rows('intro')) :
-      while (have_rows('intro')) : the_row();
-      $intro_img = get_sub_field('intro_image');
-    ?>
-        
-        <?= get_sub_field('title'); ?> <br>
-        <?= get_sub_field('subtitle'); ?> <br>
-        <?= get_sub_field('subtitle_2'); ?> <br>
-        <?= get_sub_field('text'); ?> <br>
-        <?php if (have_rows('signature')) : while (have_rows('signature')) : the_row(); ?>
-        <?= get_sub_field('subtitle'); ?> <br>
-        <?= get_sub_field('title'); ?> <br>
-        <?php endwhile; endif; ?>
-        
-        <?= $intro_img['sizes']["rest700"]; ?> <br>
-    <?php
-      endwhile;
-    else :
-    // no rows found
-    endif; ?>
+if (have_rows('intro')) :
+  while (have_rows('intro')) : the_row();
+    $intro_img = get_sub_field('intro_image');
+?>
+    <div class="intro-part mx-auto">
+      <div class="row">
+        <div class="col-12 col-lg-7">
+          <img src="<?= $intro_img['url']; ?>" alt="The chef">
+        </div>
+        <div class="col-12 col-lg-5 my-auto">
+          <div class="intro-block">
+            <div class="intro-block-pad">
+              <div class="page-subtitles"><?= get_sub_field('title'); ?></div>
+              <div class="page-title"><?= get_sub_field('subtitle'); ?></div>
+              <div class="intro-b-st2"><?= get_sub_field('subtitle_2'); ?> </div>
+              <div class="intro-b-txt"><?= get_sub_field('text'); ?> </div>
+              <?php if (have_rows('signature')) : while (have_rows('signature')) : the_row(); ?>
+                  <div class="intro-b-s-subtitle"><?= get_sub_field('subtitle'); ?> </div>
+                  <div class="intro-b-s-title page-subtitles"><?= get_sub_field('title'); ?> </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    
+
+
+<?php endwhile;
+              endif; ?>
+
+<br>
+<?php
+  endwhile;
+else :
+// no rows found
+endif; ?>
 <!-- END INTRO -->
-  
-<!-- ADD HERE RESTAURANTS PART -->
+
+
+<!-- START RESTAURANTS PART -->
+<div class="cont-frontpage">
+  <!-- ADD HERE RESTAURANTS PART --> ADD HERE RESTAURANTS PART
+</div>
+<!-- END RESTAURANTS PART -->
+
+
 
 <!-- START OUR MENU -->
-<?php
+
+
+<div class="our-menu mx-auto">
+  <div class="row">
+    <?php
     if (have_rows('our_menu')) :
       while (have_rows('our_menu')) : the_row();
     ?>
-        
-        <?= get_sub_field('subtitle'); ?> <br>
-        <?= get_sub_field('title'); ?> <br>
-        <?= get_sub_field('text'); ?> <br>
-        <?= get_sub_field('images'); // RAND 4 IMAGE?> <br>
-        
+        <div class="col-12 col-lg-6">
+          <div class="row">
+
+            <?php
+            $images = get_sub_field('images');
+            if ($images) : ?>
+
+              <?php foreach ($images as $image) : ?>
+                <div class="col-6 test-img">
+                  <a href="<?php echo esc_url($image['url']); ?>">
+                    <img src="<?php echo esc_url($image['sizes']['ourmenu280']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                  </a>
+                  <p><?php echo esc_html($image['caption']); ?></p>
+                </div>
+              <?php endforeach; ?>
+
+            <?php endif; ?>
+
+
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="o-menu-txt-block my-auto">
+            <div class="page-subtitles"><?= get_sub_field('subtitle'); ?></div>
+            <div class="page-title"><?= get_sub_field('title'); ?></div>
+            <div class="intro-b-txt"><?= get_sub_field('text'); ?> </div>
+            <div class="'o-menu-btn-sect">View the full menu</div>
+          </div>
+        </div>
+
+        <?php // var_dump(get_sub_field('images')) ; // RAND 4 IMAGE
+        ?> <br>
+
 
     <?php
       endwhile;
     else :
     // no rows found
     endif; ?>
+  </div>
+</div>
 <!-- END OUR MENU -->
 
-<!-- START BANNER TOP -->
+
+
+
+
+<!-- START testimony -->
+
 <?php
-    if (have_rows('testimony')) :
-      while (have_rows('testimony')) : the_row();
-      $testimony_img = get_sub_field('image');
+if (have_rows('testimony')) :
+  while (have_rows('testimony')) : the_row();
+    $testimony_img = get_sub_field('image');
+?>
+
+<div class="test-top-hash pt-5 mb-n5"></div>
+<div class="testimony">
+  <div class="row">
+    <div class="col-12 col-lg-6 text-center my-auto">
+      <div class="my-5 mx-auto test-quote"></div>
+      <div class="my-5"><?= get_sub_field('text'); ?></div>
+      <div class="my-5"><?= get_sub_field('name'); ?></div>
+      
+    </div>
+    <div class="col-12 col-lg-6 test-img" style="background-image: url(' <?= $testimony_img['url']; ?> ');"></div>
+
+
+
+
+
+    <?php // echo $testimony_img['url'];         
     ?>
-        123
-        <?= get_sub_field('name'); ?> <br>
-        <?= get_sub_field('text'); ?> <br>
-        <?= $testimony_img['url']; ?> <br>
-        
-
-    <?php
-      endwhile;
-    else :
-    // no rows found
-    endif; ?>
-<!-- END BANNER TOP -->
 
 
-<!-- ADD HERE LAST RECIPES PART -->
+
+  </div>
+</div>
+<div class="test-bottom-hash mt-n5"></div>
+<?php
+endwhile;
+else :
+// no rows found
+endif; ?>
+
+    <!-- END testimony -->
 
 
-<?php get_footer(); ?>
+    <!-- ADD HERE LAST RECIPES PART -->
 
 
-<?php get_footer(); ?>
+
+    <?php get_footer(); ?>
+
+
+    <?php get_footer(); ?>

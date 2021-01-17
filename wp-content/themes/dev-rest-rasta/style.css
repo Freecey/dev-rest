@@ -11096,4 +11096,209 @@ a.text-dark:hover, a.text-dark:focus {
   max-width: inherit !important;
   /* Corrige un souci de conflit avec le thème */
 }
+
+.banner-top {
+  height: 1080px;
+  background: no-repeat center center;
+  background-size: cover;
+}
+
+.banner-top .cont-banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #ffffff !important;
+  max-width: 1670px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner-top .cont-banner .font-title-top {
+  font-size: 100px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.banner-top .cont-banner .font-subtitle-top {
+  font-size: 60px;
+  font-weight: normal;
+  margin-top: 8rem;
+}
+
+.banner-top .cont-banner .banner-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 4rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.banner-top .cont-banner .banner-link .link-barre {
+  width: 3rem;
+  border: solid 1px white;
+  height: 1px;
+  margin-right: 1rem;
+}
+
+.banner-top .cont-banner .banner-link .link-text {
+  color: white !important;
+}
+
+.banner-top-hash {
+  background-image: url(assets/images/hachures-blanches.png);
+  width: 100%;
+  height: 73px;
+  z-index: 2;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.banner-card {
+  max-width: 1410px;
+  margin-top: -73px;
+}
+
+.banner-card .card-intro {
+  background-color: white;
+  max-width: 450px;
+  min-width: 310px;
+  border-radius: 35px 35px 0px 0px;
+  -webkit-box-shadow: 2px 2px 2px #D5D5D5;
+          box-shadow: 2px 2px 2px #D5D5D5;
+  z-index: 3;
+}
+
+.banner-card .card-intro .c-intro-img {
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100px;
+  width: 100px;
+}
+
+.banner-card .card-intro .card-img1 {
+  background-image: url("assets/svg/quality-food.svg");
+}
+
+.banner-card .card-intro .card-img2 {
+  background-image: url("assets/svg/fastest-delivery.svg");
+}
+
+.banner-card .card-intro .card-img3 {
+  background-image: url("assets/svg/original-recipes.svg");
+}
+
+.banner-card .card-intro .c-intro-tt {
+  font-size: 1.25rem;
+  color: #292929;
+  line-height: 1.2;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.banner-card .card-intro .c-intro-txt {
+  font-size: 0.9rem;
+  color: #292929;
+  line-height: 22px;
+}
+
+.intro-part {
+  margin-top: 6rem;
+  max-width: 1410px;
+}
+
+.intro-part .intro-block {
+  position: relative;
+  z-index: 2;
+  -webkit-box-shadow: 5px 10px 5px #D5D5D5;
+          box-shadow: 5px 10px 5px #D5D5D5;
+  margin-left: -15rem;
+  background-color: white !important;
+}
+
+.intro-part .intro-block .intro-block-pad {
+  padding: 7rem 5rem;
+}
+
+.intro-part .intro-block .intro-block-pad .intro-b-st2 {
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.intro-part .intro-block .intro-block-pad .intro-b-txt {
+  padding: 1.5em 0;
+}
+
+.intro-part .intro-block .intro-block-pad .intro-b-s-subtitle {
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.our-menu {
+  max-width: 1410px;
+}
+
+@media screen and (max-width: 990px) {
+  .card-intro {
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+  }
+  .intro-block {
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    margin-left: 0 !important;
+  }
+  .intro-block .intro-block-pad {
+    padding: 4rem 2rem !important;
+  }
+}
+
+.testimony {
+  background-color: #292929;
+  color: white !important;
+}
+
+.testimony .test-text {
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+.testimony .test-quote {
+  background-image: url("assets/images/double-quote.png");
+  background-size: 100% 100%;
+  height: 50px;
+  width: 50px;
+}
+
+.testimony .test-img {
+  position: initial;
+  height: 600px !important;
+  background-size: 100% 100%;
+}
+
+.test-top-hash {
+  background-image: url(assets/images/hachures-blanches.png);
+  width: 100%;
+  height: 73px;
+  z-index: 99 !important;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.test-bottom-hash {
+  background-image: url(assets/images/hachures-blanches.png);
+  width: 100%;
+  height: 73px;
+  z-index: 99 !important;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.cont-frontpage {
+  background-color: #E9E9E9 !important;
+}
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,196 @@
+
+$bg-notwhite  : #E9E9E9;
+$border-color : #D5D5D5;
+$bg-gris : #292929;
+.banner-top {
+    height: 1080px;
+    // background-size:100% co;
+    // background-color: $bg-notwhite;
+    background: no-repeat center center;
+    background-size: cover;
+    //justify-content: center;
+    //display: flex;
+    // border-bottom: 2px solid transparent;
+    // padding: 15px;
+    // border-image: url(assets/images/hachures-blanches.png)  stretch rotateY(180deg);
+    .cont-banner{
+        display: flex;
+        color: #ffffff !important;
+        max-width: 1670px;
+        margin-left: auto;
+        margin-right: auto;
+        .font-title-top{
+            font-size: 100px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .font-subtitle-top{
+            font-size: 60px;
+            font-weight: normal;
+            margin-top: 8rem;
+        }
+        .banner-link{
+            display: flex;
+            margin-top: 4rem;
+            align-items: center;
+            .link-barre{
+                width: 3rem;
+                border: solid 1px white;
+                height: 1px;
+                margin-right: 1rem;
+            }
+            .link-text{
+                color: white !important;
+            }
+        }
+    }
+}
+
+
+.banner-top-hash{
+    background-image: url(assets/images/hachures-blanches.png);
+    //
+    width: 100%;
+    height: 73px;
+    z-index: 2;
+    transform: rotate(180deg);
+}
+
+
+
+.banner-card {
+    max-width: 1410px;
+    margin-top: -73px;
+
+    .card-intro{
+        background-color: white;
+        max-width: 450px;
+        min-width: 310px;
+        border-radius: 35px 35px 0px 0px;
+        box-shadow: 2px 2px 2px $border-color; 
+        z-index: 3;
+        .c-intro-img{
+            display: inline-block;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100px;
+            width: 100px;
+        }
+        .card-img1{
+            background-image: url('assets/svg/quality-food.svg');
+        }
+        .card-img2{
+            background-image: url('assets/svg/fastest-delivery.svg');
+        }
+        .card-img3{
+            background-image: url('assets/svg/original-recipes.svg');
+        }
+        .c-intro-tt{
+            font-size: 1.25rem;
+            color: #292929;
+            line-height: 1.2;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .c-intro-txt{
+            font-size: 0.9rem;
+            color: #292929;
+            line-height: 22px;
+        }
+
+
+    }
+}
+
+
+
+
+.intro-part {
+    margin-top: 6rem;
+    max-width: 1410px;
+    .intro-block{
+        position: relative;
+        z-index: 2;
+        box-shadow: 5px 10px 5px $border-color; 
+        margin-left: -15rem;
+        background-color: white !important;
+        .intro-block-pad{
+            padding: 7rem 5rem;
+            .intro-b-st2{
+                font-weight: bolder;
+                text-transform: uppercase;
+            }
+            .intro-b-txt{
+                padding: 1.5em 0;
+            }
+            .intro-b-s-subtitle{
+                font-weight: bolder;
+                text-transform: uppercase;
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+.our-menu{
+    max-width: 1410px;
+}
+
+
+@media screen and (max-width: 990px) {
+    .card-intro {
+    box-shadow: none !important; 
+    }
+    .intro-block{
+
+        box-shadow: none !important; 
+        margin-left: 0 !important;
+        .intro-block-pad{
+            padding: 4rem 2rem !important;
+        }
+
+    }
+}
+
+.testimony{
+    background-color: $bg-gris;
+    color: white !important;
+    .test-text{
+        align-content: space-around;
+    }
+    .test-quote{
+        background-image: url('assets/images/double-quote.png');
+        background-size:100% 100%;
+        height: 50px;
+        width: 50px;
+    }
+    .test-img{
+        position: initial;
+        height: 600px !important;
+        background-size:100% 100%;
+        // z-index: 1 !important;
+    }
+}
+
+.test-top-hash{
+    background-image: url(assets/images/hachures-blanches.png);
+    width: 100%;
+    height: 73px;
+    z-index: 99 !important;
+    transform: rotate(360deg);
+}
+
+.test-bottom-hash{
+    background-image: url(assets/images/hachures-blanches.png);
+    width: 100%;
+    height: 73px;
+    z-index: 99 !important;
+    transform: rotate(180deg);
+}
+
+
+
+.cont-frontpage{
+    background-color: $bg-notwhite !important;
+}
