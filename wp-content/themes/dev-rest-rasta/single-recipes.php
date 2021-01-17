@@ -1,14 +1,47 @@
 <?php get_header(); ?>
 
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <h1><?php the_title(); ?></h1>
-        <img class="w-100" src="<?php echo get_field('image'); ?> " alt="">
-        <?php the_content(); ?>
-        </div>
-        <?php
-        //wp_reset_postdata > avoid to change the value of post
-        wp_reset_postdata(); ?>
-<?php endwhile;
-endif; ?>
+
+<div class="container">
+
+   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+         <div class="navSingle">
+            <a href="" class="navSingle__return">Return</a>
+            <div class="navSingle__separator">|</div>
+            <p class="navSingle__date"><?php the_date(); ?></p>
+            <p class="navSingle__term"><?php the_terms(get_the_ID(), 'category-recipe'); ?></p>
+         </div>
+         <h2 class="titleRecipe"><?php the_title(); ?></h2>
+         <p class="descRecipe"> <?php the_content(); ?></p>
+         <?php
+
+
+         $image = get_field('image');
+         $size = 'single-recipe-img';
+         if ($image) {
+            echo wp_get_attachment_image($image, $size);
+         } ?>
+         <!-- <img class="imgRecipe" src="<?php echo get_field('image'); ?> " alt="" style="width: 100%"> -->
+
+
+         <h3 class="subtitlesRecipe">Ingredients</h3>
+         <p><?php echo get_field('ingredients'); ?></p>
+         <h3 class="subtitlesRecipe">Instructions</h3>
+         <?php
+         $steps_count = 0;
+         if (have_rows('preparation')) :
+            while (have_rows('preparation')) : the_row(); ?>
+               <?php $steps_count++; ?>
+               <div class="steps">
+                  <p><span class="stepCounter"><?php echo $steps_count; ?></span><?php the_sub_field('steps'); ?></p>
+               </div>
+         <?php endwhile;
+         else :
+         // no rows found
+         endif; ?>
+   <?php endwhile;
+   endif; ?>
+</div>
+
+
 
 <?php get_footer(); ?>

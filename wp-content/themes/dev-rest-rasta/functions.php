@@ -10,7 +10,8 @@ function devrest_supports()
     register_nav_menu('footer', 'FOOTER NAVBAR');
     // register_nav_menu('archive-recipes', 'recipes-menu');
 
-    add_image_size('recipe-thumbnail', 350, 215, true);
+    add_image_size('archive-recipe-img', 665, 400, true);
+    add_image_size('single-recipe-img', 965, 400, true);
 }
 
 function devrest_assets()
@@ -64,7 +65,8 @@ function custom_excerpt_length()
 {
     return 20;
 }
-function custom_excerpt_more() {
+function custom_excerpt_more()
+{
     return '...';
 }
 
@@ -94,14 +96,21 @@ if (is_admin()) {
 
 function add_links_themenu()
 {
-    add_menu_page( 'the_menu', 'The Menu', 'edit_posts', 'post.php?post=107&action=edit&classic-editor', '', 'dashicons-book-alt', 8 );
-    add_menu_page( 'restaurant_infos', 'Restaurant infos', 'edit_posts', 'post.php?post=224&action=edit&classic-editor', '', 'dashicons-store', 9 );
+    add_menu_page('the_menu', 'The Menu', 'edit_posts', 'post.php?post=107&action=edit&classic-editor', '', 'dashicons-book-alt', 8);
+    add_menu_page('restaurant_infos', 'Restaurant infos', 'edit_posts', 'post.php?post=224&action=edit&classic-editor', '', 'dashicons-store', 9);
 }
 
+
+function my_register_fields()
+{
+    include_once('acf-image-crop / acf-image-crop.php');
+}
 
 add_action('init', 'devrest_init');
 add_action('after_setup_theme', 'devrest_supports');
 add_action('wp_enqueue_scripts', 'devrest_assets');
 add_filter('excerpt_length', 'custom_excerpt_length', 999);
 add_action('admin_menu', 'add_links_themenu');
-add_filter( 'excerpt_more', 'custom_excerpt_more' );
+add_filter('excerpt_more', 'custom_excerpt_more');
+add_action('acf / register_fields', 'my_register_fields');
+
