@@ -69,7 +69,9 @@ function custom_excerpt_length()
 {
     return 20;
 }
-
+function custom_excerpt_more() {
+    return '...';
+}
 
 //filter to add/remove setting > post-type editor
 if (is_admin()) {
@@ -117,6 +119,6 @@ add_action('after_setup_theme', 'devrest_supports');
 add_action('wp_enqueue_scripts', 'devrest_assets');
 add_filter('excerpt_length', 'custom_excerpt_length', 999);
 add_action('admin_menu', 'add_links_themenu');
-
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 add_action('acf/init', 'my_acf_init');
+add_filter( 'excerpt_more', 'custom_excerpt_more' );

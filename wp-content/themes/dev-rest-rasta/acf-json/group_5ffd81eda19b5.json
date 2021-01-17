@@ -16,7 +16,7 @@
                 "id": ""
             },
             "taxonomy": "category-recipe",
-            "field_type": "multi_select",
+            "field_type": "select",
             "allow_null": 0,
             "add_term": 0,
             "save_terms": 1,
@@ -125,5 +125,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1610613851
+    "modified": 1610725666
 }

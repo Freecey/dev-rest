@@ -1,6 +1,6 @@
 <!-- footer.php -->
 
-    
+
     <footer> 
 
         <p>Je suis le footer</p>

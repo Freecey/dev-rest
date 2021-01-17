@@ -28,7 +28,6 @@ Version: 1.0
 
 // @import "ressources/scss/bootstrap-min.scss";
 
-
 @import "ressources/scss/bootstrap.scss";
 
 //style fonts
@@ -41,91 +40,161 @@ Version: 1.0
     url("assets/fonts/Poppins-Bold.ttf"),
 }
 
-*{
-    font-family: 'Poppins';
+* {
+  font-family: "Poppins";
 }
 
 
 // font size in page
-@mixin font-title-page(){
-    font-size: 42px;
-    font-weight: regular;
+@mixin font-title-page() {
+  font-size: 42px;
+  font-weight: regular;
 }
-@mixin font-subtitle-page(){
-    font-size: 42px;
-    font-weight: bold;
+@mixin font-subtitle-page() {
+  font-size: 42px;
+  font-weight: bold;
 }
 // font size in top
-@mixin font-title-top(){
-    font-size: 100px;
-    font-weight: semi-bold;
+@mixin font-title-top() {
+  font-size: 100px;
+  font-weight: semi-bold;
 }
-@mixin font-subtitle-top(){
-    font-size: 60px;
-    font-weight: regular;
+@mixin font-subtitle-top() {
+  font-size: 60px;
+  font-weight: regular;
 }
 // font size in menu
-@mixin font-title-menu(){
-    font-size: 16px;
-    font-weight: light;
+@mixin font-title-menu() {
+  font-size: 16px;
+  font-weight: light;
+}
+// font size in nav
+@mixin font-nav() {
+  font-size: 16px;
+  font-weight: bold;
 }
 
+/* ============= archive-recipe > */
+$color-secondary:#808080;
 
-///////// style 4 pagination >
-$pag-gray: #c0c0c0;
-
-.page-numbers {
-    width: 25px;
-    height: 25px;
-    margin: 5px;
-    border: 0.5px solid $pag-gray;
-    border-radius: 5px;
-    text-align: center;
-    background-color: lighten(#F5F5F5, 10);
-    color: $pag-gray;
-    transition: all 0.2s;
-    &:hover {
-        text-decoration: none;
-        color: darken($pag-gray, 20);
-        font-weight: bold;
-    }
-    &.current {
-        color: darken($pag-gray, 20);
-        font-weight: bold;
-    }
-    &.next {
-        color: $pag-gray;
-        border: 0;
-        background-color: #80808000;
-    }
-    &.prev {
-        @extend .next;
-    }
+@mixin underline-animate {
+  &::after {
+    content: "";
+    display: block;
+    width: 102%;
+    height: 1px;
+    background: black;
+    transform: scale(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  &:hover::after {
+    transform: scale(1);
+  }
+}
+@mixin box-shadow-posts {
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.445) ;
 }
 
-///////////style 4 nav-taxonomy >
-.nav-taxonomy {
-    @include font-title-menu();
+/* ====== style bg archive-recipe > */
+.archive-recipe {
+  background-color: #f5f5f5;
+}
+
+/* ====== style card-recipe > */
+.post-recipe{
+  @include box-shadow-posts();
+  margin-bottom: 2.5rem;
+}
+.post-terms {
+  display: inline-block;
+  & a {
+    @include font-nav();
     color: black;
-    &::before{
-        content: url('wp-content/themes/dev-rest-rasta/assets/svg/cutelry.svg');
-        color: black;
+    &:hover {
+      text-decoration: none;
     }
+    @include underline-animate();
+  }
+}
+.post-title{
+  font-weight: bold;
+}
+.post-date{
+  text-transform: uppercase;
+  color: $color-secondary;
+  font-size: 12px;
+}
+.post-date-before{
+  width: 12px;
+  margin-right: 5px;
+}
+
+/* ====== style nav-taxonomy > */
+.nav-taxonomy {
+  margin-top: 2rem;
+  @include font-nav();
+  color: black;
+  &:hover {
+    color: black;
+  }
+  @include underline-animate();
+}
+.terms-before {
+  width: 16px;
+  margin-right: 5px;
+  vertical-align: baseline;
+}
+
+/* ====== style 4 pagination > */
+.container-pagination{
+  margin-bottom: 2rem;
+}
+.page-numbers {
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+  border: 0.5px solid $color-secondary;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #f5f5f5;
+  color: $color-secondary;
+  transition: all 0.2s;
+  &:hover {
+    text-decoration: none;
+    color: darken($color-secondary, 20);
+    font-weight: bold;
+    background-color: white;
+  }
+  &.current {
+    color: darken($color-secondary, 20);
+    font-weight: bold;
+    background-color: white;
+  }
+  &.next {
+    color: $color-secondary;
+    border: 0;
+    background-color: #80808000;
+  }
+  &.prev {
+    @extend .next;
+  }
 }
 
 
 
-.page-title{
- font-size: 46px;
- font-weight: bold;
- text-transform: uppercase;
+
+///////// next page >
+
+.page-title {
+  font-size: 46px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 .page-subtitles{
  font-size: 42px;
  font-weight: regular;
 
 }
-
 
 // =========== START THE MENU ===========
 
@@ -251,14 +320,13 @@ $pag-gray: #c0c0c0;
   margin: 0 !important;
   padding: 0.2rem;
   margin-top: 0.2rem !important;
-  padding-left: 1.5rem ;
-  padding-right: 1.5rem ;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 .chef-select-cont {
   border: #e3c033 2px solid;
   margin: 0 !important;
   margin-bottom: 0.2rem;
-  
 }
 
 // =========== END THE MENU ===========
@@ -278,9 +346,8 @@ $pag-gray: #c0c0c0;
 }
 // =========== END GMAPS ===========
 
+
 // =========== START dev-rest-infos ===========
-
-
 
 // =========== END dev-rest-infos ===========
 
