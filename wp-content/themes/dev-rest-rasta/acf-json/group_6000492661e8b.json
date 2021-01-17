@@ -225,8 +225,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "center_lat": "",
-                    "center_lng": "",
+                    "center_lat": "50.6237478",
+                    "center_lng": "5.5566933",
                     "zoom": "",
                     "height": ""
                 }
@@ -269,7 +269,7 @@
                 {
                     "key": "field_600072fc57b4f",
                     "label": "Restaurant Reservation Title",
-                    "name": "Restaurant Reservation Title",
+                    "name": "restaurant_reservation_title",
                     "type": "text",
                     "instructions": "",
                     "required": 1,
@@ -317,7 +317,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "multisite_rest"
+                "value": "restaurants"
             }
         ]
     ],
@@ -344,5 +344,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1610642342
+    "modified": 1610727294
 }
