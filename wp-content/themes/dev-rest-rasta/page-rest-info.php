@@ -48,9 +48,9 @@ Template Name: Informations Restaurant
             
                     <?php if (have_rows('opening')) :  while (have_rows('opening')) : the_row(); ?>
                             <div class="div">
-                                <div class="opening">
+                                <div class="opening d-flex">
                                     <img src="/wp-content/themes/dev-rest-rasta/assets/svg/time-clock.svg" alt="" class="time-clock">
-                                    <div class="opening-days-and-hours">
+                                    <div class="opening-days-and-hours d-flex">
                                         <?= the_sub_field('opening_days'); ?>
                                         <div class="opening-line"></div>
                                         <?= the_sub_field('opening_hours'); ?> 
