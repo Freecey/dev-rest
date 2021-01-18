@@ -10,6 +10,7 @@ function devrest_supports()
     register_nav_menu('footer', 'FOOTER NAVBAR');
     add_image_size('archive-recipe-img', 665, 350, true);
     add_image_size('single-recipe-img', 765, 350, true);
+    add_image_size('step-recipe-img', 650, 275, true);
 }
 
 function devrest_assets()
@@ -47,7 +48,6 @@ function devrest_init()
         'show_admin_column' => true,
         'public' => true,
     ]);
-
     register_post_type('multisite_rest', [
         'label' => 'Restaurants',
         'public' => true,
