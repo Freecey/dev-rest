@@ -16,7 +16,7 @@ if (have_rows('banner_top')) :
           <div class="banner-link">
             <div class="link-barre"></div>
             <div class="link-text">
-            <a href="the-menu/" class="">Check our menu</a>
+              Check our menu
             </div>
           </div>
         </div>
@@ -28,7 +28,7 @@ if (have_rows('banner_top')) :
     <div class="banner-top-hash mt-n5"></div>
 
     <div class=" text-center banner-card mx-auto">
-      <div class="d-flex justify-content-center flex-wrap flex-lg-nowrap">
+      <div class="d-flex justify-content-center flex-wrap flex-sm-wrap flex-md-wrap flex-lg-nowrap">
 
         <?php if (have_rows('card_banner_1')) : while (have_rows('card_banner_1')) : the_row(); ?>
             <div class="text-center card-intro mt-4 mt-lg-n5">
@@ -42,7 +42,7 @@ if (have_rows('banner_top')) :
         endif; ?>
 
         <?php if (have_rows('card_banner_2')) : while (have_rows('card_banner_2')) : the_row(); ?>
-            <div class="text-center card-intro mx-0 mx-lg-3  mt-4 mt-lg-n5">
+            <div class="text-center card-intro mx-0 mx-lg-3  mt-0 mt-lg-n5">
               <div class="c-intro-img card-img2 mt-5 mb-3"></div>
               <div class="c-intro-tt py-2"><?= get_sub_field('card_title'); ?></div>
               <div class="c-intro-txt d-none d-sm-none d-md-block d-lg-block  px-5  py-2"><?= get_sub_field('card_text'); ?></div>
@@ -51,7 +51,7 @@ if (have_rows('banner_top')) :
         endif; ?>
 
         <?php if (have_rows('card_banner_3')) : while (have_rows('card_banner_3')) : the_row(); ?>
-            <div class="text-center card-intro  mt-4 mt-lg-n5 ">
+            <div class="text-center card-intro  mt-0 mt-lg-n5 ">
               <div class="c-intro-img card-img3 mt-5 mb-3"></div>
               <div class="c-intro-tt  py-2"><?= get_sub_field('card_title'); ?></div>
               <div class="c-intro-txt d-none d-sm-none d-md-block d-lg-block  px-5  py-2"><?= get_sub_field('card_text'); ?></div>
@@ -142,13 +142,8 @@ endif; ?>
             $images = get_sub_field('images');
             if ($images) : ?>
 
-              <?php 
-              $img_count = 0;
-              foreach ($images as $image) : 
-              $img_count++;
-              //echo $img_count ;
-              ?>
-                <div class="col-6 test-img <?php if ($img_count % 2 == 0) : echo 'text-left'; else : echo 'text-right'; endif;  ?>">
+              <?php foreach ($images as $image) : ?>
+                <div class="col-6 test-img">
                   <a href="<?php echo esc_url($image['url']); ?>">
                     <img src="<?php echo esc_url($image['sizes']['ourmenu280']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                   </a>
@@ -162,14 +157,11 @@ endif; ?>
           </div>
         </div>
         <div class="col-12 col-lg-6">
-          <div class="o-menu-txt-block my-auto text-center">
+          <div class="o-menu-txt-block my-auto">
             <div class="page-subtitles"><?= get_sub_field('subtitle'); ?></div>
             <div class="page-title"><?= get_sub_field('title'); ?></div>
             <div class="intro-b-txt"><?= get_sub_field('text'); ?> </div>
-            <div class="'o-menu-btn-sect">
-            <a href="the-menu/" class="btn btn-dark">View the full menu</a>
-            </div>
-
+            <div class="'o-menu-btn-sect">View the full menu</div>
           </div>
         </div>
 
@@ -192,7 +184,50 @@ endif; ?>
 
 <!-- START testimony -->
 
-<div id="carouseltestimony" class="carousel slide" data-ride="carousel">
+<?php
+if (have_rows('testimony')) :
+  while (have_rows('testimony')) : the_row();
+    $testimony_img = get_sub_field('image');
+    $row_i = get_row_index();
+    // echo $row_i;
+    ?>
+    <?php if ($row_i === 1) : echo ' active'; endif; ?>
+
+
+    <div class="test-top-hash pt-5 mb-n5"></div>
+    <div class="testimony">
+      <div class="row">
+        <div class="col-12 col-lg-6 text-center my-auto">
+          <div class="my-5 mx-auto test-quote"></div>
+          <div class="my-5"><?= get_sub_field('text'); ?></div>
+          <div class="my-5"><?= get_sub_field('name'); ?></div>
+
+        </div>
+        <div class="col-12 col-lg-6 test-img" style="background-image: url(' <?= $testimony_img['url']; ?> ');"></div>
+
+
+
+
+
+        <?php // echo $testimony_img['url'];         
+        ?>
+
+
+
+      </div>
+    </div>
+    <div class="test-bottom-hash mt-n5"></div>
+<?php
+  endwhile;
+else :
+// no rows found
+endif; ?>
+
+
+
+
+
+<div id="carouselExample" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
   <?php
   if (have_rows('testimony')) :
@@ -202,29 +237,23 @@ endif; ?>
     // echo $row_i;
     ?>
     
-    <div class="carousel-item testimony <?php if ($row_i === 1) : echo ' active'; endif; ?>">
     <div class="test-top-hash pt-5 mb-n5"></div>
+    <div class="carousel-item testimony <?php if ($row_i === 1) : echo ' active'; endif; ?>">
       <div class="row">
-      <div class="col-12 col-lg-6 text-center my-auto order-2 order-lg-1 test-block-text">
+        <div class="col-6 d-flex align-items-center">
           <div>
-          <div class="mx-auto test-quote"></div>
-          <div class="my-5 mx-5 text-comment"><?= get_sub_field('text'); ?></div>
+          <div class="my-5 mx-auto test-quote"></div>
+          <div class="my-5"><?= get_sub_field('text'); ?></div>
           <div class="my-5"><?= get_sub_field('name'); ?></div>
           </div>
-          <ol class="carousel-indicators">
-    <li data-target="#carouseltestimony" data-slide-to="0" class="<?php if ($row_i === 1) : echo ' active'; endif; ?>"></li>
-    <li data-target="#carouseltestimony" data-slide-to="1" class="<?php if ($row_i === 2) : echo ' active'; endif; ?>"></li>
-    <li data-target="#carouseltestimony" data-slide-to="2" class="<?php if ($row_i === 3) : echo ' active'; endif; ?>"></li>
-  </ol>
         </div>
       
-        <div class="col-12 col-lg-6 test-img order-1 order-lg-2" style="background-image: url(' <?= $testimony_img['url']; ?> ');"></div>
+        <div class="col-12 col-lg-6 test-img" style="background-image: url(' <?= $testimony_img['url']; ?> ');"></div>
         
 
       </div>
-      <div class="test-bottom-hash mt-n5"></div>
     </div>
-    
+    <!-- <div class="test-bottom-hash mt-n5"></div> -->
     <?php
   endwhile;
 else :
@@ -232,15 +261,77 @@ else :
 endif; ?>
     
 
-    <a class="carousel-control-prev d-flex d-lg-none" href="#carouseltestimony" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon mb-5" aria-hidden="true"></span>
+    <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
-    <a class="carousel-control-next d-flex d-lg-none" href="#carouseltestimony" role="button" data-slide="next">
-      <span class="carousel-control-next-icon mb-5" aria-hidden="true"></span>
+    <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
   </div>
+
+
+
+
+
+<!-- FOR TEST DELETE AFTER -->
+
+<!-- <div id="carouselExample" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="row">
+        <div class="col-6 d-flex align-items-center">
+          <div>
+            <h2>Title 1 </h2>
+            <p>Lorem ipsum</p>
+          </div>
+        </div>
+        <div class="col-6">
+          <img class="d-block w-100" src="http://lorempixel.com/304/220/" alt="First slide">
+        </div>
+
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row">
+        <div class="col-6 d-flex align-items-center">
+          <div>
+            <h2>Title 2</h2>
+            <p>Lorem ipsum</p>
+          </div>
+        </div>
+        <div class="col-6">
+          <img class="d-block w-100" src="http://lorempixel.com/304/220/nightlife/" alt="Second slide">
+        </div>
+
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row">
+        <div class="col-6 d-flex align-items-center">
+          <div>
+            <h2>Title 3</h2>
+            <p>Lorem ipsum</p>
+          </div>
+        </div>
+        <div class="col-6">
+          <img class="d-block w-100" src="http://lorempixel.com/304/220/sports/" alt="Third slide">
+        </div>
+
+      </div>
+    </div>
+
+    <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div> -->
+<!-- FOR TEST DELETE AFTER -->
 
   <script src="http://www.wordpress.lan/wp-content/themes/dev-rest-rasta/js/popper.min.js"></script>
   <script src="http://www.wordpress.lan/wp-content/themes/dev-rest-rasta/js/bootstrap.min.js"></script>
