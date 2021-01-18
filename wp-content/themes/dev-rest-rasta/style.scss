@@ -332,6 +332,16 @@ $color-secondary:#808080;
 // =========== END THE MENU ===========
 
 
+
+.rest-info-main {
+  width: 100%;
+  height: 100vh;
+  background-color: #2D2D2D;
+  color: #ffff;
+  padding-left: 10%;
+  padding-right: 10%;
+} 
+
 // =========== START GMAPS ===========
 .acf-map {
   width: 100%;
@@ -346,6 +356,81 @@ $color-secondary:#808080;
 }
 // =========== END GMAPS ===========
 
+
+.rest-info-main-box {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: #ffff;
+  justify-content: space-between;
+}
+
+.rest-description {
+  font-size: 10px;
+}
+
+// ==== NETWORKS ICONS ====
+.network-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 9999px;
+  margin: 10px 10px 10px 0px;
+  text-align: center;
+
+    &:nth-child(1){
+      background-color: #474A9A;
+    }
+    &:nth-child(2) {
+      background-color: #4285F4;
+    }
+    &:nth-child(3) {
+      background-color: #F1005C;
+    }
+    &:nth-child(4) {
+      background-color: #156CB6;
+    }
+
+    a {
+      line-height: 33px;
+    }
+
+}
+
+// ==== OPENING ====
+.opening {
+  margin-bottom: 5px;
+}
+
+.opening img {
+  margin-right: 20px;
+}
+
+// .opening-line {
+//   width: 100%;
+// }
+
+// ==== CONTACT US ====
+
+.open {
+  padding-left: 15px;
+}
+
+.open-phone-number{
+  padding-bottom: 15px;
+}
+
+.open-email{
+  padding-top: 15px;
+}
+
+// ==== INSTAGRAM IMAGES ====
+
+.instagram-images {
+  width: 192px;
+  height: 135px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
 // =========== START dev-rest-infos ===========
 
