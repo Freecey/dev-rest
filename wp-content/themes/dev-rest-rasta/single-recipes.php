@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 
-<div class="container">
+<div class="container container-singleRecipe">
 
    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
          <div class="navSingle">
@@ -11,18 +11,14 @@
             <p class="navSingle__term"><?php the_terms(get_the_ID(), 'category-recipe'); ?></p>
          </div>
          <h2 class="titleRecipe"><?php the_title(); ?></h2>
-         <p class="descRecipe"> <?php the_content(); ?></p>
+         <p class="descRecipe"> <?php the_field('description'); ?></p>
          <?php
-
-
          $image = get_field('image');
-         $size = 'single-recipe-img';
-         if ($image) {
-            echo wp_get_attachment_image($image, $size);
+         $size = 'archive-recipe-img';
+         if ($image) { ?>
+            <img class="card-img" src="<?php echo $image['sizes']["single-recipe-img"]; ?>" alt="">
+         <?php
          } ?>
-         <!-- <img class="imgRecipe" src="<?php echo get_field('image'); ?> " alt="" style="width: 100%"> -->
-
-
          <h3 class="subtitlesRecipe">Ingredients</h3>
          <p><?php echo get_field('ingredients'); ?></p>
          <h3 class="subtitlesRecipe">Instructions</h3>

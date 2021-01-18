@@ -8,10 +8,8 @@ function devrest_supports()
     add_theme_support('html5');
     register_nav_menu('header', 'TOP NAVBAR');
     register_nav_menu('footer', 'FOOTER NAVBAR');
-    // register_nav_menu('archive-recipes', 'recipes-menu');
-
-    add_image_size('archive-recipe-img', 665, 400, true);
-    add_image_size('single-recipe-img', 965, 400, true);
+    add_image_size('archive-recipe-img', 665, 350, true);
+    add_image_size('single-recipe-img', 765, 350, true);
 }
 
 function devrest_assets()
@@ -61,13 +59,22 @@ function devrest_init()
     ]);
 }
 
-function custom_excerpt_length()
+// function custom_excerpt_length()
+// {
+//     return 10;
+// }
+// function custom_excerpt_more()
+// {
+//     return '...';
+// }
+function archive_custom_excerpt($text)
 {
-    return 20;
-}
-function custom_excerpt_more()
-{
-    return '...';
+    $text = strip_shortcodes($text);
+    $text = apply_filters('the_content', $text);
+    $text = str_replace(']]>', ']]>', $text);
+    $excerpt_length = apply_filters('excerpt_length', 20);
+    $excerpt_more = apply_filters('excerpt_more', ' ' . '...');
+    return wp_trim_words($text, $excerpt_length, $excerpt_more);
 }
 
 //filter to add/remove setting > post-type editor
@@ -109,8 +116,7 @@ function my_register_fields()
 add_action('init', 'devrest_init');
 add_action('after_setup_theme', 'devrest_supports');
 add_action('wp_enqueue_scripts', 'devrest_assets');
-add_filter('excerpt_length', 'custom_excerpt_length', 999);
 add_action('admin_menu', 'add_links_themenu');
-add_filter('excerpt_more', 'custom_excerpt_more');
+// add_filter('excerpt_length', 'custom_excerpt_length', 999);
+// add_filter('excerpt_more', 'custom_excerpt_more');
 add_action('acf / register_fields', 'my_register_fields');
-

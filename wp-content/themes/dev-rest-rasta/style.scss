@@ -71,7 +71,7 @@ Version: 1.0
   font-weight: bold;
 }
 
-/* ============= archive-recipe > */
+/* ============= archive-recipe > ========================*/
 $color-secondary:#808080;
 
 @mixin underline-animate {
@@ -177,8 +177,12 @@ $color-secondary:#808080;
   }
 }
 
-/* ============= single-recipe > */
 
+/* ============= single-recipe > ================== */
+
+.container-singleRecipe{
+  width: 50%;
+}
 
 
 

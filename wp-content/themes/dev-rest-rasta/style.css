@@ -10818,7 +10818,7 @@ a.text-dark:hover, a.text-dark:focus {
   font-family: "Poppins";
 }
 
-/* ============= archive-recipe > */
+/* ============= archive-recipe > ========================*/
 /* ====== style bg archive-recipe > */
 .archive-recipe {
   background-color: #f5f5f5;
@@ -10953,7 +10953,11 @@ a.text-dark:hover, a.text-dark:focus {
   background-color: #80808000;
 }
 
-/* ============= single-recipe > */
+/* ============= single-recipe > ================== */
+.container-singleRecipe {
+  width: 50%;
+}
+
 .page-title {
   font-size: 46px;
   font-weight: bold;

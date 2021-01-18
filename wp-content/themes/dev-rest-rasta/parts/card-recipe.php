@@ -13,15 +13,17 @@
                             <?php $image = get_field('image');
                             $size = 'archive-recipe-img';
                             if ($image) { ?>
-                                <?php echo wp_get_attachment_image($image, $size); ?>
+                                <img class="card-img" src="<?php echo $image['sizes']["single-recipe-img"]; ?>" alt="">
                             <?php
-                            } ?> </div>
+                            } ?>
+                        </div>
                         <div class="col-sm-12 col-md-12 col-lg-5 order-lg-1">
                             <div class="card-body ">
                                 <div class="card-text post-date mb-2"><img class="post-date-before" src="/wp-content/themes/dev-rest-rasta/assets/svg/clock.svg" alt=""> <?php echo get_the_date(); ?></div>
                                 <div class="card-text post-terms mb-2"><?php the_terms(get_the_ID(), 'category-recipe', '<img class="terms-before" src="/wp-content/themes/dev-rest-rasta/assets/svg/cutelry.svg" alt="">', ''); ?></div>
                                 <h5 class="card-title post-title mb-4"><?php the_title(); ?></h5>
-                                <div class="card-text mb-4"><?php the_field('description'); ?></div>
+                                <!-- <div class="card-text mb-4"><?php echo substr(get_field('description'), 0, 100); ?></div> -->
+                                <div class="card-text mb-4"><?php echo archive_custom_excerpt(get_field('description')); ?></div>
                                 <a href="<?php the_permalink(); ?> " class="btn btn-dark">Read More</a>
                             </div>
                         </div>
@@ -30,7 +32,7 @@
                             <?php $image = get_field('image');
                             $size = 'archive-recipe-img';
                             if ($image) { ?>
-                                <?php echo wp_get_attachment_image($image, $size); ?>
+                                <img class="card-img" src="<?php echo $image['sizes']["single-recipe-img"]; ?>" alt="">
                             <?php
                             } ?>
                         </div>
@@ -39,7 +41,7 @@
                                 <div class="card-text post-date mb-2"><img class="post-date-before" src="/wp-content/themes/dev-rest-rasta/assets/svg/clock.svg" alt=""><?php echo get_the_date(); ?></div>
                                 <div class="card-text post-terms mb-2"><?php the_terms(get_the_ID(), 'category-recipe', '<img class="terms-before" src="/wp-content/themes/dev-rest-rasta/assets/svg/cutelry.svg" alt="">', ''); ?></div>
                                 <h5 class="card-title post-title mb-4"><?php the_title(); ?></h5>
-                                <div class="card-text mb-4"><?php the_field('description'); ?></div>
+                                <div class="card-text mb-4"><?php echo archive_custom_excerpt(get_field('description')); ?></div>
                                 <a href="<?php the_permalink(); ?>" class="btn btn-dark">Read More</a>
                             </div>
                         </div>
