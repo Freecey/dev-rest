@@ -6,128 +6,134 @@ Template Name: Informations Restaurant
 <?php get_header() ?>
 <!-- page-rest-info -->
 <div class="container-fluid p-0">
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
+<?php
+if (have_rows('infos_footer')) :
+  while (have_rows('infos_footer')) : the_row(); 
+  $images = get_sub_field('instagram');
+?>
         <div class="container-fluid rest-info-main">
             <div class="row rest-info-main-box">
-                <div class="col-3">
-                    <h2><?php the_title(); ?></h2>
+                <div class="col-12 col-lg-3 ">
+                    <div class="row">
+                    <div class="col-12 col-md-6 col-lg-12">
+                    <h3><?php the_title(); ?></h3>
 
                     <!-- Recup brieve_description from Restaurant description -->
+                    
                     <div class="rest_description">
-                        <?= get_field('brieve_description'); ?>
+                        <?= get_sub_field('restaurant_description'); ?>
                     </div>
                     
+                    </div>
                     <!-- Networks icons -->
-                    <div class="d-flex network">
-                        <div class="network-icon">
+                    <div class="col-12 col-md-6 col-lg-12">
+                    <div class="flex d-flex network">
+                        <div class="btn network-icon">
                             <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/facebook.svg" alt=""></a>
                         </div>
-                        <div class="network-icon">
+                        <div class="btn network-icon">
                             <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/twitter.svg" alt=""></a>
                         </div>
-                        <div class="network-icon">
+                        <div class="btn network-icon">
                             <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/instagram.svg" alt=""></a>
                         </div>
-                        <div class="network-icon">
+                        <div class="btn network-icon">
                             <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/linkedin.svg" alt=""></a>
                         </div>
                     </div>
-
+                    </div>
                 </div>
+            </div>
 
                 <!-- recup sub_field from Opening -->
-                <div class="col-3">
-                
-                    <?php
-                    $field_name = "opening";
-                    $field = get_field_object($field_name);
+                <div class="col-12 col-md-6 col-lg-3 mt-5 mt-lg-0">                    
+                    
+                    <h5>Open Hours</h5>
 
-                    echo '<h3>'. $field['label'] . '</h3>';
-                    ?>
-            
-                    <?php if (have_rows('opening')) :  while (have_rows('opening')) : the_row(); ?>
-                            <div class="div">
-                                <div class="opening d-flex">
-                                    <img src="/wp-content/themes/dev-rest-rasta/assets/svg/time-clock.svg" alt="" class="time-clock">
-                                    <div class="opening-days-and-hours d-flex">
-                                        <?= the_sub_field('opening_days'); ?>
-                                        <div class="opening-line"></div>
-                                        <?= the_sub_field('opening_hours'); ?> 
+                    <?php if (have_rows('open_hours')) : while (have_rows('open_hours')) : the_row(); ?>
+                        <div class="div">
+                            <div class="opening d-flex">
+                                <img src="/wp-content/themes/dev-rest-rasta/assets/svg/time-clock.svg" alt="" class="time-clock">
+                                <div class="opening-days-and-hours d-flex">
+                                    <div class="days">
+                                        <?= get_sub_field('opening_days'); ?>
+                                    </div>
+                                    <div class="opening-line"></div>
+                                    <div class="hours">
+                                        <?= get_sub_field('opening_hours'); ?>
                                     </div>
                                 </div>
                             </div>
-                    <?php endwhile;
-                    endif; ?>
+                        </div>
+                    <?php endwhile; endif; ?>
+
                 </div>
 
+        
                 <!-- Recup fields from Contact us -->
-                <div class="col-3">
+                <div class="col-12 col-md-6 col-lg-3 mt-5 mt-lg-0">
 
-                    <h3>Contact us</h3>
-                   
-                    <div class="contact-us-box">
-                        <table class="array">
-                            <tr>
-                                <td ><img class="open-phone-number" src="/wp-content/themes/dev-rest-rasta/assets/svg/call (10).svg" alt=""></td>
-                                <td class="open open-phone-number"><?= get_field('phone_number'); ?></td>
-                            </tr>
-                            <tr>
-                                <td ><img src="/wp-content/themes/dev-rest-rasta/assets/svg/place (14).svg" alt=""> </td>
-                                <td class="open"><?= get_field('street_and_number'); ?></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class="open"><?= get_field('postcode_and_city'); ?></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td class="open open-country"><?= get_field('country'); ?></td>
-                            </tr>
-                            <tr>
-                                <td class="open-email"><img class="contact-us-icon" src="/wp-content/themes/dev-rest-rasta/assets/svg/mail-1.svg" alt=""> </td>
-                                <td class="open open-email"><?= get_field('email'); ?></td>
-                            </tr>
-                        </table>
-                    </div>
+                    <h5>Contact us</h5>
 
+                    <?php if (have_rows('contact_us')) : the_row(); ?>
+                
+                        <div class="contact-us-box">
+                            <table class="array">
+                                <tr>
+                                    <td ><img class="open-phone-number" src="/wp-content/themes/dev-rest-rasta/assets/svg/call (10).svg" alt=""></td>
+                                    <td class="open open-phone-number"><?= get_sub_field('phone_number'); ?></td>
+                                </tr>
+                                <tr>
+                                    <td ><img src="/wp-content/themes/dev-rest-rasta/assets/svg/place (14).svg" alt=""> </td>
+                                    <td class="open"><?= get_sub_field('street_and_number'); ?></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="open"><?= get_sub_field('postcode_and_city'); ?></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="open open-country"><?= get_sub_field('country'); ?></td>
+                                </tr>
+                                <tr>
+                                    <td class="open-email"><img class="contact-us-icon" src="/wp-content/themes/dev-rest-rasta/assets/svg/mail-1.svg" alt=""> </td>
+                                    <td class="open open-email"><?= get_sub_field('e-mail'); ?></td>
+                                </tr>
+                            </table>
+                        </div>
+                    <?php endif; ?>
                     
                 </div>
 
                
                 <!-- Recup images from Instagram -->
+                
+                
+                <div class="col-12 col-sm-12 col-md-12 col-lg-3 p-0 mx-md-auto mt-5 mt-lg-0">
 
-                <?php
+                    <div class="text-left text-md-center text-lg-left">
 
-                $images = get_field('instagram');
+                        <h5>Instagram</h5>
 
-                if ($images) : ?>
-
-                <div class="col-12 col-sm-12 col-md-12 col-lg-3 p-0">
-
-                    <?php
-                        $field_name = "instagram";
-                        $field = get_field_object($field_name);
-                    
-                        echo '<h3>'. $field['label'] . '</h3>';
-                    ?>
-
-                    <div class="instagram-images">
-                        <?php foreach ($images as $image) : ?>
-
-                            <a href="<?= $image['url']; ?>">
-                                <img src="<?= $image['sizes']['thumbnail']; ?>" style='width: 60px;' alt="<?= $image['alt']; ?>" />
-                            </a>
-                               
-                        <?php endforeach; ?>   
+                        <?php 
+                            if ($images) : ?>
+                                <div class="instagram-galery mx-auto mx-lg-0">
+                                <?php foreach ($images as $image) : ?>
+                                    <div class="'instagram-galery-images">
+                                        <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" style="width: 75px;" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                    </div>
+                                <?php endforeach; ?>
+                                </div>
+                        <?php endif; ?>
                     </div>
+
                 </div>
 
-                <?php endif; ?>
+
             </div>
         </div>
 
 <?php endwhile;
 endif; ?>
-
 </div>
