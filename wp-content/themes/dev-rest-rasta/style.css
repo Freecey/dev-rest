@@ -11087,12 +11087,21 @@ a.text-dark:hover, a.text-dark:focus {
   height: 100vh;
   background-color: #2D2D2D;
   color: #ffff;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .rest-info-main-box {
   padding-top: 30px;
   padding-bottom: 30px;
   border-bottom: #ffff;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.rest-description {
+  font-size: 10px;
 }
 
 .network-icon {
@@ -11131,8 +11140,32 @@ a.text-dark:hover, a.text-dark:focus {
   margin-right: 20px;
 }
 
-.instagram-picture {
-  margin: 5px;
-  text-align: center;
+.opening-line {
+  width: auto;
+}
+
+.open {
+  padding-left: 15px;
+}
+
+.open-phone-number {
+  padding-bottom: 15px;
+}
+
+.open-email {
+  padding-top: 15px;
+}
+
+.instagram-images {
+  width: 192px;
+  height: 135px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 /*# sourceMappingURL=style.css.map */

@@ -16,8 +16,8 @@ Template Name: Informations Restaurant
                     <!-- Recup brieve_description from Restaurant description -->
                     <div class="rest_description">
                         <?= get_field('brieve_description'); ?>
-                        <br>
                     </div>
+                    
                     <!-- Networks icons -->
                     <div class="d-flex network">
                         <div class="network-icon">
@@ -50,8 +50,11 @@ Template Name: Informations Restaurant
                             <div class="div">
                                 <div class="opening">
                                     <img src="/wp-content/themes/dev-rest-rasta/assets/svg/time-clock.svg" alt="" class="time-clock">
-                                    <?= the_sub_field('opening_days'); ?>
-                                    <?= the_sub_field('opening_hours'); ?> <br>
+                                    <div class="opening-days-and-hours">
+                                        <?= the_sub_field('opening_days'); ?>
+                                        <div class="opening-line"></div>
+                                        <?= the_sub_field('opening_hours'); ?> 
+                                    </div>
                                 </div>
                             </div>
                     <?php endwhile;
@@ -63,40 +66,35 @@ Template Name: Informations Restaurant
 
                     <h3>Contact us</h3>
                    
-
-                    <div class="contact_us">
-                        <div class="phone-number d-flex">   
-                            <div class="icone">                         
-                                <img src="/wp-content/themes/dev-rest-rasta/assets/svg/call (10).svg" alt=""> 
-                            </div>                           
-                            <?= get_field('phone_number'); ?>
-                        </div>
-
-                        <div class="address">
-                            <div class="street-and-number d-flex">
-                                <div class="icone">                             
-                                    <img src="/wp-content/themes/dev-rest-rasta/assets/svg/place (14).svg" alt=""> 
-                                </div>                               
-                                <?= get_field('street_and_number'); ?>
-                            </div>
-                            <div class="postcode_and_city">
-                                <?= get_field('postcode_and_city'); ?>
-                            </div>
-                            <div class="country">
-                                <?= get_field('country'); ?>
-                            </div>
-                        </div>
-
-                        <div class="email d-flex">
-                            <div class="icone">
-                                <img src="/wp-content/themes/dev-rest-rasta/assets/svg/mail-1.svg" alt=""> 
-                            </div>
-                            <?= get_field('email'); ?>
-                        </div>
+                    <div class="contact-us-box">
+                        <table class="array">
+                            <tr>
+                                <td ><img class="open-phone-number" src="/wp-content/themes/dev-rest-rasta/assets/svg/call (10).svg" alt=""></td>
+                                <td class="open open-phone-number"><?= get_field('phone_number'); ?></td>
+                            </tr>
+                            <tr>
+                                <td ><img src="/wp-content/themes/dev-rest-rasta/assets/svg/place (14).svg" alt=""> </td>
+                                <td class="open"><?= get_field('street_and_number'); ?></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="open"><?= get_field('postcode_and_city'); ?></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="open open-country"><?= get_field('country'); ?></td>
+                            </tr>
+                            <tr>
+                                <td class="open-email"><img class="contact-us-icon" src="/wp-content/themes/dev-rest-rasta/assets/svg/mail-1.svg" alt=""> </td>
+                                <td class="open open-email"><?= get_field('email'); ?></td>
+                            </tr>
+                        </table>
                     </div>
+
+                    
                 </div>
 
-                
+               
                 <!-- Recup images from Instagram -->
 
                 <?php
@@ -113,16 +111,14 @@ Template Name: Informations Restaurant
                     
                         echo '<h3>'. $field['label'] . '</h3>';
                     ?>
-                    <div class="row justify-content-center">
+
+                    <div class="instagram-images">
                         <?php foreach ($images as $image) : ?>
-                            
-                            <div class="instagram col-4">
-                                <div class="instagram-picture">
-                                    <a href="<?= $image['url']; ?>">
-                                        <img src="<?= $image['sizes']['thumbnail']; ?>" style='width: 60px;' alt="<?= $image['alt']; ?>" />
-                                    </a>
-                                </div>
-                            </div>
+
+                            <a href="<?= $image['url']; ?>">
+                                <img src="<?= $image['sizes']['thumbnail']; ?>" style='width: 60px;' alt="<?= $image['alt']; ?>" />
+                            </a>
+                               
                         <?php endforeach; ?>   
                     </div>
                 </div>

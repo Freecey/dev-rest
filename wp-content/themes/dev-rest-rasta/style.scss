@@ -264,12 +264,19 @@ font-weight: normal;
   height: 100vh;
   background-color: #2D2D2D;
   color: #ffff;
+  padding-left: 10%;
+  padding-right: 10%;
 } 
 
 .rest-info-main-box {
   padding-top: 30px;
   padding-bottom: 30px;
   border-bottom: #ffff;
+  justify-content: space-between;
+}
+
+.rest-description {
+  font-size: 10px;
 }
 
 // ==== NETWORKS ICONS ====
@@ -308,15 +315,36 @@ font-weight: normal;
   margin-right: 20px;
 }
 
+.opening-days-and-hours {
+  
+}
+
+.opening-line {
+  width: auto;
+}
+
 // ==== CONTACT US ====
 
+.open {
+  padding-left: 15px;
+}
 
+.open-phone-number{
+  padding-bottom: 15px;
+}
 
+.open-email{
+  padding-top: 15px;
+}
 
 // ==== INSTAGRAM IMAGES ====
-.instagram-picture {  
-  margin: 5px;
-  text-align: center;
+
+.instagram-images {
+  width: 192px;
+  height: 135px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 // =========== END dev-rest-infos ===========
