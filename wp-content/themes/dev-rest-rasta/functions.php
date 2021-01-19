@@ -13,6 +13,7 @@ function devrest_supports()
     add_image_size('archive-recipe-img', 665, 350, true);
     add_image_size('single-recipe-img', 765, 350, true);
     add_image_size('step-recipe-img', 650, 275, true);
+    add_image_size('latest-recipes-img', 260, 200, true);
     add_image_size('rest700', 700, 700, true);
     add_image_size('ourmenu280', 280, 280, true);
     add_image_size('recipe-thumbnail', 350, 215, true);
@@ -134,4 +135,3 @@ add_action('admin_menu', 'add_links_themenu');
 add_action('acf / register_fields', 'my_register_fields');
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 add_action('acf/init', 'my_acf_init');
-add_filter( 'excerpt_more', 'custom_excerpt_more' );

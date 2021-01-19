@@ -10820,10 +10820,20 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 /* ====== KevKsar START >>>>>>> */
+/* ============================================= posst recipas > ===================================================*/
+.bgHatching {
+  width: 100%;
+  height: 4rem;
+  position: relative;
+  top: 2rem;
+}
+
 /* ============================================= archive-recipe > ===================================================*/
 /* ====== style bg archive-recipe > */
-.archive-recipe {
+.archiveRecipe {
   background-color: #f5f5f5;
+  padding-top: 5rem;
+  margin-bottom: -3rem;
 }
 
 /* ====== style post-recipe > */
@@ -10994,11 +11004,38 @@ a.text-dark:hover, a.text-dark:focus {
   background-color: #80808000;
 }
 
+/* ===================================== taxonomy-recipe > ======================================= */
+.taxonomyRecipe {
+  background-color: #f5f5f5;
+  padding-top: 5rem;
+  margin-bottom: -3rem;
+}
+
 /* ===================================== single-recipe > ======================================= */
-.section-singleRecipe {
+.singleRecipe {
   padding: 0;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #525252), color-stop(30%, white));
-  background: linear-gradient(180deg, #525252 30%, white 30%);
+}
+
+.topContainer {
+  padding: 0;
+  background: #525252 30%;
+  color: white;
+}
+
+@media (max-width: 767.98px) {
+  .topContainer {
+    padding: 0 1rem;
+  }
+}
+
+.topContainer__titleRecipe {
+  font-size: 46px;
+  font-weight: bold;
+  margin: 3rem 0;
+}
+
+.topContainer__descRecipe {
+  margin-bottom: 2rem;
 }
 
 /* ====== style 4 nav single post > */
@@ -11108,23 +11145,14 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 /* ====== style 4 */
-.titleRecipe {
-  color: white;
-  margin: 3rem 0;
-}
-
-.subtitlesRecipe {
-  font-weight: bold;
-  margin: 2rem;
-}
-
 .additional-info {
   font-weight: bold;
   margin-bottom: 2rem;
 }
 
-.descRecipe {
-  color: white;
+.subtitlesRecipe {
+  font-size: 42px;
+  font-weight: regular;
   margin-bottom: 2rem;
 }
 
@@ -11138,14 +11166,23 @@ a.text-dark:hover, a.text-dark:focus {
 .mainContainer {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "networksIcons ingredients" "     .        preparation";
+      grid-template-areas: "networksIcons ingredients"
+ "     .        preparation";
   padding-right: 96px;
 }
 
 @media (max-width: 767.98px) {
   .mainContainer {
-        grid-template-areas: " ingredients" " preparation" "networksIcons";
-    padding: 0 0.5rem;
+        grid-template-areas: "ingredients"
+ "preparation"
+ "networksIcons";
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .mainContainer {
+    padding: 0 1rem;
   }
 }
 
@@ -11235,6 +11272,149 @@ a.text-dark:hover, a.text-dark:focus {
 .steps p > img {
   width: 100%;
   height: auto;
+}
+
+/* ===================================== latest-updates-recipe > ======================================= */
+/* ====== style 4 section latest-update > */
+.latestRecipe {
+  text-align: center;
+  background-color: #f5f5f5;
+  padding-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.latestRecipe__title {
+  font-size: 46px;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
+.latestRecipe__subTitle {
+  font-size: 42px;
+  font-weight: regular;
+}
+
+/* ====== style 4 cards container > */
+.cardsContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+
+@media (max-width: 991.98px) {
+  .cardsContainer {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .cardsContainer {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .cardsContainer {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+/* ====== style 4 cards > */
+.latestCard {
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.445);
+          box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.445);
+  text-align: left;
+}
+
+.latestCard__image {
+  width: 100%;
+  height: auto;
+}
+
+.latestCard__body {
+  background-color: white;
+  padding: 1rem;
+}
+
+.latestCard__date {
+  text-transform: uppercase;
+  color: #808080;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.latestCard__date-before {
+  width: 0.8rem;
+  margin-right: 0.2rem;
+  vertical-align: middle;
+}
+
+.latestCard__title {
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+}
+
+.latestCard__text {
+  margin-bottom: 1.5rem;
+}
+
+.latestCard .linkRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.latestCard .linkRow__before {
+  width: 50%;
+  border-bottom: 1px dotted black;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-right: 1rem;
+}
+
+.latestCard .linkRow__link {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  color: black;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.latestCard .linkRow__link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: black;
+  opacity: 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.latestCard .linkRow__link:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  opacity: 1;
+}
+
+.latestCard .linkRow__link:hover {
+  color: black;
+  text-decoration: none;
 }
 
 /* <<<<<<<< END KevKsar ====== */
@@ -11475,7 +11655,7 @@ a.text-dark:hover, a.text-dark:focus {
 .rest-info-main {
   width: 100%;
   height: 100vh;
-  background-color: #2D2D2D;
+  background-color: #2d2d2d;
   color: #ffff;
   padding-left: 10%;
   padding-right: 10%;
@@ -11504,7 +11684,8 @@ a.text-dark:hover, a.text-dark:focus {
           justify-content: space-between;
 }
 
-.rest-info-main-box h3, .rest-info-main-box h5 {
+.rest-info-main-box h3,
+.rest-info-main-box h5 {
   font-weight: 900;
   margin-bottom: 20px;
 }
@@ -11521,34 +11702,6 @@ a.text-dark:hover, a.text-dark:focus {
 
 .network {
   width: 212px;
-}
-
-.network-icon {
-  width: 35px;
-  height: 35px;
-  border-radius: 9999px;
-  margin: 10px 10px 10px 0px;
-  text-align: center;
-}
-
-.network-icon:nth-child(1) {
-  background-color: #474A9A;
-}
-
-.network-icon:nth-child(2) {
-  background-color: #4285F4;
-}
-
-.network-icon:nth-child(3) {
-  background-color: #F1005C;
-}
-
-.network-icon:nth-child(4) {
-  background-color: #156CB6;
-}
-
-.network-icon img {
-  padding-bottom: 5px;
 }
 
 .opening {
