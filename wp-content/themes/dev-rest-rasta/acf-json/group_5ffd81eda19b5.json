@@ -28,7 +28,7 @@
             "key": "field_5ffd8239c0be9",
             "label": "Image",
             "name": "image",
-            "type": "image",
+            "type": "image_crop",
             "instructions": "Add a presentation image.",
             "required": 1,
             "conditional_logic": 0,
@@ -37,16 +37,54 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "url",
+            "crop_type": "hard",
+            "target_size": "thumbnail",
+            "width": "",
+            "height": "",
             "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
+            "force_crop": "no",
+            "save_in_media_library": "yes",
+            "retina_mode": "no",
+            "save_format": "object",
+            "library": "all"
+        },
+        {
+            "key": "field_6004686a151f9",
+            "label": "Description",
+            "name": "description",
+            "type": "wysiwyg",
+            "instructions": "Add the description.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_60058ab4849fe",
+            "label": "Infos recipe",
+            "name": "infos_recipe",
+            "type": "text",
+            "instructions": "Add additional infos",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "For 4 people - preparation 30 min :",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5ffd829dc0bea",
@@ -88,8 +126,8 @@
             "sub_fields": [
                 {
                     "key": "field_5ffd838fc0bec",
-                    "label": "Step",
-                    "name": "step",
+                    "label": "Steps",
+                    "name": "steps",
                     "type": "wysiwyg",
                     "instructions": "Add step.",
                     "required": 0,
@@ -101,9 +139,33 @@
                     },
                     "default_value": "",
                     "tabs": "visual",
-                    "toolbar": "full",
+                    "toolbar": "basic",
                     "media_upload": 1,
                     "delay": 0
+                },
+                {
+                    "key": "field_6005d2f57b5bb",
+                    "label": "Step illustration",
+                    "name": "step_illustration",
+                    "type": "image_crop",
+                    "instructions": "Add a step illustration",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "crop_type": "hard",
+                    "target_size": "step-recipe-img",
+                    "width": "",
+                    "height": "",
+                    "preview_size": "medium",
+                    "force_crop": "no",
+                    "save_in_media_library": "yes",
+                    "retina_mode": "no",
+                    "save_format": "object",
+                    "library": "all"
                 }
             ]
         }
@@ -125,5 +187,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1610725666
+    "modified": 1610994725
 }
