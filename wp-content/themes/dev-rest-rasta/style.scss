@@ -41,144 +41,328 @@ Version: 1.0
 }
 
 * {
-  font-family: "Poppins";
+   font-family: "Poppins";
 }
 
 
 // font size in page
 @mixin font-title-page() {
-  font-size: 42px;
-  font-weight: regular;
+   font-size: 42px;
+   font-weight: regular;
 }
 @mixin font-subtitle-page() {
-  font-size: 42px;
-  font-weight: bold;
+   font-size: 42px;
+   font-weight: bold;
 }
 // font size in top
 @mixin font-title-top() {
-  font-size: 100px;
-  font-weight: semi-bold;
+   font-size: 100px;
+   font-weight: semi-bold;
 }
 @mixin font-subtitle-top() {
-  font-size: 60px;
-  font-weight: regular;
+   font-size: 60px;
+   font-weight: regular;
 }
 // font size in menu
 @mixin font-title-menu() {
-  font-size: 16px;
-  font-weight: light;
+   font-size: 16px;
+   font-weight: light;
 }
 // font size in nav
 @mixin font-nav() {
-  font-size: 16px;
-  font-weight: bold;
+   font-size: 16px;
+   font-weight: bold;
 }
 
-/* ============= archive-recipe > */
-$color-secondary:#808080;
 
-@mixin underline-animate {
-  &::after {
-    content: "";
-    display: block;
-    width: 102%;
-    height: 1px;
-    background: black;
-    transform: scale(0);
-    transition: transform 0.3s ease-in-out;
-  }
-  &:hover::after {
-    transform: scale(1);
-  }
-}
+
+/* ====== KevKsar START >>>>>>> */
+
+/* ============================================= archive-recipe > ===================================================*/
+$color-secondary: #808080;
 @mixin box-shadow-posts {
-  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.445) ;
+   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.445);
 }
-
+@mixin underline-animate($color: black) {
+   &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: $color;
+      opacity: 0;
+      transform: scaleX(0);
+      transition: all 0.3s ease-in-out;
+   }
+   &:hover::after {
+      transform: scaleX(1);
+      opacity: 1;
+   }
+}
+@mixin hover-tax-nav($color: black) {
+   transition: all 0.3s ease-in-out;
+   @include underline-animate($color);
+   &:hover {
+      color: $color;
+      text-decoration: none;
+   }
+}
+@mixin hover-networks-icons() {
+   transition: all 0.3s ease-in-out;
+   transform: scale(1);
+   &:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.445);
+   }
+}
 /* ====== style bg archive-recipe > */
 .archive-recipe {
-  background-color: #f5f5f5;
+   background-color: #f5f5f5;
 }
-
-/* ====== style card-recipe > */
-.post-recipe{
-  @include box-shadow-posts();
-  margin-bottom: 2.5rem;
+/* ====== style post-recipe > */
+.postRecipe {
+   @include box-shadow-posts();
+   margin-bottom: 2.5rem;
 }
-.post-terms {
-  display: inline-block;
-  & a {
-    @include font-nav();
-    color: black;
-    &:hover {
-      text-decoration: none;
-    }
-    @include underline-animate();
-  }
+.postRecipeBody {
+   &__date-before {
+      width: 0.8rem;
+      margin-right: 0.2rem;
+      vertical-align: middle;
+   }
+   &__date {
+      text-transform: uppercase;
+      color: $color-secondary;
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+   }
+   &__title {
+      font-weight: bold;
+      margin-bottom: 1.2rem;
+   }
+   &__text {
+      margin-bottom: 1.5rem;
+   }
+   &__terms {
+      display: inline-block;
+      margin-bottom: 1rem;
+      @include hover-tax-nav();
+      > a {
+         @include font-nav();
+         text-decoration: none;
+         color: black;
+      }
+   }
 }
-.post-title{
-  font-weight: bold;
-}
-.post-date{
-  text-transform: uppercase;
-  color: $color-secondary;
-  font-size: 12px;
-}
-.post-date-before{
-  width: 12px;
-  margin-right: 5px;
-}
-
 /* ====== style nav-taxonomy > */
-.nav-taxonomy {
-  margin-top: 2rem;
-  @include font-nav();
-  color: black;
-  &:hover {
-    color: black;
-  }
-  @include underline-animate();
-}
-.terms-before {
-  width: 16px;
-  margin-right: 5px;
-  vertical-align: baseline;
+.navTaxonomy {
+   display: flex;
+   padding-left: 0;
+   margin-top: 3rem;
+   &__item{
+      list-style-type: none;
+      margin-right: 1rem;
+      @include hover-tax-nav();
+   }
+   &__link{
+      color: black;
+      @include font-nav();
+      &:hover{
+         text-decoration: none;
+         color: black;
+      }
+      &--active{
+         border-bottom: 1px solid black;
+      }
+   }
+   &__before{
+      width: 1rem;
+      margin-right: 0.3rem;
+      vertical-align: baseline;   
+   }
 }
 
 /* ====== style 4 pagination > */
-.container-pagination{
-  margin-bottom: 2rem;
+.container-pagination {
+   margin-bottom: 2rem;
 }
 .page-numbers {
-  width: 25px;
-  height: 25px;
-  margin: 5px;
-  border: 0.5px solid $color-secondary;
-  border-radius: 5px;
-  text-align: center;
-  background-color: #f5f5f5;
-  color: $color-secondary;
-  transition: all 0.2s;
-  &:hover {
-    text-decoration: none;
-    color: darken($color-secondary, 20);
-    font-weight: bold;
-    background-color: white;
-  }
-  &.current {
-    color: darken($color-secondary, 20);
-    font-weight: bold;
-    background-color: white;
-  }
-  &.next {
-    color: $color-secondary;
-    border: 0;
-    background-color: #80808000;
-  }
-  &.prev {
-    @extend .next;
-  }
+   width: 25px;
+   height: 25px;
+   margin: 0.3rem;
+   border: 0.5px solid $color-secondary;
+   border-radius: 5px;
+   text-align: center;
+   background-color: #f5f5f5;
+   color: $color-secondary;
+   transform: scale(1);
+   transition: all 0.3s linear;
+   &:hover {
+      text-decoration: none;
+      color: darken($color-secondary, 20);
+      background-color: white;
+   }
+   &.current {
+      color: darken($color-secondary, 20);
+      font-weight: bold;
+      background-color: white;
+      transform: scale(1.1);
+   }
+   &.next {
+      color: $color-secondary;
+      border: 0;
+      background-color: #80808000;
+   }
+   &.prev {
+      @extend .next;
+   }
 }
+
+/* ===================================== single-recipe > ======================================= */
+.section-singleRecipe {
+   padding: 0;
+   background: linear-gradient(180deg, rgb(82, 82, 82) 30%, rgb(255, 255, 255) 30%);  /////////RMV BG > ITS JST HERE 4 DEV//////////
+}
+/* ====== style 4 nav single post > */
+.navSingle {
+   display: grid;
+   grid-template-columns: auto auto 1fr auto;
+   padding-top: 3rem;
+   color: white;
+   font-size: 14px;
+   font-weight: bold;
+   @include media-breakpoint-down(xs) {
+      grid-template-rows: 1fr auto;
+   }
+   &__return {
+      @include hover-tax-nav(white);
+      &:visited {
+         color: white;
+      }
+      @include media-breakpoint-down(xs) {
+         grid-row: 1/2;
+         margin-bottom: 2rem;
+      }
+   }
+   &__date {
+      text-transform: uppercase;
+      @include media-breakpoint-down(xs) {
+         grid-row: 2/3;
+      }
+   }
+   &__separator {
+      margin: 0 1rem;
+      color: $color-secondary;
+      @include media-breakpoint-down(xs) {
+         grid-column: 2/3;
+         grid-row: 2/3;
+      }
+   }
+   &__term {
+      text-align: end;
+      @extend .navSingle__return;
+      > a {
+         text-decoration: none;
+         color: white;
+      }
+      @include media-breakpoint-down(xs) {
+         grid-row: 2/3;
+      }
+   }
+}
+/* ====== style 4 */
+.titleRecipe {
+   color: white;
+   margin: 3rem 0;
+}
+.subtitlesRecipe {
+   font-weight: bold;
+   margin: 2rem;
+}
+.additional-info {
+   font-weight: bold;
+   margin-bottom: 2rem;
+}
+.descRecipe {
+   color: white;
+   margin-bottom: 2rem;
+}
+.imgSingleRecipe {
+   width: 100%;
+   height: auto;
+   margin-bottom: 1rem;
+}
+/* ====== style 4 main content (ingredients & descriptionn) > */
+.mainContainer {
+   display: grid;
+   grid-template-areas:
+      "networksIcons ingredients"
+      "     .        preparation";
+   padding-right: 96px;
+   @include media-breakpoint-down(sm) {
+      grid-template-areas:
+         " ingredients"
+         " preparation"
+         "networksIcons";
+      padding: 0 0.5rem;
+   }
+}
+.sectionIngredients {
+   grid-area: ingredients;
+   ul > li {
+      line-height: 2rem;
+      padding-left: 3rem;
+      @include media-breakpoint-down(md) {
+         padding-left: 1.5rem;
+         line-height: 1.5rem;
+      }
+      @include media-breakpoint-down(sm) {
+         padding-left: 0rem;
+      }
+   }
+}
+.sectionPreparation {
+   grid-area: preparation;
+}
+.networkSingleRecipe {
+   grid-area: networksIcons;
+   margin-top: 2rem;
+   margin-right: 3rem;
+   @include media-breakpoint-down(sm) {
+      display: flex;
+      justify-self: end;
+      margin: 0;
+   }
+}
+.steps {
+   display: flex;
+   &__counter {
+      position: absolute;
+      margin-left: -2.2rem;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+      border-radius: 50%;
+      color: white;
+      font-weight: bold;
+      @include media-breakpoint-down(sm) {
+         position: relative;
+         margin: 0 1rem 0 0;
+         flex-shrink: 0;
+      }
+   }
+   p > img {
+      width: 100%;
+      height: auto;
+      @include media-breakpoint-down(xs) {
+      }
+   }
+}
+
+/* <<<<<<<< END KevKsar ====== */
 
 
 
@@ -186,10 +370,21 @@ $color-secondary:#808080;
 ///////// next page >
 
 .page-title {
-  font-size: 46px;
-  font-weight: bold;
-  text-transform: uppercase;
+   font-size: 46px;
+   font-weight: bold;
+   text-transform: uppercase;
 }
+
+.page-subtitles {
+   font-size: 42px;
+   font-weight: normal;
+}
+
+.container-dish {
+   padding: 0.2rem;
+   padding-left: 2rem;
+   padding-right: 2rem;
+  
 .page-subtitles{
  font-size: 42px;
  font-weight: regular;
@@ -205,128 +400,128 @@ $color-secondary:#808080;
 }
 
 .flex-menu-section {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: normal;
-  align-content: normal;
-  margin-bottom: 1rem;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   justify-content: center;
+   align-items: normal;
+   align-content: normal;
+   margin-bottom: 1rem;
 }
 
 .flex-menu-section-items:nth-child(1) {
-  display: block;
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  align-self: auto;
-  order: 0;
-  border-bottom: solid 3px black;
-  text-align: center;
-  width: 20%;
-  padding-bottom: 0.3rem;
-  margin-top: 4rem;
-  text-transform: uppercase;
-  //font-size: 600;
-  font-size: 16px !important;
-  font-weight: medium;
+   display: block;
+   flex-grow: 0;
+   flex-shrink: 1;
+   flex-basis: auto;
+   align-self: auto;
+   order: 0;
+   border-bottom: solid 3px black;
+   text-align: center;
+   width: 20%;
+   padding-bottom: 0.3rem;
+   margin-top: 4rem;
+   text-transform: uppercase;
+   //font-size: 600;
+   font-size: 16px !important;
+   font-weight: medium;
 }
 
 .flex-menu-dish {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: normal;
-  align-content: normal;
-  padding-top: 0.3rem;
-  padding-bottom: 0.3rem;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   justify-content: space-between;
+   align-items: normal;
+   align-content: normal;
+   padding-top: 0.3rem;
+   padding-bottom: 0.3rem;
 }
 
 .flex-menu-dish-items:nth-child(1) {
-  display: block;
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  align-self: auto;
-  order: 0;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding-right: 0.3rem;
+   display: block;
+   flex-grow: 0;
+   flex-shrink: 1;
+   flex-basis: auto;
+   align-self: auto;
+   order: 0;
+   text-transform: uppercase;
+   font-weight: bold;
+   padding-right: 0.3rem;
 }
 
 .flex-menu-dish-items:nth-child(2) {
-  display: block;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: auto;
-  align-self: auto;
-  order: 0;
-  border-bottom: dotted black 2px;
-  margin-bottom: 0.3rem;
+   display: block;
+   flex-grow: 1;
+   flex-shrink: 1;
+   flex-basis: auto;
+   align-self: auto;
+   order: 0;
+   border-bottom: dotted black 2px;
+   margin-bottom: 0.3rem;
 }
 
 .flex-menu-dish-items:nth-child(3) {
-  display: block;
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  align-self: auto;
-  order: 0;
-  font-weight: bold;
-  padding-left: 0.5rem;
-  margin-right: 0.5rem;
-  font-size: 20px;
+   display: block;
+   flex-grow: 0;
+   flex-shrink: 1;
+   flex-basis: auto;
+   align-self: auto;
+   order: 0;
+   font-weight: bold;
+   padding-left: 0.5rem;
+   margin-right: 0.5rem;
+   font-size: 20px;
 }
 
 .flex-menu-dish-down {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: normal;
-  align-content: normal;
-  padding-bottom: 1rem;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: nowrap;
+   justify-content: space-between;
+   align-items: normal;
+   align-content: normal;
+   padding-bottom: 1rem;
 }
 
 .flex-menu-dish-items-down:nth-child(1) {
-  display: block;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: auto;
-  align-self: auto;
-  order: 0;
-  width: 80%;
-  text-align: justify;
-  color: #727272 !important;
+   display: block;
+   flex-grow: 1;
+   flex-shrink: 1;
+   flex-basis: auto;
+   align-self: auto;
+   order: 0;
+   width: 80%;
+   text-align: justify;
+   color: #727272 !important;
 }
 
 .flex-menu-dish-items-down:nth-child(2) {
-  display: block;
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  align-self: auto;
-  order: 0;
-  width: 20%;
+   display: block;
+   flex-grow: 0;
+   flex-shrink: 1;
+   flex-basis: auto;
+   align-self: auto;
+   order: 0;
+   width: 20%;
 }
 
 .chef-select-label {
-  display: inline-block;
-  background-color: #e3c033;
-  color: white;
-  margin-right: auto;
-  font-size: 0.8rem;
-  margin: 0 !important;
-  padding: 0.2rem;
-  margin-top: 0.2rem !important;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+   display: inline-block;
+   background-color: #e3c033;
+   color: white;
+   margin-right: auto;
+   font-size: 0.8rem;
+   margin: 0 !important;
+   padding: 0.2rem;
+   margin-top: 0.2rem !important;
+   padding-left: 1.5rem;
+   padding-right: 1.5rem;
 }
 .chef-select-cont {
-  border: #e3c033 2px solid;
-  margin: 0 !important;
-  margin-bottom: 0.2rem;
+   border: #e3c033 2px solid;
+   margin: 0 !important;
+   margin-bottom: 0.2rem;
 }
 
 // =========== END THE MENU ===========
@@ -462,6 +657,30 @@ $color-secondary:#808080;
 }
 
 
+// ==== NETWORKS ICONS ====
+.network-icon {
+   width: 35px;
+   height: 35px;
+   border-radius: 50%;
+   margin: 10px 10px 10px 0px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   @include hover-networks-icons();
+
+   &:nth-child(1) {
+      background-color: #474a9a;
+   }
+   &:nth-child(2) {
+      background-color: #4285f4;
+   }
+   &:nth-child(3) {
+      background-color: #f1005c;
+   }
+   &:nth-child(4) {
+      background-color: #156cb6;
+   }
+}
 // =========== END dev-rest-infos ===========
 
 @import "css/front.scss"; 

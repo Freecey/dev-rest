@@ -16,7 +16,7 @@ $bg-gris : #292929;
     .cont-banner{
         display: flex;
         color: #ffffff !important;
-        max-width: 1670px;
+        max-width: 1410px;
         margin-left: auto;
         margin-right: auto;
         .font-title-top{
@@ -135,6 +135,15 @@ $bg-gris : #292929;
 
 .our-menu{
     max-width: 1410px;
+    .page-subtitles{
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+    }
+    .intro-b-txt{
+        padding-top: 4rem;
+        padding-bottom: 6rem;
+        line-height : 2rem;
+    }
 }
 
 
@@ -159,11 +168,24 @@ $bg-gris : #292929;
     .test-text{
         align-content: space-around;
     }
+    .test-block-text{
+        max-height: 600px !important;
+        min-height: 500px !important;
+        .text-comment{
+            margin-top: 1rem;
+            margin-bottom: 7rem;
+            font-weight: bold;
+            font-size: 1.2rem;
+
+        }
+    }
     .test-quote{
         background-image: url('assets/images/double-quote.png');
         background-size:100% 100%;
         height: 50px;
         width: 50px;
+        margin-top: 4rem;
+        margin-bottom: 7rem;
     }
     .test-img{
         position: initial;
@@ -187,6 +209,7 @@ $bg-gris : #292929;
     height: 73px;
     z-index: 99 !important;
     transform: rotate(180deg);
+    position: relative;
 }
 
 
