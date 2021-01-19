@@ -551,19 +551,34 @@ $color-secondary: #808080;
 }
 // =========== END GMAPS ===========
 
+// =========== START dev-rest-infos ===========
 
 .rest-info-main-box {
   padding-top: 30px;
   padding-bottom: 30px;
   border-bottom: #ffff;
   justify-content: space-between;
+    h3, h5{
+    font-weight: 900;
+    margin-bottom: 20px;
+  }
 }
 
-.rest-description {
-  font-size: 10px;
+.rest_description, 
+.opening-days-and-hours,
+.array {
+  font-size: 12px;
 }
+
+.rest_description {
+  padding-bottom: 1.5rem;
+} 
 
 // ==== NETWORKS ICONS ====
+.network {
+  width: 212px;
+}
+
 .network-icon {
   width: 35px;
   height: 35px;
@@ -584,24 +599,38 @@ $color-secondary: #808080;
       background-color: #156CB6;
     }
 
-    a {
-      line-height: 33px;
+    img {
+      padding-bottom: 5px;
     }
-
 }
 
 // ==== OPENING ====
 .opening {
   margin-bottom: 5px;
+  display: flex;
 }
 
 .opening img {
   margin-right: 20px;
+  width: 13px;
 }
 
-// .opening-line {
-//   width: 100%;
-// }
+.opening-line {
+  height: 2px;
+  width: auto;
+  border-top: 2px solid #fff;
+  flex-grow: 5;
+  border-radius:50%;
+  margin: 0 7px 0 7px;
+  align-self: center;
+}
+
+.opening-days-and-hours {
+  width: 100%;
+}
+
+
+
 
 // ==== CONTACT US ====
 
@@ -619,15 +648,14 @@ $color-secondary: #808080;
 
 // ==== INSTAGRAM IMAGES ====
 
-.instagram-images {
-  width: 192px;
-  height: 135px;
+.instagram-galery {
+  width: 240px;
+  height: 165px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-// =========== START dev-rest-infos ===========
 
 // ==== NETWORKS ICONS ====
 .network-icon {
