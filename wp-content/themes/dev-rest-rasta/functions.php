@@ -1,5 +1,7 @@
 <?php
 
+$GOOGLEAPIKEY = 'ADD_KEY_HERE'; //${{ secrets.GOOGLEAPI }}
+
 function devrest_supports()
 {
     add_theme_support('title-tag');
@@ -21,7 +23,7 @@ function devrest_assets()
     wp_enqueue_style('normalize');
     wp_enqueue_style('Dev_Rest');
     if( is_singular( 'restaurants' )) {
-        wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?key=${{ secrets.GOOGLEAPI }}', array(), '3', true );
+        wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?key=ADD_KEY_HERE', array(), '3', true );
         wp_enqueue_script( 'map', get_template_directory_uri() . '/js/map.js', array('google-map', 'jquery'), '0.1', true );
     };
 }
@@ -104,12 +106,12 @@ function add_links_themenu()
 }
 
 function my_acf_google_map_api( $api ){
-	$api['key'] = '${{ secrets.GOOGLEAPI }}';
+	$api['key'] = 'ADD_KEY_HERE';
 	return $api;
 }
 
 function my_acf_init() {
-	acf_update_setting('google_api_key', '${{ secrets.GOOGLEAPI }}');
+	acf_update_setting('google_api_key', 'ADD_KEY_HERE');
 }
 
 
