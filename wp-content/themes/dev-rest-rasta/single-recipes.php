@@ -1,15 +1,17 @@
 <?php get_header(); ?>
 
-<div class="container section-singleRecipe col-sm-12 col-md-10 col-lg-7">
+<div class="container singleRecipe col-sm-12 col-md-10 col-lg-7">
    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-         <div class="navSingle">
-            <a href="<?php echo get_post_type_archive_link('recipes');?>" class="navSingle__return"><span>&#8592;</span> Return</a>
-            <div class="navSingle__separator">|</div>
-            <p class="navSingle__date"><?php the_date(); ?></p>
-            <div class="navSingle__term navSingle__link"><?php the_terms(get_the_ID(), 'category-recipe', '<img class="navTaxonomy__before" src="/wp-content/themes/dev-rest-rasta/assets/svg/cutelry-white.svg" alt="">', ''); ?></div>
+         <div class="topContainer">
+            <div class="navSingle">
+               <a href="<?php echo get_post_type_archive_link('recipes'); ?>" class="navSingle__return"><span>&#8592;</span> Return</a>
+               <div class="navSingle__separator">|</div>
+               <p class="navSingle__date"><?php the_date(); ?></p>
+               <div class="navSingle__term navSingle__link"><?php the_terms(get_the_ID(), 'category-recipe', '<img class="navTaxonomy__before" src="/wp-content/themes/dev-rest-rasta/assets/svg/cutelry-white.svg" alt="">', ''); ?></div>
+            </div>
+            <h2 class="topContainer__titleRecipe"><?php the_title(); ?></h2>
+            <div class="topContainer__descRecipe"><?php echo get_field('description'); ?></div>
          </div>
-         <h2 class="titleRecipe"><?php the_title(); ?></h2>
-         <div class="descRecipe"><?php echo get_field('description'); ?></div>
          <?php
          $image = get_field('image');
          $size = 'archive-recipe-img';
@@ -18,7 +20,7 @@
          <?php
          } ?>
          <div class="mainContainer">
-            <div class="network networkSingleRecipe">
+            <div class="networkSingleRecipe">
                <div class="network-icon btn">
                   <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/facebook.svg" alt=""></a>
                </div>
@@ -62,5 +64,9 @@
    <?php endwhile;
    endif; ?>
 </div>
+<img class="bgHatching" src="/wp-content/themes/dev-rest-rasta/assets/images/hachures-blanches.png" alt="">
+
+
+<?php get_template_part('parts/latest-updates-recipes'); ?>
 
 <?php get_footer(); ?>
