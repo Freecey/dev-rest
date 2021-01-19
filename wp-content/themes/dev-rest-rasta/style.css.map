@@ -90,7 +90,9 @@
         "ressources/scss/utilities/_stretched-link.scss",
         "ressources/scss/utilities/_text.scss",
         "ressources/scss/utilities/_visibility.scss",
-        "ressources/scss/_print.scss"
+        "ressources/scss/_print.scss",
+        "css/front.scss"
+
     ],
     "names": [],
     "file": "style.css"
