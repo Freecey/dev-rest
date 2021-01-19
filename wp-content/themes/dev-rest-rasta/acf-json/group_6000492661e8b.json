@@ -128,8 +128,8 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "full",
+                    "tabs": "visual",
+                    "toolbar": "basic",
                     "media_upload": 0,
                     "delay": 0
                 },
@@ -149,8 +149,8 @@
                     "return_format": "array",
                     "preview_size": "thumbnail",
                     "library": "all",
-                    "min_width": "",
-                    "min_height": "",
+                    "min_width": 820,
+                    "min_height": 820,
                     "min_size": "",
                     "max_width": "",
                     "max_height": "",
@@ -344,5 +344,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1610727294
+    "modified": 1611056889
 }
