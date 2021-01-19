@@ -47,6 +47,11 @@
   color: white !important;
 }
 
+.banner-top .cont-banner .banner-link .banner-link-a {
+  text-decoration: none !important;
+  color: white !important;
+}
+
 .banner-top-hash {
   background-image: url(assets/images/hachures-blanches.png);
   width: 100%;
@@ -111,9 +116,14 @@
   max-width: 1410px;
 }
 
+.intro-part .img-block-intro img {
+  max-width: 100%;
+  height: auto;
+}
+
 .intro-part .intro-block {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   -webkit-box-shadow: 5px 10px 5px #D5D5D5;
           box-shadow: 5px 10px 5px #D5D5D5;
   margin-left: -15rem;
@@ -165,6 +175,14 @@
     margin-left: 0 !important;
   }
   .intro-block .intro-block-pad {
+    padding: 4rem 2rem !important;
+  }
+  .intro-block-left {
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    margin-right: 0 !important;
+  }
+  .intro-block-left .intro-block-pad {
     padding: 4rem 2rem !important;
   }
 }
@@ -225,7 +243,100 @@
   position: relative;
 }
 
-.cont-frontpage {
-  background-color: #E9E9E9 !important;
+.ZZZcont-restautants {
+  background: url("assets/images/burger-party.png") #f5f5f538 !important;
+}
+
+.cont-restautants {
+  margin-top: 6rem;
+  padding-top: 6rem;
+  margin-bottom: 6rem;
+  padding-bottom: 6rem;
+  position: relative;
+  background: #F5F5F5;
+  overflow: hidden;
+}
+
+.cont-restautants .o-rest-part {
+  margin-top: 6rem;
+  max-width: 1410px;
+}
+
+.cont-restautants .o-rest-part .img-block {
+  z-index: 2;
+}
+
+.cont-restautants .o-rest-part .img-block img {
+  max-width: 100%;
+  height: auto;
+}
+
+.cont-restautants .o-rest-part .intro-block {
+  position: relative;
+  z-index: 3;
+  -webkit-box-shadow: 5px 10px 5px #D5D5D5;
+          box-shadow: 5px 10px 5px #D5D5D5;
+  margin-left: -15rem;
+  background-color: white !important;
+}
+
+.cont-restautants .o-rest-part .intro-block .intro-block-pad {
+  padding: 7rem 5rem;
+}
+
+.cont-restautants .o-rest-part .intro-block .intro-block-pad .intro-b-st2 {
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.cont-restautants .o-rest-part .intro-block .intro-block-pad .intro-b-txt {
+  padding: 1.5em 0;
+}
+
+.cont-restautants .o-rest-part .intro-block .intro-block-pad .intro-b-s-subtitle {
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.cont-restautants .o-rest-part .intro-block-left {
+  position: relative;
+  z-index: 3;
+  -webkit-box-shadow: 5px 10px 5px #D5D5D5;
+          box-shadow: 5px 10px 5px #D5D5D5;
+  margin-right: -15rem;
+  background-color: white !important;
+}
+
+.cont-restautants .o-rest-part .intro-block-left .intro-block-pad {
+  padding: 7rem 5rem;
+}
+
+.cont-restautants .o-rest-part .intro-block-left .intro-block-pad .intro-b-st2 {
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.cont-restautants .o-rest-part .intro-block-left .intro-block-pad .intro-b-txt {
+  padding: 1.5em 0;
+}
+
+.cont-restautants .o-rest-part .intro-block-left .intro-block-pad .intro-b-s-subtitle {
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.cont-restautants:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.2;
+  background-image: url("assets/images/burger-party.png");
 }
 /*# sourceMappingURL=front.css.map */

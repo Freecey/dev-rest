@@ -16,8 +16,7 @@ if (have_rows('banner_top')) :
           <div class="banner-link">
             <div class="link-barre"></div>
             <div class="link-text">
-            <?php $banlink = get_sub_field('banner_link') ; ?>
-              <a class="banner-link-a" href="<?= $banlink['url']; ?>" class=""><?= $banlink['title']; ?></a>
+              <a href="the-menu/" class="">Check our menu</a>
             </div>
           </div>
         </div>
@@ -84,8 +83,8 @@ if (have_rows('intro')) :
 ?>
     <div class="intro-part mx-auto">
       <div class="row">
-        <div class="col-12 col-lg-7 img-block-intro">
-          <img src="<?= $intro_img['sizes']["frontimg"]; ?>" alt="The chef">
+        <div class="col-12 col-lg-7">
+          <img src="<?= $intro_img['url']; ?>" alt="The chef">
         </div>
         <div class="col-12 col-lg-5 my-auto">
           <div class="intro-block">
@@ -120,11 +119,11 @@ endif; ?>
 
 
 <!-- START RESTAURANTS PART -->
-<div class="cont-restautants">
+<div class="cont-frontpage">
   <?php if (have_rows('our_restaurants')) : while (have_rows('our_restaurants')) : the_row(); ?>
 
-      <div class="page-subtitles text-center"><?= get_sub_field('title'); ?></div>
-      <div class="page-title text-center"><?= get_sub_field('subtitle'); ?></div>
+      <div class="page-subtitles"><?= get_sub_field('title'); ?></div>
+      <div class="page-title"><?= get_sub_field('subtitle'); ?></div>
 
       <?php $query = new WP_Query([
         'post_type' => 'restaurants',
@@ -149,52 +148,28 @@ endif; ?>
             <?php if ($row_i === 1) :
 
 
-              // echo ' YOLOOOOO : ' .  $testcount; 
-            ?>
+              echo ' YOLOOOOO : ' .  $testcount; ?>
 
-              <?php if ($testcount % 2 == 0) : ?>
-                <div class="o-rest-part mx-auto">
-                  <div class="row">
-                    <div class="col-12 col-lg-7 img-block">
-                      <img src="<?= $rest_prez_img['sizes']["frontimg"]; ?>" alt="Restaurants picture">
-                    </div>
-                    <div class="col-12 col-lg-5 my-auto text-center">
-                      <div class="intro-block">
-                        <div class="intro-block-pad">
-                          <div class="page-subtitles"><?= get_sub_field('restaurant_presentation_block_subtitle'); ?></div>
-                          <div class="page-title"><?= get_sub_field('restaurant_presentation_block_title'); ?></div>
-                          <div class="intro-b-txt"><?= get_sub_field('restaurant_presentation_block_wysiwig'); ?> </div>
-                          <div class="'o-menu-btn-sect">
-                            <a href="<?php the_permalink(); ?>" class="btn btn-dark">More infos</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+
+              <div class="intro-part mx-auto">
+                <div class="row">
+                  <div class="col-12 col-lg-7">
+                    <img src="<?= $rest_prez_img['sizes']["rest700"]; ?>" alt="Restaurants picture">
                   </div>
-                </div>
-              <?php else :  ?>
-                <div class="o-rest-part mx-auto">
-                  <div class="row">
-
-                    <div class="col-12 col-lg-5 my-auto order-2 order-lg-1">
-                      <div class="intro-block-left">
-                        <div class="intro-block-pad text-center">
-                          <div class="page-subtitles"><?= get_sub_field('restaurant_presentation_block_subtitle'); ?></div>
-                          <div class="page-title"><?= get_sub_field('restaurant_presentation_block_title'); ?></div>
-                          <div class="intro-b-txt"><?= get_sub_field('restaurant_presentation_block_wysiwig'); ?> </div>
-                          <div class="'o-menu-btn-sect">
-                            <a href="<?php the_permalink(); ?>" class="btn btn-dark">More infos</a>
-                          </div>
-                        </div>
+                  <div class="col-12 col-lg-5 my-auto">
+                    <div class="intro-block">
+                      <div class="intro-block-pad">
+                        <div class="page-subtitles"><?= get_sub_field('restaurant_presentation_block_subtitle'); ?></div>
+                        <div class="page-title"><?= get_sub_field('restaurant_presentation_block_title'); ?></div>
+                        <div class="intro-b-txt"><?= get_sub_field('restaurant_presentation_block_wysiwig'); ?> </div>
                       </div>
                     </div>
-                    <div class="col-12 col-lg-7 img-block order-1 order-lg-2">
-                      <img src="<?= $rest_prez_img['sizes']["frontimg"]; ?>" alt="Restaurants picture">
-                    </div>
+
                   </div>
                 </div>
 
-              <?php endif; ?>
+              </div>
+
 
             <?php $testcount++;
             endif; ?>
