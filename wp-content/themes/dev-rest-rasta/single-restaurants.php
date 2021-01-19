@@ -98,14 +98,96 @@
                     $rest_prez_img = get_sub_field('restaurant_reservation_image'); ?>
 
 
-<div class="text-center page-subtitles my-4"><?php the_sub_field('restaurant_reservation_subtitle'); ?></div>
+                    <div class="text-center page-subtitles my-4"><?php the_sub_field('restaurant_reservation_subtitle'); ?></div>
                     <div class="text-center page-title"><?php the_sub_field('restaurant_reservation_title'); ?></div>
 
-<div class="col-lg-6">
-                    <img src="<?php echo $rest_prez_img['sizes']["rest700"]; ?>" class="card-img" alt="...">
-</div>
+                    <div class="col-lg-6">
+                        <img src="<?php echo $rest_prez_img['sizes']["rest700"]; ?>" class="card-img" alt="...">
+                    </div>
 
-
+                    <div class="col-4">
+                        <!-- <form> -->
+<?= do_shortcode('[contact-form-7 id="446" title="Reserve"]'); ?>
+                            <!-- <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputName">Email</label>
+                                    <input type="text" class="form-control" id="inputName">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputEmail">Email</label>
+                                    <input type="email" class="form-control" id="inputEmail">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputPhone">Phone Number</label>
+                                    <input type="tel" class="form-control" id="inputPhone">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputTable">Table For</label>
+                                    <select id="inputTable" class="form-control">
+                                        <option selected>1 Person</option>
+                                        <option>2 Persons</option>
+                                        <option>3 Persons</option>
+                                        <option>4 Persons</option>
+                                        <option>5 Persons</option>
+                                        <option>6 Persons</option>
+                                        <option>7 Persons</option>
+                                        <option>8 Persons</option>
+                                        <option>More</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label for="inputPlace">Place</label>
+                                    <select id="inputPlace" class="form-control">
+                                        <option selected>Liege</option>
+                                        <option>Namur</option>
+                                        <option>Arlon</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputTime">Select Time</label>
+                                    <select id="inputTime" class="form-control">
+                                        <option selected>12:00 AM</option>
+                                        <option>12:30 AM</option>
+                                        <option>13:00 AM</option>
+                                        <option>13:30 AM</option>
+                                        <option>14:00 AM</option>
+                                        <option>17:30 AM</option>
+                                        <option>18:00 AM</option>
+                                        <option>18:30 AM</option>
+                                        <option>19:00 AM</option>
+                                        <option>19:30 AM</option>
+                                        <option>20:00 AM</option>
+                                        <option>20:30 AM</option>
+                                        <option>21:00 AM</option>
+                                        <option>21:30 AM</option>
+                                        <option>22:00 AM</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputDate">Select Date</label>
+                                    <select id="inputDate" class="form-control">
+                                        <option selected>Choose...</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="YourMessage">Your Message</label>
+                                <textarea class="form-control" id="YourMessage" rows="3"></textarea>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <button type="submit" class="btn btn-primary">RESERVE NOW</button>
+                                </div>
+                            </div> -->
+                        <!-- </form> -->
+                    </div>
 
             <?php endwhile;
             endif; ?>
