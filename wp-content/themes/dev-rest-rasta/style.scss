@@ -90,7 +90,7 @@ nav {
 
 .navigation {
 	display: flex;
-
+	justify-content: center;
 }
 
 .navigation-box {
@@ -99,7 +99,7 @@ nav {
 }
 
 .ecartement {
-	flex-grow: 5;
+	flex-grow: 6;
 }
 
 .nav-restaurant-name {
