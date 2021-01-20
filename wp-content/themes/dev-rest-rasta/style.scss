@@ -76,6 +76,131 @@ Version: 1.0
 
 
 
+
+// ============ NAVBAR START =================
+
+
+nav {
+	display: flex;	
+	position:fixed;
+	height: 70px;
+	width: 100%;
+	background-color: black;	
+}
+
+.navigation {
+	display: flex;
+
+}
+
+.navigation-box {
+	width: 100%;
+	display: flex;
+}
+
+.ecartement {
+	flex-grow: 5;
+}
+
+.nav-restaurant-name {
+	color: #fff;
+	margin: 0;
+	align-self: center;
+}
+
+.logo-menu {
+	position: fixed;
+	align-self: center;
+	right: 20px;
+	width: 30px;
+	//z-index: 200;
+	display: none;
+}
+
+// .liste-nav {
+// 	background-color: black;
+// 	height: auto;
+// 	width: auto;
+// 	display: flex;
+// 	justify-content: center;
+// 	list-style-type: none;
+// 	position: fixed;
+// 	// z-index: 100;
+// }
+
+.liste-nav {
+	list-style-type: none;
+	display: flex;
+	margin-bottom: 0;
+	font-size: 16px;
+	align-items: center;
+		a {
+			text-decoration: none;
+			color: #fff;
+			font-weight: 900;
+		}
+}
+
+.item-nav {
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	
+		a {
+			font-size: 16px;
+			color: #ffff;
+			text-decoration: none;
+			margin: 0 20px;
+		}
+}
+
+.item-nav a::after {
+	content:"";
+	display: block;
+	margin: 0 auto;
+	width: 0%;
+	height: 2px;
+	background-color: #fff;
+	transition: all 0.2s ease-in-out ;
+}
+
+.item-nav a:hover::after {
+	width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+
+    .logo-menu {
+        display: block;
+    }
+    .liste-nav {
+        display: none;
+        flex-direction: column;
+		height: auto;
+    }
+    .liste-nav.active {
+        display: block;
+    }
+    .item-nav {
+		background-color: black;
+		height: 50px;
+		// margin-right: 100px;
+		a {
+			margin: 0;
+		}
+    }
+    .item-nav:nth-child(1){
+        margin-top: 70px;
+    }
+
+}
+
+
+
+
+
+// ============ NAVBAR END =================
+
 /* ====== KevKsar START >>>>>>> */
 
 /* ============================================= archive-recipe > ===================================================*/
@@ -384,6 +509,7 @@ $color-secondary: #808080;
    padding: 0.2rem;
    padding-left: 2rem;
    padding-right: 2rem;
+}
   
 .page-subtitles{
  font-size: 42px;
@@ -553,8 +679,12 @@ $color-secondary: #808080;
 
 // =========== START dev-rest-infos ===========
 
+.super-box {
+	background-color: #292929;
+}
+
 .rest-info-main-box {
-  padding-top: 30px;
+  padding-top: 100px;
   padding-bottom: 30px;
   border-bottom: #ffff;
   justify-content: space-between;
@@ -562,6 +692,10 @@ $color-secondary: #808080;
     font-weight: 900;
     margin-bottom: 20px;
   }
+}
+
+.rest-info-main {
+   background-color: #292929;
 }
 
 .rest_description, 
@@ -577,31 +711,6 @@ $color-secondary: #808080;
 // ==== NETWORKS ICONS ====
 .network {
   width: 212px;
-}
-
-.network-icon {
-  width: 35px;
-  height: 35px;
-  border-radius: 9999px;
-  margin: 10px 10px 10px 0px;
-  text-align: center;
-
-    &:nth-child(1){
-      background-color: #474A9A;
-    }
-    &:nth-child(2) {
-      background-color: #4285F4;
-    }
-    &:nth-child(3) {
-      background-color: #F1005C;
-    }
-    &:nth-child(4) {
-      background-color: #156CB6;
-    }
-
-    img {
-      padding-bottom: 5px;
-    }
 }
 
 // ==== OPENING ====

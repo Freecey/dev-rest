@@ -5,14 +5,14 @@ Template Name: Informations Restaurant
 ?>
 <?php get_header() ?>
 <!-- page-rest-info -->
-<div class="container-fluid p-0">
+<div class="container-fluid p-0 super-box">
 
 <?php
 if (have_rows('infos_footer')) :
   while (have_rows('infos_footer')) : the_row(); 
   $images = get_sub_field('instagram');
 ?>
-        <div class="container-fluid rest-info-main">
+        <div class="container p-0 rest-info-main">
             <div class="row rest-info-main-box">
                 <div class="col-12 col-lg-3 ">
                     <div class="row">
