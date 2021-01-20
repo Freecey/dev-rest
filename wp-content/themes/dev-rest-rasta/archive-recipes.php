@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<?php get_template_part('parts/top-banner'); ?>
+<?php get_template_part('parts/top-banner-archive-recipes');?>
 <img class="bgHatchingTop" src="/wp-content/themes/dev-rest-rasta/assets/images/hachures-grises.png" alt="">
 <section class="archiveRecipe">
     <div class="container">
