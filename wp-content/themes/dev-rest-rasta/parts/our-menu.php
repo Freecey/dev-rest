@@ -1,28 +1,23 @@
+
+
 <?php
 
 
 $args = array(
-  'page_id' => '336'
+    'page_id' => '336'
 );
 // Custom query.
-$query = new WP_Query($args);
-
+$query = new WP_Query( $args );
+ 
 // Check that we have query results.
-if ($query->have_posts()) {
-
-  // Start looping over the query results.
-  while ($query->have_posts()) {
-
-    $query->the_post();
-
-    // Contents of the queried post results go here.
-?>
-
-    <div class="our-menu mx-auto">
-      <div class="row">
-        <?php
-        if (have_rows('our_menu')) :
-          while (have_rows('our_menu')) : the_row();
+if ( $query->have_posts() ) {
+ 
+    // Start looping over the query results.
+    while ( $query->have_posts() ) {
+ 
+        $query->the_post();
+ 
+        // Contents of the queried post results go here.
         ?>
 <div class="container-fluid bg-white-sec">
 <div class="our-menu mx-auto">
@@ -52,27 +47,28 @@ if ($query->have_posts()) {
                   </a>
                   <p><?php echo esc_html($image['caption']); ?></p>
                 </div>
-              <?php endforeach; ?
+              <?php endforeach; ?>
 
-                <?php endif; ?>
+            <?php endif; ?>
 
 
-              </div>
-            </div>
-            <div class="col-12 col-lg-6">
-              <div class="o-menu-txt-block my-auto text-center">
-                <div class="page-subtitles"><?= get_sub_field('subtitle'); ?></div>
-                <div class="page-title"><?= get_sub_field('title'); ?></div>
-                <div class="intro-b-txt"><?= get_sub_field('text'); ?> </div>
-                <div class="'o-menu-btn-sect">
-                  <a href="the-menu/" class="btn btn-dark">View the full menu</a>
-                </div>
-
-              </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="o-menu-txt-block my-auto text-center">
+            <div class="page-subtitles"><?= get_sub_field('subtitle'); ?></div>
+            <div class="page-title"><?= get_sub_field('title'); ?></div>
+            <div class="intro-b-txt"><?= get_sub_field('text'); ?> </div>
+            <div class="'o-menu-btn-sect">
+              <a href="the-menu/" class="btn btn-dark">View the full menu</a>
             </div>
 
-            <?php // var_dump(get_sub_field('images')) ; // RAND 4 IMAGE
-            ?> <br>
+          </div>
+        </div>
+
+        <?php // var_dump(get_sub_field('images')) ; // RAND 4 IMAGE
+        ?> <br>
+
 
     <?php
       endwhile;
@@ -83,10 +79,11 @@ if ($query->have_posts()) {
 </div>
 </div>
 <?php
-  }
 }
-
+ 
+}
+ 
 // Restore original post data.
 wp_reset_postdata();
-
+ 
 ?>
