@@ -136,6 +136,20 @@ add_action('admin_menu', 'add_links_themenu');
 add_action('acf / register_fields', 'my_register_fields');
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 add_action('acf/init', 'my_acf_init');
+add_filter( 'excerpt_more', 'custom_excerpt_more' );
+
+
+
+// filter to change class of the navbar menu
+
+function item_nav($classes) 
+{
+    $classes[] = "item-nav";
+    return $classes;
+}
+
+add_filter('nav_menu_css_class', 'item_nav');
+
 
 
 /*Contact form 7 remove span*/
@@ -146,3 +160,4 @@ add_filter('wpcf7_form_elements', function($content) {
         
     return $content;
 });
+

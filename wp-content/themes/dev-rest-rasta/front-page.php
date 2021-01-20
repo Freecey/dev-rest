@@ -139,6 +139,7 @@ endif; ?>
           <?php
           while (have_rows('restaurant_presentation')) : the_row(); ?>
 
+
             <?php
             $row_i = get_row_index();
             $rest_prez_img = get_sub_field('restaurant_presentation_block_image_');
@@ -280,15 +281,12 @@ endif; ?>
   <script src="http://www.wordpress.lan/wp-content/themes/dev-rest-rasta/js/popper.min.js"></script>
   <script src="http://www.wordpress.lan/wp-content/themes/dev-rest-rasta/js/bootstrap.min.js"></script>
 
-  </div>
+</div>
+
   <!-- END testimony -->
 
 
   <!-- ADD HERE LAST RECIPES PART -->
   <?php get_template_part('parts/latest-updates-recipes'); ?>
-
-
-  <?php get_footer(); ?>
-
 
   <?php get_footer(); ?>
