@@ -1,7 +1,24 @@
 <!-- footer.php -->
 
 
+<div class="sect-space"></div>
 <footer>
+
+
+
+    <!-- <div class="tnp tnp-subscription">
+        <form method="post" action="http://www.wordpress.lan/?na=s">
+
+            <input type="hidden" name="nlang" value="">
+            <div class="tnp-field tnp-field-email"><label for="tnp-email">Your Email Address</label>
+                <input class="tnp-email" type="email" name="ne" value="" required>
+            </div>
+            <div class="tnp-field tnp-field-button"><input class="tnp-submit" type="submit" value="Subscribe">
+            </div>
+        </form>
+    </div>
+    </div> -->
+    <div class="test-top-hash pt-5 mb-n5"></div>
     <?php
 
 
@@ -21,6 +38,30 @@
     ?>
 
             <div class="container-fluid p-0 super-box">
+
+
+            <div class="mx-auto cont-content newslt-bg">
+    <div class="test-top-hash pt-5 mb-n5"></div>
+        <div class="row">
+            <div class="col-md-6 my-auto">
+                <div class="page-title">
+                    JOIN OUR<br>
+                    NEWSLETTER
+                </div>
+            </div>
+            <div class="col-md-6 my-auto">
+                <form class="form-inline" method="post" action="http://www.wordpress.lan/?na=s">
+                    <input type="hidden" name="nlang" value="">
+                    <div class="form-group mx-sm-3 -my2">
+                        <label for="inputSubscribe" class="sr-only">Your Email Address</label>
+                        <input type="email" class="form-control" id="inputSubscribe" name="ne" value="" required placeholder="Your Email Address">
+                    </div>
+                    <input type="submit" class="btn btn-light my-2" value="Subscribe">
+                </form>
+            </div>
+        </div>
+
+    </div>
 
                 <?php
                 if (have_rows('infos_footer')) :

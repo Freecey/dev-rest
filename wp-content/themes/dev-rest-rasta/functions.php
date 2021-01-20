@@ -31,6 +31,10 @@ function devrest_assets()
         wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyA47vijiVRgmG0KOlrFxU98bR66HCWIa-Q', array(), '3', true );
         wp_enqueue_script( 'map', get_template_directory_uri() . '/js/map.js', array('google-map', 'jquery'), '0.1', true );
     };
+    if( is_front_page()) {
+        wp_enqueue_script( 'Popper_min', get_template_directory_uri() . '/js/popper.min.js', array(), '0.1', true );
+        wp_enqueue_script( 'BS_min', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '0.1', true );
+    };
 }
 
 function devrest_init()
