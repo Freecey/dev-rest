@@ -19,7 +19,7 @@ if ( $query->have_posts() ) {
  
         // Contents of the queried post results go here.
         ?>
-
+<div class="container-fluid bg-white-sec">
 <div class="our-menu mx-auto">
   <div class="row">
     <?php
@@ -77,7 +77,7 @@ if ( $query->have_posts() ) {
     endif; ?>
   </div>
 </div>
-
+</div>
 <?php
 }
  
