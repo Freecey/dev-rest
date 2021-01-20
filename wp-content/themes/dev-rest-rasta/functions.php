@@ -16,6 +16,7 @@ function devrest_supports()
     add_image_size('latest-recipes-img', 260, 200, true);
     add_image_size('rest700', 700, 700, true);
     add_image_size('ourmenu280', 280, 280, true);
+    add_image_size('top-banner-img', 1850, 800, true);
 }
 
 function devrest_assets()
@@ -24,9 +25,9 @@ function devrest_assets()
     wp_register_style('Dev_Rest', get_template_directory_uri() . '/style.css');
     wp_enqueue_style('normalize');
     wp_enqueue_style('Dev_Rest');
-    if( is_singular( 'restaurants' )) {
-        wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?key=ADD_KEY_HERE', array(), '3', true );
-        wp_enqueue_script( 'map', get_template_directory_uri() . '/js/map.js', array('google-map', 'jquery'), '0.1', true );
+    if (is_singular('restaurants')) {
+        wp_enqueue_script('google-map', 'https://maps.googleapis.com/maps/api/js?key=ADD_KEY_HERE', array(), '3', true);
+        wp_enqueue_script('map', get_template_directory_uri() . '/js/map.js', array('google-map', 'jquery'), '0.1', true);
     };
 }
 
@@ -56,10 +57,9 @@ function devrest_init()
         'hierarchical' => true,
         'show_admin_column' => true,
         'public' => true,
+        'has_archive' => true,
     ]);
-
     register_post_type('restaurants', [
-
         'label' => 'Restaurants',
         'public' => true,
         'menu_position' => 4,
@@ -110,21 +110,22 @@ function add_links_themenu()
     add_menu_page('restaurant_infos', 'Restaurant infos', 'edit_posts', 'post.php?post=224&action=edit&classic-editor', '', 'dashicons-store', 9);
 }
 
-function my_acf_google_map_api( $api ){
-	$api['key'] = 'ADD_KEY_HERE';
-	return $api;
+function my_acf_google_map_api($api)
+{
+    $api['key'] = 'ADD_KEY_HERE';
+    return $api;
 }
 
-function my_acf_init() {
-	acf_update_setting('google_api_key', 'ADD_KEY_HERE');
+function my_acf_init()
+{
+    acf_update_setting('google_api_key', 'ADD_KEY_HERE');
 }
-
-
 
 function my_register_fields()
 {
     include_once('acf-image-crop / acf-image-crop.php');
 }
+
 
 add_action('init', 'devrest_init');
 add_action('after_setup_theme', 'devrest_supports');

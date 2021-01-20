@@ -1,5 +1,7 @@
 <?php get_header(); ?>
-<section class="taxonomyRecipe">
+<?php get_template_part('parts/top-banner');?>
+<img class="bgHatchingTop" src="/wp-content/themes/dev-rest-rasta/assets/images/hachures-grises.png" alt="">
+<section class="archiveRecipe">
     <div class="container">
         <?php get_template_part('options/nav-archive-recipe'); ?>
         <?php get_template_part('parts/card-recipe'); ?>
