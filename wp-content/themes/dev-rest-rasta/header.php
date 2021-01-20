@@ -21,21 +21,13 @@
 				<li class="item-nav"><a href="#Recipes">Recipes</a></li>
 			</ul>
 			
-		
-			<img src="/wp-content/themes/dev-rest-rasta/assets/svg/bullet-list-67.svg" alt="logo-menu" class="logo-menu">
+
+			<span class="menu-ghost">Menu</span>
+			<img src="/wp-content/themes/dev-rest-rasta/assets/svg/bullet-list-67.svg" alt="logo-menu" class="btn logo-menu" style="width: 60px;">
 		</div>	
 	</nav>
 	
-
-
-
-
-
-
-
-
-
-
+<!-- =========== SCRIPT BURGER-MENU START =============== -->
 
 <script type="text/javascript">
 
@@ -59,7 +51,7 @@ allLinks.forEach(function(item) {
 
 </script>
 
-
+<!--================ SCRIPT BURGER-MENU END ==================== -->
 
 
 

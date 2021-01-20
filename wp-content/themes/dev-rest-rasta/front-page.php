@@ -245,15 +245,11 @@ endif; ?>
   <script src="http://www.wordpress.lan/wp-content/themes/dev-rest-rasta/js/popper.min.js"></script>
   <script src="http://www.wordpress.lan/wp-content/themes/dev-rest-rasta/js/bootstrap.min.js"></script>
 
-
+</div>
   <!-- END testimony -->
 
 
   <!-- ADD HERE LAST RECIPES PART -->
-
-
-
-  <?php get_footer(); ?>
 
 
   <?php get_footer(); ?>
