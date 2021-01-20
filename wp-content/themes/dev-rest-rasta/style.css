@@ -10964,8 +10964,6 @@ nav {
   }
 }
 
-/* ====== KevKsar START >>>>>>> */
-/* ============================================= post recipes > ===================================================*/
 /* ===================================== hero banner > ======================================= */
 /* ====== style 4 hero banner > */
 .heroBanner {
@@ -11420,7 +11418,6 @@ nav {
 @media (max-width: 767.98px) {
   .mainContainer {
     padding: 0 1rem;
-
   }
 }
 
@@ -11610,15 +11607,6 @@ nav {
           justify-content: flex-end;
 }
 
-
-@media (max-width: 767.98px) {
-  .steps__counter {
-    position: relative;
-    margin: 0 1rem 0 0;
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
-  }
-
 .latestCard .linkRow__before {
   width: 50%;
   border-bottom: 1px dotted black;
@@ -11691,6 +11679,10 @@ nav {
   padding: 0.2rem;
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.menu-w {
+  max-width: 900px;
 }
 
 .flex-menu-section {
@@ -11935,8 +11927,7 @@ nav {
           justify-content: space-between;
 }
 
-.rest-info-main-box h3,
-.rest-info-main-box h5 {
+.rest-info-main-box h3, .rest-info-main-box h5 {
   font-weight: 900;
   margin-bottom: 20px;
 }
@@ -12057,7 +12048,6 @@ nav {
   background-color: #156cb6;
 }
 
-
 .under-line {
   width: 100%;
   height: 1px;
@@ -12071,8 +12061,8 @@ nav {
   text-align: center;
   margin-top: 30px;
   color: #f1f1f1;
-  }  
-  
+}
+
 .cont-content {
   max-width: 1410px;
 }
@@ -12230,6 +12220,7 @@ nav {
 
 .our-menu {
   max-width: 1410px;
+  background-color: white !important;
 }
 
 .our-menu .page-subtitles {
@@ -12437,5 +12428,13 @@ nav {
 
 .sect-space-2 {
   padding: 2rem 0rem;
+}
+
+.bg-white-sec {
+  background-color: white !important;
+}
+
+.banner-link-menu {
+  margin-top: 8rem !important;
 }
 /*# sourceMappingURL=style.css.map */
