@@ -1,6 +1,6 @@
 <?php
 
-$GOOGLEAPIKEY = 'ADD_KEY_HERE'; //${{ secrets.GOOGLEAPI }}
+$GOOGLEAPIKEY = 'AIzaSyA47vijiVRgmG0KOlrFxU98bR66HCWIa-Q'; //${{ secrets.GOOGLEAPI }}
 
 function devrest_supports()
 {
@@ -13,9 +13,12 @@ function devrest_supports()
     add_image_size('archive-recipe-img', 665, 350, true);
     add_image_size('single-recipe-img', 765, 350, true);
     add_image_size('step-recipe-img', 650, 275, true);
+    add_image_size('latest-recipes-img', 260, 200, true);
     add_image_size('rest700', 700, 700, true);
     add_image_size('ourmenu280', 280, 280, true);
     add_image_size('recipe-thumbnail', 350, 215, true);
+    add_image_size('frontimg', 810, 820, true);
+    add_image_size('reservation-img', 1060, 940, true);
 }
 
 function devrest_assets()
@@ -25,7 +28,7 @@ function devrest_assets()
     wp_enqueue_style('normalize');
     wp_enqueue_style('Dev_Rest');
     if( is_singular( 'restaurants' )) {
-        wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?key=ADD_KEY_HERE', array(), '3', true );
+        wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyA47vijiVRgmG0KOlrFxU98bR66HCWIa-Q', array(), '3', true );
         wp_enqueue_script( 'map', get_template_directory_uri() . '/js/map.js', array('google-map', 'jquery'), '0.1', true );
     };
 }
@@ -111,12 +114,12 @@ function add_links_themenu()
 }
 
 function my_acf_google_map_api( $api ){
-	$api['key'] = 'ADD_KEY_HERE';
+	$api['key'] = 'AIzaSyA47vijiVRgmG0KOlrFxU98bR66HCWIa-Q';
 	return $api;
 }
 
 function my_acf_init() {
-	acf_update_setting('google_api_key', 'ADD_KEY_HERE');
+	acf_update_setting('google_api_key', 'AIzaSyA47vijiVRgmG0KOlrFxU98bR66HCWIa-Q');
 }
 
 
@@ -146,3 +149,15 @@ function item_nav($classes)
 }
 
 add_filter('nav_menu_css_class', 'item_nav');
+
+
+
+/*Contact form 7 remove span*/
+add_filter('wpcf7_form_elements', function($content) {
+    $content = preg_replace('/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control-wrap(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
+
+    $content = str_replace('<br />', '', $content);
+        
+    return $content;
+});
+

@@ -10965,10 +10965,20 @@ nav {
 }
 
 /* ====== KevKsar START >>>>>>> */
+/* ============================================= posst recipas > ===================================================*/
+.bgHatching {
+  width: 100%;
+  height: 4rem;
+  position: relative;
+  top: 2rem;
+}
+
 /* ============================================= archive-recipe > ===================================================*/
 /* ====== style bg archive-recipe > */
-.archive-recipe {
+.archiveRecipe {
   background-color: #f5f5f5;
+  padding-top: 5rem;
+  margin-bottom: -3rem;
 }
 
 /* ====== style post-recipe > */
@@ -11139,11 +11149,38 @@ nav {
   background-color: #80808000;
 }
 
+/* ===================================== taxonomy-recipe > ======================================= */
+.taxonomyRecipe {
+  background-color: #f5f5f5;
+  padding-top: 5rem;
+  margin-bottom: -3rem;
+}
+
 /* ===================================== single-recipe > ======================================= */
-.section-singleRecipe {
+.singleRecipe {
   padding: 0;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #525252), color-stop(30%, white));
-  background: linear-gradient(180deg, #525252 30%, white 30%);
+}
+
+.topContainer {
+  padding: 0;
+  background: #525252 30%;
+  color: white;
+}
+
+@media (max-width: 767.98px) {
+  .topContainer {
+    padding: 0 1rem;
+  }
+}
+
+.topContainer__titleRecipe {
+  font-size: 46px;
+  font-weight: bold;
+  margin: 3rem 0;
+}
+
+.topContainer__descRecipe {
+  margin-bottom: 2rem;
 }
 
 /* ====== style 4 nav single post > */
@@ -11253,23 +11290,14 @@ nav {
 }
 
 /* ====== style 4 */
-.titleRecipe {
-  color: white;
-  margin: 3rem 0;
-}
-
-.subtitlesRecipe {
-  font-weight: bold;
-  margin: 2rem;
-}
-
 .additional-info {
   font-weight: bold;
   margin-bottom: 2rem;
 }
 
-.descRecipe {
-  color: white;
+.subtitlesRecipe {
+  font-size: 42px;
+  font-weight: regular;
   margin-bottom: 2rem;
 }
 
@@ -11289,8 +11317,15 @@ nav {
 
 @media (max-width: 767.98px) {
   .mainContainer {
-        grid-template-areas: " ingredients" " preparation" "networksIcons";
-    padding: 0 0.5rem;
+        grid-template-areas: "ingredients" "preparation" "networksIcons";
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .mainContainer {
+    padding: 0 1rem;
+
   }
 }
 
@@ -11380,6 +11415,158 @@ nav {
 .steps p > img {
   width: 100%;
   height: auto;
+}
+
+/* ===================================== latest-updates-recipe > ======================================= */
+/* ====== style 4 section latest-update > */
+.latestRecipe {
+  text-align: center;
+  background-color: #f5f5f5;
+  padding-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.latestRecipe__title {
+  font-size: 46px;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
+.latestRecipe__subTitle {
+  font-size: 42px;
+  font-weight: regular;
+}
+
+/* ====== style 4 cards container > */
+.cardsContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+
+@media (max-width: 991.98px) {
+  .cardsContainer {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .cardsContainer {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .cardsContainer {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+/* ====== style 4 cards > */
+.latestCard {
+  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.445);
+          box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.445);
+  text-align: left;
+}
+
+.latestCard__image {
+  width: 100%;
+  height: auto;
+}
+
+.latestCard__body {
+  background-color: white;
+  padding: 1rem;
+}
+
+.latestCard__date {
+  text-transform: uppercase;
+  color: #808080;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.latestCard__date-before {
+  width: 0.8rem;
+  margin-right: 0.2rem;
+  vertical-align: middle;
+}
+
+.latestCard__title {
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+}
+
+.latestCard__text {
+  margin-bottom: 1.5rem;
+}
+
+.latestCard .linkRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+
+@media (max-width: 767.98px) {
+  .steps__counter {
+    position: relative;
+    margin: 0 1rem 0 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+
+.latestCard .linkRow__before {
+  width: 50%;
+  border-bottom: 1px dotted black;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-right: 1rem;
+}
+
+.latestCard .linkRow__link {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  color: black;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.latestCard .linkRow__link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: black;
+  opacity: 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.latestCard .linkRow__link:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  opacity: 1;
+}
+
+.latestCard .linkRow__link:hover {
+  color: black;
+  text-decoration: none;
 }
 
 /* <<<<<<<< END KevKsar ====== */
@@ -11620,7 +11807,7 @@ nav {
 .rest-info-main {
   width: 100%;
   height: 100vh;
-  background-color: #2D2D2D;
+  background-color: #2d2d2d;
   color: #ffff;
   padding-left: 10%;
   padding-right: 10%;
@@ -11628,7 +11815,7 @@ nav {
 
 .acf-map {
   width: 100%;
-  height: 400px;
+  height: 840px;
   border: #ccc solid 1px;
   margin: 0px auto;
   -webkit-filter: grayscale(100%);
@@ -11653,7 +11840,8 @@ nav {
           justify-content: space-between;
 }
 
-.rest-info-main-box h3, .rest-info-main-box h5 {
+.rest-info-main-box h3,
+.rest-info-main-box h5 {
   font-weight: 900;
   margin-bottom: 20px;
 }
@@ -11774,6 +11962,7 @@ nav {
   background-color: #156cb6;
 }
 
+
 .under-line {
   width: 100%;
   height: 1px;
@@ -11787,6 +11976,10 @@ nav {
   text-align: center;
   margin-top: 30px;
   color: #f1f1f1;
+  }  
+  
+.cont-content {
+  max-width: 1410px;
 }
 
 .banner-top {
@@ -11835,6 +12028,11 @@ nav {
 }
 
 .banner-top .cont-banner .banner-link .link-text {
+  color: white !important;
+}
+
+.banner-top .cont-banner .banner-link .banner-link-a {
+  text-decoration: none !important;
   color: white !important;
 }
 
@@ -11902,9 +12100,14 @@ nav {
   max-width: 1410px;
 }
 
+.intro-part .img-block-intro img {
+  max-width: 100%;
+  height: auto;
+}
+
 .intro-part .intro-block {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   -webkit-box-shadow: 5px 10px 5px #D5D5D5;
           box-shadow: 5px 10px 5px #D5D5D5;
   margin-left: -15rem;
@@ -11958,6 +12161,14 @@ nav {
   .intro-block .intro-block-pad {
     padding: 4rem 2rem !important;
   }
+  .intro-block-left {
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    margin-right: 0 !important;
+  }
+  .intro-block-left .intro-block-pad {
+    padding: 4rem 2rem !important;
+  }
 }
 
 .testimony {
@@ -12001,7 +12212,7 @@ nav {
   background-image: url(assets/images/hachures-blanches.png);
   width: 100%;
   height: 73px;
-  z-index: 99 !important;
+  z-index: 5 !important;
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
@@ -12010,13 +12221,126 @@ nav {
   background-image: url(assets/images/hachures-blanches.png);
   width: 100%;
   height: 73px;
-  z-index: 99 !important;
+  z-index: 5 !important;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   position: relative;
 }
 
-.cont-frontpage {
-  background-color: #E9E9E9 !important;
+.ZZZcont-restautants {
+  background: url("assets/images/burger-party.png") #f5f5f538 !important;
+}
+
+.cont-restautants {
+  margin-top: 6rem;
+  padding-top: 6rem;
+  margin-bottom: 6rem;
+  padding-bottom: 6rem;
+  position: relative;
+  background: #F5F5F5;
+  overflow: hidden;
+}
+
+.cont-restautants .o-rest-part {
+  margin-top: 6rem;
+  max-width: 1410px;
+}
+
+.cont-restautants .o-rest-part .img-block {
+  z-index: 2;
+}
+
+.cont-restautants .o-rest-part .img-block img {
+  max-width: 100%;
+  height: auto;
+}
+
+.cont-restautants .o-rest-part .intro-block {
+  position: relative;
+  z-index: 3;
+  -webkit-box-shadow: 5px 10px 5px #D5D5D5;
+          box-shadow: 5px 10px 5px #D5D5D5;
+  margin-left: -15rem;
+  background-color: white !important;
+}
+
+.cont-restautants .o-rest-part .intro-block .intro-block-pad {
+  padding: 7rem 5rem;
+}
+
+.cont-restautants .o-rest-part .intro-block .intro-block-pad .intro-b-st2 {
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.cont-restautants .o-rest-part .intro-block .intro-block-pad .intro-b-txt {
+  padding: 1.5em 0;
+}
+
+.cont-restautants .o-rest-part .intro-block .intro-block-pad .intro-b-s-subtitle {
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.cont-restautants .o-rest-part .intro-block-left {
+  position: relative;
+  z-index: 3;
+  -webkit-box-shadow: 5px 10px 5px #D5D5D5;
+          box-shadow: 5px 10px 5px #D5D5D5;
+  margin-right: -15rem;
+  background-color: white !important;
+}
+
+.cont-restautants .o-rest-part .intro-block-left .intro-block-pad {
+  padding: 7rem 5rem;
+}
+
+.cont-restautants .o-rest-part .intro-block-left .intro-block-pad .intro-b-st2 {
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.cont-restautants .o-rest-part .intro-block-left .intro-block-pad .intro-b-txt {
+  padding: 1.5em 0;
+}
+
+.cont-restautants .o-rest-part .intro-block-left .intro-block-pad .intro-b-s-subtitle {
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.cont-restautants:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.2;
+  background-image: url("assets/images/burger-party.png");
+}
+
+.banner-top-s-rest {
+  height: 800px;
+}
+
+.block-reserve-form {
+  padding: 2rem 3rem;
+}
+
+.sect-space {
+  padding: 4rem 0rem;
+}
+
+.sect-space-3 {
+  padding: 3rem 0rem;
+}
+
+.sect-space-2 {
+  padding: 2rem 0rem;
 }
 /*# sourceMappingURL=style.css.map */
