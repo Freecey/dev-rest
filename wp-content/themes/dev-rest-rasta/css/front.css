@@ -355,14 +355,17 @@
 
 .sect-space {
   padding: 4rem 0rem;
+  background-color: white !important;
 }
 
 .sect-space-3 {
   padding: 3rem 0rem;
+  background-color: white !important;
 }
 
 .sect-space-2 {
   padding: 2rem 0rem;
+  background-color: white !important;
 }
 
 .bg-white-sec {

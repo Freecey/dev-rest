@@ -11406,13 +11406,13 @@ nav {
 .mainContainer {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "networksIcons ingredients" "     .        preparation";
+      grid-template-areas: "networksIcons ingredients" "     .        preparation";
   padding-right: 96px;
 }
 
 @media (max-width: 767.98px) {
   .mainContainer {
-        grid-template-areas: "ingredients" "preparation" "networksIcons";
+        grid-template-areas: "ingredients" "preparation" "networksIcons";
     padding: 0 1rem;
   }
 }
@@ -12437,14 +12437,17 @@ nav {
 
 .sect-space {
   padding: 4rem 0rem;
+  background-color: white !important;
 }
 
 .sect-space-3 {
   padding: 3rem 0rem;
+  background-color: white !important;
 }
 
 .sect-space-2 {
   padding: 2rem 0rem;
+  background-color: white !important;
 }
 
 .bg-white-sec {
