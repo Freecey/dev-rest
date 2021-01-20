@@ -11166,16 +11166,13 @@ a.text-dark:hover, a.text-dark:focus {
 .mainContainer {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "networksIcons ingredients"
- "     .        preparation";
+      grid-template-areas: "networksIcons ingredients" "     .        preparation";
   padding-right: 96px;
 }
 
 @media (max-width: 767.98px) {
   .mainContainer {
-        grid-template-areas: "ingredients"
- "preparation"
- "networksIcons";
+        grid-template-areas: "ingredients" "preparation" "networksIcons";
     padding: 0 1rem;
   }
 }
@@ -11802,6 +11799,10 @@ a.text-dark:hover, a.text-dark:focus {
   background-color: #156cb6;
 }
 
+.cont-content {
+  max-width: 1410px;
+}
+
 .banner-top {
   height: 1080px;
   background: no-repeat center center;
@@ -12032,7 +12033,7 @@ a.text-dark:hover, a.text-dark:focus {
   background-image: url(assets/images/hachures-blanches.png);
   width: 100%;
   height: 73px;
-  z-index: 99 !important;
+  z-index: 5 !important;
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
@@ -12041,7 +12042,7 @@ a.text-dark:hover, a.text-dark:focus {
   background-image: url(assets/images/hachures-blanches.png);
   width: 100%;
   height: 73px;
-  z-index: 99 !important;
+  z-index: 5 !important;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   position: relative;
@@ -12142,5 +12143,25 @@ a.text-dark:hover, a.text-dark:focus {
   z-index: 1;
   opacity: 0.2;
   background-image: url("assets/images/burger-party.png");
+}
+
+.banner-top-s-rest {
+  height: 800px;
+}
+
+.block-reserve-form {
+  padding: 2rem 3rem;
+}
+
+.sect-space {
+  padding: 4rem 0rem;
+}
+
+.sect-space-3 {
+  padding: 3rem 0rem;
+}
+
+.sect-space-2 {
+  padding: 2rem 0rem;
 }
 /*# sourceMappingURL=style.css.map */
