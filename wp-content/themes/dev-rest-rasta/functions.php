@@ -17,7 +17,6 @@ function devrest_supports()
     add_image_size('rest700', 700, 700, true);
     add_image_size('ourmenu280', 280, 280, true);
     add_image_size('top-banner-img', 1850, 800, true);
-    add_image_size('recipe-thumbnail', 350, 215, true);
     add_image_size('frontimg', 810, 820, true);
     add_image_size('reservation-img', 1060, 940, true);
 }
@@ -135,8 +134,6 @@ add_action('admin_menu', 'add_links_themenu');
 add_action('acf / register_fields', 'my_register_fields');
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 add_action('acf/init', 'my_acf_init');
-
-
 
 // filter to change class of the navbar menu
 
