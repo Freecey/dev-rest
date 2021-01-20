@@ -9,7 +9,7 @@ if (have_rows('banner_top')) :
 ?>
         <div class="banner-top banner-top-s-rest" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' <?= $bannertop_img['url']; ?> ');">
             <div class="cont-banner">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-8">
                     <div class="font-subtitle-top"><?= get_sub_field('subtitle'); ?></div>
                     <div class="font-title-top"><?= get_sub_field('main_title'); ?></div>
                     <div class="banner-link">
@@ -160,7 +160,7 @@ endif; ?>
 
 <!-- END restaurant_reservation PART -->
 
-<div class="sect-space"></div>
+<div class="sect-space" id="Reserve"></div>
 
 <!-- START OUR MENU -->
 <?php get_template_part('parts/our-menu'); ?>

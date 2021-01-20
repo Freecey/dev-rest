@@ -150,6 +150,7 @@ $bg-gris : #292929;
 
 .our-menu{
     max-width: 1410px;
+    background-color: white !important;
     .page-subtitles{
         padding-top: 2rem;
         padding-bottom: 1rem;
@@ -371,4 +372,12 @@ $bg-gris : #292929;
 
 .sect-space-2{
     padding: 2rem 0rem;
+}
+
+.bg-white-sec{
+    background-color: white !important;
+}
+
+.banner-link-menu{
+    margin-top: 8rem !important;
 }

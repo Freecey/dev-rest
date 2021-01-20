@@ -155,6 +155,7 @@
 
 .our-menu {
   max-width: 1410px;
+  background-color: white !important;
 }
 
 .our-menu .page-subtitles {
@@ -362,5 +363,13 @@
 
 .sect-space-2 {
   padding: 2rem 0rem;
+}
+
+.bg-white-sec {
+  background-color: white !important;
+}
+
+.banner-link-menu {
+  margin-top: 8rem !important;
 }
 /*# sourceMappingURL=front.css.map */

@@ -10964,7 +10964,9 @@ nav {
   }
 }
 
+
 /* ===================================== hero banner archive recipes> ======================================= */
+
 /* ====== style 4 hero banner > */
 .heroBanner {
   position: relative;
@@ -11406,13 +11408,16 @@ nav {
 .mainContainer {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "networksIcons ingredients" "     .        preparation";
+      grid-template-areas: "networksIcons ingredients"
+ "     .        preparation";
   padding-right: 96px;
 }
 
 @media (max-width: 767.98px) {
   .mainContainer {
-        grid-template-areas: "ingredients" "preparation" "networksIcons";
+        grid-template-areas: "ingredients"
+ "preparation"
+ "networksIcons";
     padding: 0 1rem;
   }
 }
@@ -11697,6 +11702,10 @@ nav {
   padding-right: 2rem;
 }
 
+.menu-w {
+  max-width: 900px;
+}
+
 .flex-menu-section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11939,8 +11948,7 @@ nav {
           justify-content: space-between;
 }
 
-.rest-info-main-box h3,
-.rest-info-main-box h5 {
+.rest-info-main-box h3, .rest-info-main-box h5 {
   font-weight: 900;
   margin-bottom: 20px;
 }
@@ -12248,6 +12256,7 @@ nav {
 
 .our-menu {
   max-width: 1410px;
+  background-color: white !important;
 }
 
 .our-menu .page-subtitles {
@@ -12455,5 +12464,13 @@ nav {
 
 .sect-space-2 {
   padding: 2rem 0rem;
+}
+
+.bg-white-sec {
+  background-color: white !important;
+}
+
+.banner-link-menu {
+  margin-top: 8rem !important;
 }
 /*# sourceMappingURL=style.css.map */

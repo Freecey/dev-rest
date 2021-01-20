@@ -1,13 +1,46 @@
 <!-- page-the-menu.php -->
 <?php get_header(); ?>
 
+<!-- START BANNER TOP -->
+<?php
+if (have_rows('banner_top')) :
+    while (have_rows('banner_top')) : the_row();
+        $bannertop_img = get_sub_field('banner_image');
+?>
+        <div class="banner-top banner-top-s-rest" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' <?= $bannertop_img['url']; ?> ');">
+            <div class="cont-banner">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-8">
+                    <div class="font-subtitle-top"><?= get_sub_field('subtitle'); ?></div>
+                    <div class="font-title-top"><?= get_sub_field('main_title'); ?></div>
+                    <div class="banner-link banner-link-menu">
+                        <div class="link-barre"></div>
+                        <div class="link-text">
+                            <?php $banlink = get_sub_field('banner_link'); ?>
+                            <a class="banner-link-a" href="<?= $banlink['url']; ?>" class=""><?= $banlink['title']; ?></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="banner-top-hash mt-n5"></div>
+<?php
+    endwhile;
+else :
+// no rows found
+endif; ?>
+<!-- END BANNER TOP -->
+
+
 <div class="rows">
 <div class="text-center page-subtitles my-4">Welcome</div>
 
 <div class="text-center page-title"><?php the_title(); ?></div>
 
 
-  <div class="col-12 col-sm-12 col-md-12 col-lg-8 mx-auto">
+  <div class="col-12 col-sm-12 col-md-12 col-lg-8 mx-auto menu-w">
 
     <?php
 
@@ -55,8 +88,8 @@
     endif; ?>
   </div>
 </div>
-
+<div class="sect-space"></div>
 <!-- ADD HERE LAST RECIPES PART -->
-
+<?php get_template_part('parts/latest-updates-recipes'); ?>
 
 <?php get_footer(); ?>

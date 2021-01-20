@@ -120,7 +120,7 @@ endif; ?>
 
 
 <!-- START RESTAURANTS PART -->
-<div class="cont-restautants">
+<div class="cont-restautants" id="OursRestaurants">
   <?php if (have_rows('our_restaurants')) : while (have_rows('our_restaurants')) : the_row(); ?>
 
       <div class="page-subtitles text-center"><?= get_sub_field('title'); ?></div>
