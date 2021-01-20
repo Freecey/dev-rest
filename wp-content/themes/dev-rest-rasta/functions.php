@@ -27,13 +27,13 @@ function devrest_assets()
     wp_register_style('Dev_Rest', get_template_directory_uri() . '/style.css');
     wp_enqueue_style('normalize');
     wp_enqueue_style('Dev_Rest');
-    if( is_singular( 'restaurants' )) {
-        wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyA47vijiVRgmG0KOlrFxU98bR66HCWIa-Q', array(), '3', true );
-        wp_enqueue_script( 'map', get_template_directory_uri() . '/js/map.js', array('google-map', 'jquery'), '0.1', true );
+    if (is_singular('restaurants')) {
+        wp_enqueue_script('google-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyA47vijiVRgmG0KOlrFxU98bR66HCWIa-Q', array(), '3', true);
+        wp_enqueue_script('map', get_template_directory_uri() . '/js/map.js', array('google-map', 'jquery'), '0.1', true);
     };
-    if( is_front_page()) {
-        wp_enqueue_script( 'Popper_min', get_template_directory_uri() . '/js/popper.min.js', array(), '0.1', true );
-        wp_enqueue_script( 'BS_min', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '0.1', true );
+    if (is_front_page()) {
+        wp_enqueue_script('Popper_min', get_template_directory_uri() . '/js/popper.min.js', array(), '0.1', true);
+        wp_enqueue_script('BS_min', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '0.1', true);
     };
 }
 
@@ -66,7 +66,7 @@ function devrest_init()
         'has_archive' => true,
     ]);
     register_post_type('restaurants', [
-        'label' => 'Restaurants',
+        'label' => 'Our Franchise',
         'public' => true,
         'menu_position' => 4,
         'menu_icon' => 'dashicons-admin-multisite',
@@ -112,17 +112,42 @@ if (is_admin()) {
 
 function add_links_themenu()
 {
-    add_menu_page('the_menu', 'The Menu', 'edit_posts', 'post.php?post=107&action=edit&classic-editor', '', 'dashicons-book-alt', 8);
+    add_menu_page('the_menu', 'The Menu', 'edit_posts', 'post.php?post=107&action=edit&classic-editor', '', 'dashicons-book-alt', 4);
     add_menu_page('restaurant_infos', 'Restaurant infos', 'edit_posts', 'post.php?post=224&action=edit&classic-editor', '', 'dashicons-store', 9);
+    add_menu_page('homepage', 'Home Page', 'edit_posts', 'post.php?post=336&action=edit&classic-editor', '', 'dashicons-admin-home', 9);
+    add_menu_page('navbar', 'Navbar', 'edit_posts', 'nav-menus.php', '', 'dashicons-menu-alt', 9);
+    remove_menu_page('edit.php');
+    remove_menu_page('edit-comments.php');
+    remove_submenu_page('edit.php?post_type=restaurants', 'post-new.php?post_type=restaurants');
+    if (!(current_user_can('administrator'))) {
+        remove_menu_page('themes.php');
+        remove_menu_page('wpcf7');
+        remove_menu_page('acf-field-group');
+        remove_menu_page('plugins.php');
+        remove_menu_page('edit.php?post_type=acf-field-group');
+        remove_menu_page('edit.php?post_type=page');
+        remove_submenu_page('index.php', 'update-core.php');
+    }
 }
 
-function my_acf_google_map_api( $api ){
-	$api['key'] = 'AIzaSyA47vijiVRgmG0KOlrFxU98bR66HCWIa-Q';
-	return $api;
+function plt_hide_wp_mail_smtp_menus() {
+    if (!(current_user_can('administrator'))) {
+	remove_menu_page('wp-mail-smtp');
+	remove_submenu_page('wp-mail-smtp', 'wp-mail-smtp');
+	remove_submenu_page('wp-mail-smtp', 'wp-mail-smtp-logs');
+    remove_submenu_page('wp-mail-smtp', 'wp-mail-smtp-about');
+    }
 }
 
-function my_acf_init() {
-	acf_update_setting('google_api_key', 'AIzaSyA47vijiVRgmG0KOlrFxU98bR66HCWIa-Q');
+function my_acf_google_map_api($api)
+{
+    $api['key'] = 'AIzaSyA47vijiVRgmG0KOlrFxU98bR66HCWIa-Q';
+    return $api;
+}
+
+function my_acf_init()
+{
+    acf_update_setting('google_api_key', 'AIzaSyA47vijiVRgmG0KOlrFxU98bR66HCWIa-Q');
 }
 
 function my_register_fields()
@@ -135,13 +160,14 @@ add_action('init', 'devrest_init');
 add_action('after_setup_theme', 'devrest_supports');
 add_action('wp_enqueue_scripts', 'devrest_assets');
 add_action('admin_menu', 'add_links_themenu');
+add_action('admin_menu', 'plt_hide_wp_mail_smtp_menus', 2147483647);
 add_action('acf / register_fields', 'my_register_fields');
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 add_action('acf/init', 'my_acf_init');
 
 // filter to change class of the navbar menu
 
-function item_nav($classes) 
+function item_nav($classes)
 {
     $classes[] = "item-nav";
     return $classes;
@@ -152,11 +178,10 @@ add_filter('nav_menu_css_class', 'item_nav');
 
 
 /*Contact form 7 remove span*/
-add_filter('wpcf7_form_elements', function($content) {
+add_filter('wpcf7_form_elements', function ($content) {
     $content = preg_replace('/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control-wrap(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
 
     $content = str_replace('<br />', '', $content);
-        
+
     return $content;
 });
-
