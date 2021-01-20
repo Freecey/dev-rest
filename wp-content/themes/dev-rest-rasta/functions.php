@@ -1,6 +1,6 @@
 <?php
 
-$GOOGLEAPIKEY = 'ADD_KEY_HERE'; //${{ secrets.GOOGLEAPI }}
+$GOOGLEAPIKEY = 'AIzaSyA47vijiVRgmG0KOlrFxU98bR66HCWIa-Q'; //${{ secrets.GOOGLEAPI }}
 
 function devrest_supports()
 {
@@ -17,6 +17,9 @@ function devrest_supports()
     add_image_size('rest700', 700, 700, true);
     add_image_size('ourmenu280', 280, 280, true);
     add_image_size('top-banner-img', 1850, 800, true);
+    add_image_size('recipe-thumbnail', 350, 215, true);
+    add_image_size('frontimg', 810, 820, true);
+    add_image_size('reservation-img', 1060, 940, true);
 }
 
 function devrest_assets()
@@ -25,9 +28,9 @@ function devrest_assets()
     wp_register_style('Dev_Rest', get_template_directory_uri() . '/style.css');
     wp_enqueue_style('normalize');
     wp_enqueue_style('Dev_Rest');
-    if (is_singular('restaurants')) {
-        wp_enqueue_script('google-map', 'https://maps.googleapis.com/maps/api/js?key=ADD_KEY_HERE', array(), '3', true);
-        wp_enqueue_script('map', get_template_directory_uri() . '/js/map.js', array('google-map', 'jquery'), '0.1', true);
+    if( is_singular( 'restaurants' )) {
+        wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyA47vijiVRgmG0KOlrFxU98bR66HCWIa-Q', array(), '3', true );
+        wp_enqueue_script( 'map', get_template_directory_uri() . '/js/map.js', array('google-map', 'jquery'), '0.1', true );
     };
 }
 
@@ -110,15 +113,13 @@ function add_links_themenu()
     add_menu_page('restaurant_infos', 'Restaurant infos', 'edit_posts', 'post.php?post=224&action=edit&classic-editor', '', 'dashicons-store', 9);
 }
 
-function my_acf_google_map_api($api)
-{
-    $api['key'] = 'ADD_KEY_HERE';
-    return $api;
+function my_acf_google_map_api( $api ){
+	$api['key'] = 'AIzaSyA47vijiVRgmG0KOlrFxU98bR66HCWIa-Q';
+	return $api;
 }
 
-function my_acf_init()
-{
-    acf_update_setting('google_api_key', 'ADD_KEY_HERE');
+function my_acf_init() {
+	acf_update_setting('google_api_key', 'AIzaSyA47vijiVRgmG0KOlrFxU98bR66HCWIa-Q');
 }
 
 function my_register_fields()
@@ -134,3 +135,28 @@ add_action('admin_menu', 'add_links_themenu');
 add_action('acf / register_fields', 'my_register_fields');
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 add_action('acf/init', 'my_acf_init');
+add_filter( 'excerpt_more', 'custom_excerpt_more' );
+
+
+
+// filter to change class of the navbar menu
+
+function item_nav($classes) 
+{
+    $classes[] = "item-nav";
+    return $classes;
+}
+
+add_filter('nav_menu_css_class', 'item_nav');
+
+
+
+/*Contact form 7 remove span*/
+add_filter('wpcf7_form_elements', function($content) {
+    $content = preg_replace('/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control-wrap(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
+
+    $content = str_replace('<br />', '', $content);
+        
+    return $content;
+});
+

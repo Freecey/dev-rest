@@ -2,6 +2,11 @@
 $bg-notwhite  : #E9E9E9;
 $border-color : #D5D5D5;
 $bg-gris : #292929;
+.cont-content{
+    max-width: 1410px;
+}
+
+
 .banner-top {
     height: 1080px;
     // background-size:100% co;
@@ -40,6 +45,10 @@ $bg-gris : #292929;
                 margin-right: 1rem;
             }
             .link-text{
+                color: white !important;
+            }
+            .banner-link-a{
+                text-decoration: none !important;
                 color: white !important;
             }
         }
@@ -109,9 +118,15 @@ $bg-gris : #292929;
 .intro-part {
     margin-top: 6rem;
     max-width: 1410px;
+    .img-block-intro{
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+    }
     .intro-block{
         position: relative;
-        z-index: 2;
+        z-index: 3;
         box-shadow: 5px 10px 5px $border-color; 
         margin-left: -15rem;
         background-color: white !important;
@@ -160,6 +175,15 @@ $bg-gris : #292929;
         }
 
     }
+    .intro-block-left{
+
+        box-shadow: none !important; 
+        margin-right: 0 !important;
+        .intro-block-pad{
+            padding: 4rem 2rem !important;
+        }
+
+    }
 }
 
 .testimony{
@@ -199,7 +223,7 @@ $bg-gris : #292929;
     background-image: url(assets/images/hachures-blanches.png);
     width: 100%;
     height: 73px;
-    z-index: 99 !important;
+    z-index: 5 !important;
     transform: rotate(360deg);
 }
 
@@ -207,13 +231,144 @@ $bg-gris : #292929;
     background-image: url(assets/images/hachures-blanches.png);
     width: 100%;
     height: 73px;
-    z-index: 99 !important;
+    z-index: 5 !important;
     transform: rotate(180deg);
     position: relative;
 }
 
 
 
-.cont-frontpage{
-    background-color: $bg-notwhite !important;
+.ZZZcont-restautants{
+    background: url('assets/images/burger-party.png') #f5f5f538  !important;
+    // background-color: #F5F5F5 !important;
+}
+
+
+.cont-restautants {
+    margin-top: 6rem;
+    padding-top: 6rem;
+    margin-bottom: 6rem;
+    padding-bottom: 6rem;
+    position: relative;
+    background: #F5F5F5 ;
+    overflow: hidden;
+    .o-rest-part {
+        margin-top: 6rem;
+        max-width: 1410px;
+        .img-block{
+            z-index: 2;
+            img{
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        .intro-block{
+            position: relative;
+            z-index: 3;
+            box-shadow: 5px 10px 5px $border-color; 
+            margin-left: -15rem;
+            background-color: white !important;
+            .intro-block-pad{
+                padding: 7rem 5rem;
+                .intro-b-st2{
+                    font-weight: bolder;
+                    text-transform: uppercase;
+                }
+                .intro-b-txt{
+                    padding: 1.5em 0;
+                }
+                .intro-b-s-subtitle{
+                    font-weight: bolder;
+                    text-transform: uppercase;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+        .intro-block-left{
+            position: relative;
+            z-index: 3;
+            box-shadow: 5px 10px 5px $border-color; 
+            margin-right: -15rem;
+            background-color: white !important;
+            .intro-block-pad{
+                padding: 7rem 5rem;
+                .intro-b-st2{
+                    font-weight: bolder;
+                    text-transform: uppercase;
+                }
+                .intro-b-txt{
+                    padding: 1.5em 0;
+                }
+                .intro-b-s-subtitle{
+                    font-weight: bolder;
+                    text-transform: uppercase;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}
+.cont-restautants:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.2;
+    background-image: url('assets/images/burger-party.png');
+}
+
+.banner-top-s-rest{
+    height: 800px;
+    // position: relative;
+    // overflow: hidden;
+   // position: fixed;
+    //filter: brightness(50%);
+}
+
+// .banner-top-s-rest::before{
+//     z-index: -1;
+//     position: fixed;
+// }
+
+
+// .banner-top-s-rest {
+//     position: relative;
+//     height: 800px;
+//     color: white;
+//     display: flex;
+//     align-items: center;
+//     &::before {
+//        content: "";
+//        position: fixed;
+//        z-index: -1;
+//        top: 0;
+//        left: 0;
+//        width: 100%;
+//        height: 100%;
+//        background: url(assets/images/resto1.jpg);
+//        filter: brightness(50%);
+//     }
+//     &__inside {
+//        position: relative;
+//     }
+// }
+
+.block-reserve-form{
+    padding: 2rem 3rem;
+}
+
+.sect-space{
+    padding: 4rem 0rem;
+}
+
+.sect-space-3{
+    padding: 3rem 0rem;
+}
+
+.sect-space-2{
+    padding: 2rem 0rem;
 }

@@ -3,6 +3,100 @@
     "title": "Restaurants Site",
     "fields": [
         {
+            "key": "field_6007f7770cd1f",
+            "label": "Banner top",
+            "name": "banner_top",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6007f7940cd20",
+                    "label": "Subtitle",
+                    "name": "subtitle",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6007f7e20cd21",
+                    "label": "Main Title",
+                    "name": "main_title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6007f7ef0cd22",
+                    "label": "Banner Link",
+                    "name": "banner_link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_6007f8070cd23",
+                    "label": "Banner Image",
+                    "name": "banner_image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "uploadedTo",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                }
+            ]
+        },
+        {
             "key": "field_60006745e4e3d",
             "label": "Restaurant Banner Presentation",
             "name": "restaurant_banner_presentation",
@@ -128,8 +222,8 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "full",
+                    "tabs": "visual",
+                    "toolbar": "basic",
                     "media_upload": 0,
                     "delay": 0
                 },
@@ -149,8 +243,8 @@
                     "return_format": "array",
                     "preview_size": "thumbnail",
                     "library": "all",
-                    "min_width": "",
-                    "min_height": "",
+                    "min_width": 820,
+                    "min_height": 820,
                     "min_size": "",
                     "max_width": "",
                     "max_height": "",
@@ -301,8 +395,8 @@
                     "return_format": "array",
                     "preview_size": "medium",
                     "library": "all",
-                    "min_width": "",
-                    "min_height": "",
+                    "min_width": 1060,
+                    "min_height": 940,
                     "min_size": "",
                     "max_width": "",
                     "max_height": "",
@@ -344,5 +438,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1610727294
+    "modified": 1611144466
 }

@@ -10819,6 +10819,151 @@ a.text-dark:hover, a.text-dark:focus {
   font-family: "Poppins";
 }
 
+#menu-navbar {
+  display: none;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  height: 70px;
+  width: 100%;
+  background-color: black;
+}
+
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navigation-box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.ecartement {
+  -webkit-box-flex: 6;
+      -ms-flex-positive: 6;
+          flex-grow: 6;
+}
+
+.nav-restaurant-name {
+  color: #fff;
+  margin: 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.logo-menu {
+  position: fixed;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  right: 20px;
+  width: 30px;
+  display: none;
+}
+
+.liste-nav {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0;
+  font-size: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.liste-nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 900;
+}
+
+.item-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.item-nav a {
+  font-size: 16px;
+  color: #ffff;
+  text-decoration: none;
+  margin: 0 20px;
+}
+
+.item-nav a::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.item-nav a:hover::after {
+  width: 100%;
+}
+
+.menu-ghost {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: #f1f1f1;
+  font-weight: bold;
+  display: none;
+}
+
+@media screen and (max-width: 999px) {
+  .logo-menu {
+    display: block;
+  }
+  .liste-nav {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+  }
+  .liste-nav.active {
+    display: block;
+  }
+  .item-nav {
+    background-color: black;
+    height: 50px;
+  }
+  .item-nav a {
+    margin: 0;
+  }
+  .item-nav:nth-child(1) {
+    margin-top: 70px;
+  }
+  .menu-ghost {
+    display: block;
+  }
+}
+
 /* ====== KevKsar START >>>>>>> */
 /* ============================================= post recipes > ===================================================*/
 /* ===================================== hero banner > ======================================= */
@@ -11261,13 +11406,13 @@ a.text-dark:hover, a.text-dark:focus {
 .mainContainer {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "networksIcons ingredients" "     .        preparation";
+      grid-template-areas: "networksIcons ingredients" "     .        preparation";
   padding-right: 96px;
 }
 
 @media (max-width: 767.98px) {
   .mainContainer {
-        grid-template-areas: "ingredients" "preparation" "networksIcons";
+        grid-template-areas: "ingredients" "preparation" "networksIcons";
     padding: 0 1rem;
   }
 }
@@ -11275,6 +11420,7 @@ a.text-dark:hover, a.text-dark:focus {
 @media (max-width: 767.98px) {
   .mainContainer {
     padding: 0 1rem;
+
   }
 }
 
@@ -11463,6 +11609,15 @@ a.text-dark:hover, a.text-dark:focus {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
+
+
+@media (max-width: 767.98px) {
+  .steps__counter {
+    position: relative;
+    margin: 0 1rem 0 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
 
 .latestCard .linkRow__before {
   width: 50%;
@@ -11755,7 +11910,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .acf-map {
   width: 100%;
-  height: 400px;
+  height: 840px;
   border: #ccc solid 1px;
   margin: 0px auto;
   -webkit-filter: grayscale(100%);
@@ -11767,8 +11922,12 @@ a.text-dark:hover, a.text-dark:focus {
   /* Corrige un souci de conflit avec le thème */
 }
 
+.super-box {
+  background-color: #292929;
+}
+
 .rest-info-main-box {
-  padding-top: 30px;
+  padding-top: 100px;
   padding-bottom: 30px;
   border-bottom: #ffff;
   -webkit-box-pack: justify;
@@ -11780,6 +11939,10 @@ a.text-dark:hover, a.text-dark:focus {
 .rest-info-main-box h5 {
   font-weight: 900;
   margin-bottom: 20px;
+}
+
+.rest-info-main {
+  background-color: #292929;
 }
 
 .rest_description,
@@ -11894,6 +12057,26 @@ a.text-dark:hover, a.text-dark:focus {
   background-color: #156cb6;
 }
 
+
+.under-line {
+  width: 100%;
+  height: 1px;
+  background-color: #484747;
+  margin-top: 50px;
+  z-index: 100;
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  color: #f1f1f1;
+  }  
+  
+.cont-content {
+  max-width: 1410px;
+}
+
 .banner-top {
   height: 1080px;
   background: no-repeat center center;
@@ -11940,6 +12123,11 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .banner-top .cont-banner .banner-link .link-text {
+  color: white !important;
+}
+
+.banner-top .cont-banner .banner-link .banner-link-a {
+  text-decoration: none !important;
   color: white !important;
 }
 
@@ -12007,9 +12195,14 @@ a.text-dark:hover, a.text-dark:focus {
   max-width: 1410px;
 }
 
+.intro-part .img-block-intro img {
+  max-width: 100%;
+  height: auto;
+}
+
 .intro-part .intro-block {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   -webkit-box-shadow: 5px 10px 5px #D5D5D5;
           box-shadow: 5px 10px 5px #D5D5D5;
   margin-left: -15rem;
@@ -12063,6 +12256,14 @@ a.text-dark:hover, a.text-dark:focus {
   .intro-block .intro-block-pad {
     padding: 4rem 2rem !important;
   }
+  .intro-block-left {
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    margin-right: 0 !important;
+  }
+  .intro-block-left .intro-block-pad {
+    padding: 4rem 2rem !important;
+  }
 }
 
 .testimony {
@@ -12106,7 +12307,7 @@ a.text-dark:hover, a.text-dark:focus {
   background-image: url(assets/images/hachures-blanches.png);
   width: 100%;
   height: 73px;
-  z-index: 99 !important;
+  z-index: 5 !important;
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
@@ -12115,13 +12316,126 @@ a.text-dark:hover, a.text-dark:focus {
   background-image: url(assets/images/hachures-blanches.png);
   width: 100%;
   height: 73px;
-  z-index: 99 !important;
+  z-index: 5 !important;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   position: relative;
 }
 
-.cont-frontpage {
-  background-color: #E9E9E9 !important;
+.ZZZcont-restautants {
+  background: url("assets/images/burger-party.png") #f5f5f538 !important;
+}
+
+.cont-restautants {
+  margin-top: 6rem;
+  padding-top: 6rem;
+  margin-bottom: 6rem;
+  padding-bottom: 6rem;
+  position: relative;
+  background: #F5F5F5;
+  overflow: hidden;
+}
+
+.cont-restautants .o-rest-part {
+  margin-top: 6rem;
+  max-width: 1410px;
+}
+
+.cont-restautants .o-rest-part .img-block {
+  z-index: 2;
+}
+
+.cont-restautants .o-rest-part .img-block img {
+  max-width: 100%;
+  height: auto;
+}
+
+.cont-restautants .o-rest-part .intro-block {
+  position: relative;
+  z-index: 3;
+  -webkit-box-shadow: 5px 10px 5px #D5D5D5;
+          box-shadow: 5px 10px 5px #D5D5D5;
+  margin-left: -15rem;
+  background-color: white !important;
+}
+
+.cont-restautants .o-rest-part .intro-block .intro-block-pad {
+  padding: 7rem 5rem;
+}
+
+.cont-restautants .o-rest-part .intro-block .intro-block-pad .intro-b-st2 {
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.cont-restautants .o-rest-part .intro-block .intro-block-pad .intro-b-txt {
+  padding: 1.5em 0;
+}
+
+.cont-restautants .o-rest-part .intro-block .intro-block-pad .intro-b-s-subtitle {
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.cont-restautants .o-rest-part .intro-block-left {
+  position: relative;
+  z-index: 3;
+  -webkit-box-shadow: 5px 10px 5px #D5D5D5;
+          box-shadow: 5px 10px 5px #D5D5D5;
+  margin-right: -15rem;
+  background-color: white !important;
+}
+
+.cont-restautants .o-rest-part .intro-block-left .intro-block-pad {
+  padding: 7rem 5rem;
+}
+
+.cont-restautants .o-rest-part .intro-block-left .intro-block-pad .intro-b-st2 {
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.cont-restautants .o-rest-part .intro-block-left .intro-block-pad .intro-b-txt {
+  padding: 1.5em 0;
+}
+
+.cont-restautants .o-rest-part .intro-block-left .intro-block-pad .intro-b-s-subtitle {
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.cont-restautants:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.2;
+  background-image: url("assets/images/burger-party.png");
+}
+
+.banner-top-s-rest {
+  height: 800px;
+}
+
+.block-reserve-form {
+  padding: 2rem 3rem;
+}
+
+.sect-space {
+  padding: 4rem 0rem;
+}
+
+.sect-space-3 {
+  padding: 3rem 0rem;
+}
+
+.sect-space-2 {
+  padding: 2rem 0rem;
 }
 /*# sourceMappingURL=style.css.map */

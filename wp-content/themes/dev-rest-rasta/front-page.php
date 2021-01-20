@@ -16,7 +16,8 @@ if (have_rows('banner_top')) :
           <div class="banner-link">
             <div class="link-barre"></div>
             <div class="link-text">
-            <a href="the-menu/" class="">Check our menu</a>
+            <?php $banlink = get_sub_field('banner_link') ; ?>
+              <a class="banner-link-a" href="<?= $banlink['url']; ?>" class=""><?= $banlink['title']; ?></a>
             </div>
           </div>
         </div>
@@ -83,8 +84,8 @@ if (have_rows('intro')) :
 ?>
     <div class="intro-part mx-auto">
       <div class="row">
-        <div class="col-12 col-lg-7">
-          <img src="<?= $intro_img['url']; ?>" alt="The chef">
+        <div class="col-12 col-lg-7 img-block-intro">
+          <img src="<?= $intro_img['sizes']["frontimg"]; ?>" alt="The chef">
         </div>
         <div class="col-12 col-lg-5 my-auto">
           <div class="intro-block">
@@ -119,71 +120,102 @@ endif; ?>
 
 
 <!-- START RESTAURANTS PART -->
-<div class="cont-frontpage">
-  <!-- ADD HERE RESTAURANTS PART --> ADD HERE RESTAURANTS PART
+<div class="cont-restautants">
+  <?php if (have_rows('our_restaurants')) : while (have_rows('our_restaurants')) : the_row(); ?>
+
+      <div class="page-subtitles text-center"><?= get_sub_field('title'); ?></div>
+      <div class="page-title text-center"><?= get_sub_field('subtitle'); ?></div>
+
+      <?php $query = new WP_Query([
+        'post_type' => 'restaurants',
+        'order' => 'ASC'
+      ]);
+      $testcount = get_row_index();
+      while ($query->have_posts()) : $query->the_post(); ?>
+
+
+        <?php if (have_rows('restaurant_presentation')) : ?>
+
+          <?php
+          while (have_rows('restaurant_presentation')) : the_row(); ?>
+
+
+            <?php
+            $row_i = get_row_index();
+            $rest_prez_img = get_sub_field('restaurant_presentation_block_image_');
+            //var_dump($rest_prez_img);
+            //var_dump($rest_prez_img['sizes']["rest700"]);
+            ?>
+
+            <?php if ($row_i === 1) :
+
+
+              // echo ' YOLOOOOO : ' .  $testcount; 
+            ?>
+
+              <?php if ($testcount % 2 == 0) : ?>
+                <div class="o-rest-part mx-auto">
+                  <div class="row">
+                    <div class="col-12 col-lg-7 img-block">
+                      <img src="<?= $rest_prez_img['sizes']["frontimg"]; ?>" alt="Restaurants picture">
+                    </div>
+                    <div class="col-12 col-lg-5 my-auto text-center">
+                      <div class="intro-block">
+                        <div class="intro-block-pad">
+                          <div class="page-subtitles"><?= get_sub_field('restaurant_presentation_block_subtitle'); ?></div>
+                          <div class="page-title"><?= get_sub_field('restaurant_presentation_block_title'); ?></div>
+                          <div class="intro-b-txt"><?= get_sub_field('restaurant_presentation_block_wysiwig'); ?> </div>
+                          <div class="'o-menu-btn-sect">
+                            <a href="<?php the_permalink(); ?>" class="btn btn-dark">More infos</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              <?php else :  ?>
+                <div class="o-rest-part mx-auto">
+                  <div class="row">
+
+                    <div class="col-12 col-lg-5 my-auto order-2 order-lg-1">
+                      <div class="intro-block-left">
+                        <div class="intro-block-pad text-center">
+                          <div class="page-subtitles"><?= get_sub_field('restaurant_presentation_block_subtitle'); ?></div>
+                          <div class="page-title"><?= get_sub_field('restaurant_presentation_block_title'); ?></div>
+                          <div class="intro-b-txt"><?= get_sub_field('restaurant_presentation_block_wysiwig'); ?> </div>
+                          <div class="'o-menu-btn-sect">
+                            <a href="<?php the_permalink(); ?>" class="btn btn-dark">More infos</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-7 img-block order-1 order-lg-2">
+                      <img src="<?= $rest_prez_img['sizes']["frontimg"]; ?>" alt="Restaurants picture">
+                    </div>
+                  </div>
+                </div>
+
+              <?php endif; ?>
+
+            <?php $testcount++;
+            endif; ?>
+        <?php endwhile;
+        endif; ?>
+
+
+
+      <?php endwhile;
+      wp_reset_postdata(); ?>
+  <?php endwhile;
+  endif; ?>
+
 </div>
 <!-- END RESTAURANTS PART -->
 
 
 
 <!-- START OUR MENU -->
-
-
-<div class="our-menu mx-auto">
-  <div class="row">
-    <?php
-    if (have_rows('our_menu')) :
-      while (have_rows('our_menu')) : the_row();
-    ?>
-        <div class="col-12 col-lg-6">
-          <div class="row">
-
-            <?php
-            $images = get_sub_field('images');
-            if ($images) : ?>
-
-              <?php 
-              $img_count = 0;
-              foreach ($images as $image) : 
-              $img_count++;
-              //echo $img_count ;
-              ?>
-                <div class="col-6 test-img <?php if ($img_count % 2 == 0) : echo 'text-left'; else : echo 'text-right'; endif;  ?>">
-                  <a href="<?php echo esc_url($image['url']); ?>">
-                    <img src="<?php echo esc_url($image['sizes']['ourmenu280']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                  </a>
-                  <p><?php echo esc_html($image['caption']); ?></p>
-                </div>
-              <?php endforeach; ?>
-
-            <?php endif; ?>
-
-
-          </div>
-        </div>
-        <div class="col-12 col-lg-6">
-          <div class="o-menu-txt-block my-auto text-center">
-            <div class="page-subtitles"><?= get_sub_field('subtitle'); ?></div>
-            <div class="page-title"><?= get_sub_field('title'); ?></div>
-            <div class="intro-b-txt"><?= get_sub_field('text'); ?> </div>
-            <div class="'o-menu-btn-sect">
-            <a href="the-menu/" class="btn btn-dark">View the full menu</a>
-            </div>
-
-          </div>
-        </div>
-
-        <?php // var_dump(get_sub_field('images')) ; // RAND 4 IMAGE
-        ?> <br>
-
-
-    <?php
-      endwhile;
-    else :
-    // no rows found
-    endif; ?>
-  </div>
-</div>
+<?php get_template_part('parts/our-menu'); ?>
 <!-- END OUR MENU -->
 
 
@@ -194,43 +226,47 @@ endif; ?>
 
 <div id="carouseltestimony" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
-  <?php
-  if (have_rows('testimony')) :
-  while (have_rows('testimony')) : the_row();
-    $testimony_img = get_sub_field('image');
-    $row_i = get_row_index();
-    // echo $row_i;
-    ?>
-    
-    <div class="carousel-item testimony <?php if ($row_i === 1) : echo ' active'; endif; ?>">
-    <div class="test-top-hash pt-5 mb-n5"></div>
-      <div class="row">
-      <div class="col-12 col-lg-6 text-center my-auto order-2 order-lg-1 test-block-text">
-          <div>
-          <div class="mx-auto test-quote"></div>
-          <div class="my-5 mx-5 text-comment"><?= get_sub_field('text'); ?></div>
-          <div class="my-5"><?= get_sub_field('name'); ?></div>
-          </div>
-          <ol class="carousel-indicators">
-    <li data-target="#carouseltestimony" data-slide-to="0" class="<?php if ($row_i === 1) : echo ' active'; endif; ?>"></li>
-    <li data-target="#carouseltestimony" data-slide-to="1" class="<?php if ($row_i === 2) : echo ' active'; endif; ?>"></li>
-    <li data-target="#carouseltestimony" data-slide-to="2" class="<?php if ($row_i === 3) : echo ' active'; endif; ?>"></li>
-  </ol>
-        </div>
-      
-        <div class="col-12 col-lg-6 test-img order-1 order-lg-2" style="background-image: url(' <?= $testimony_img['url']; ?> ');"></div>
-        
-
-      </div>
-      <div class="test-bottom-hash mt-n5"></div>
-    </div>
-    
     <?php
-  endwhile;
-else :
-// no rows found
-endif; ?>
-    
+    if (have_rows('testimony')) :
+      while (have_rows('testimony')) : the_row();
+        $testimony_img = get_sub_field('image');
+        $row_i = get_row_index();
+        // echo $row_i;
+    ?>
+
+        <div class="carousel-item testimony <?php if ($row_i === 1) : echo ' active';
+                                            endif; ?>">
+          <div class="test-top-hash pt-5 mb-n5"></div>
+          <div class="row">
+            <div class="col-12 col-lg-6 text-center my-auto order-2 order-lg-1 test-block-text">
+              <div>
+                <div class="mx-auto test-quote"></div>
+                <div class="my-5 mx-5 text-comment"><?= get_sub_field('text'); ?></div>
+                <div class="my-5"><?= get_sub_field('name'); ?></div>
+              </div>
+              <ol class="carousel-indicators">
+                <li data-target="#carouseltestimony" data-slide-to="0" class="<?php if ($row_i === 1) : echo ' active';
+                                                                              endif; ?>"></li>
+                <li data-target="#carouseltestimony" data-slide-to="1" class="<?php if ($row_i === 2) : echo ' active';
+                                                                              endif; ?>"></li>
+                <li data-target="#carouseltestimony" data-slide-to="2" class="<?php if ($row_i === 3) : echo ' active';
+                                                                              endif; ?>"></li>
+              </ol>
+            </div>
+
+            <div class="col-12 col-lg-6 test-img order-1 order-lg-2" style="background-image: url(' <?= $testimony_img['url']; ?> ');"></div>
+
+
+          </div>
+          <div class="test-bottom-hash mt-n5"></div>
+        </div>
+
+    <?php
+      endwhile;
+    else :
+    // no rows found
+    endif; ?>
+
 
     <a class="carousel-control-prev d-flex d-lg-none" href="#carouseltestimony" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon mb-5" aria-hidden="true"></span>
@@ -245,15 +281,12 @@ endif; ?>
   <script src="http://www.wordpress.lan/wp-content/themes/dev-rest-rasta/js/popper.min.js"></script>
   <script src="http://www.wordpress.lan/wp-content/themes/dev-rest-rasta/js/bootstrap.min.js"></script>
 
+</div>
 
   <!-- END testimony -->
 
 
   <!-- ADD HERE LAST RECIPES PART -->
-
-
-
-  <?php get_footer(); ?>
-
+  <?php get_template_part('parts/latest-updates-recipes'); ?>
 
   <?php get_footer(); ?>

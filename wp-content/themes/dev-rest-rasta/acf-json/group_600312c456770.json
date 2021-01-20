@@ -56,6 +56,21 @@
                     "maxlength": ""
                 },
                 {
+                    "key": "field_60070d8127990",
+                    "label": "Banner Link",
+                    "name": "banner_link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                },
+                {
                     "key": "field_6003180598b98",
                     "label": "Banner Image",
                     "name": "banner_image",
@@ -491,6 +506,61 @@
             ]
         },
         {
+            "key": "field_6006b4f2c74bc",
+            "label": "Our Restaurants",
+            "name": "our_restaurants",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6006b53ac74bd",
+                    "label": "SubTitle",
+                    "name": "subtitle",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6006b552c74be",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
             "key": "field_600319d898ba2",
             "label": "Our Menu",
             "name": "our_menu",
@@ -707,5 +777,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1610877521
+    "modified": 1611075214
 }
