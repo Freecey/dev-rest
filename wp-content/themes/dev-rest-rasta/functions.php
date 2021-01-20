@@ -18,6 +18,7 @@ function devrest_supports()
     add_image_size('ourmenu280', 280, 280, true);
     add_image_size('recipe-thumbnail', 350, 215, true);
     add_image_size('frontimg', 810, 820, true);
+    add_image_size('reservation-img', 1060, 940, true);
 }
 
 function devrest_assets()
