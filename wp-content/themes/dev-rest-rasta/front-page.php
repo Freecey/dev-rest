@@ -129,7 +129,7 @@ endif; ?>
 <!-- START OUR MENU -->
 
 
-<div class="our-menu mx-auto">
+<div class="our-menu mx-auto" id="OursRestaurants">
   <div class="row">
     <?php
     if (have_rows('our_menu')) :

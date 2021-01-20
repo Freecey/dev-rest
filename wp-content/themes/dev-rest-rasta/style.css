@@ -10819,6 +10819,10 @@ a.text-dark:hover, a.text-dark:focus {
   font-family: "Poppins";
 }
 
+#menu-navbar {
+  display: none;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;

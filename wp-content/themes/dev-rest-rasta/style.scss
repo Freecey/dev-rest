@@ -79,6 +79,9 @@ Version: 1.0
 
 // ============ NAVBAR START =================
 
+#menu-navbar {
+	display: none;
+}
 
 nav {
 	display: flex;	
@@ -145,7 +148,6 @@ nav {
 	display:flex;
 	align-items: center;
 	justify-content: center;
-	
 		a {
 			font-size: 16px;
 			color: #ffff;

@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head([
-		'theme_location' => 'TOP NAVBAR']
+		'theme_location' => 'TOP NAVBAR',
+		'container' => false,
+		'menu_class' => 'liste-nav',
+		''] 
 	); ?> 
 </head>
 <body>
@@ -21,10 +24,10 @@
 			<?php wp_nav_menu(); ?>
 
 			<ul class="liste-nav">
-				<li class="item-nav"><a href="#Home"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/home-minimal.svg" alt="" style="width: 10px;"></a></li>
-				<li class="item-nav"><a href="#Ours Restaurants">Ours Restaurants</a></li>
+				<li class="item-nav"><a href="/"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/home-minimal.svg" alt="" style="width: 10px;"></a></li>
+				<li class="item-nav"><a href="/#OursRestaurants">Ours Restaurants</a></li>
 				<li class="item-nav"><a href="#Menu">Menu</a></li>
-				<li class="item-nav"><a href="#">Recipes</a></li>
+				<li class="item-nav"><a href="/recipes/">Recipes</a></li>
 			</ul>
 			
 
