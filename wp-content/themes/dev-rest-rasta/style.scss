@@ -52,11 +52,11 @@ Version: 1.0
 }
 // font size in top
 @mixin font-title-top() {
-   font-size: 100px;
-   font-weight: semi-bold;
+   font-size: 90px;
+   font-weight: bold;
 }
 @mixin font-subtitle-top() {
-   font-size: 60px;
+   font-size: 50px;
    font-weight: regular;
 }
 // font size in menu
@@ -69,9 +69,6 @@ Version: 1.0
    font-size: 16px;
    font-weight: bold;
 }
-
-
-
 
 
 // ============ NAVBAR START =================
@@ -249,19 +246,72 @@ $bg-posts-recipes: #f5f5f5;
       box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.445);
    }
 }
-.bgHatching{
+
+/* ===================================== hero banner > ======================================= */
+/* ====== style 4 hero banner > */
+.heroBanner {
+   position: relative;
+   height: 600px;
+   color: white;
+   display: flex;
+   align-items: center;
+   &::before {
+      content: "";
+      position: fixed;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(assets/images/resto1.jpg);
+      filter: brightness(50%);
+   }
+   &__inside {
+      position: relative;
+   }
+   &__subTitle {
+      @include font-subtitle-top();
+   }
+   &__title {
+      @include font-title-top();
+      text-transform: uppercase;
+   }
+   &__linkRow {
+      display: flex;
+      margin-top: 4rem;
+      &--link {
+         color: white;
+         display: inline-block;
+         @include hover-tax-nav(white);
+      }
+      &--before {
+         width: 3rem;
+         border-bottom: 1px solid white;
+         margin-right: 1rem;
+         place-self: center;
+      }
+   }
+}
+/* ============================================= archive-recipe > ===================================================*/
+.bgHatching {
    width: 100%;
    height: 4rem;
    position: relative;
    top: 2rem;
 }
-/* ============================================= archive-recipe > ===================================================*/
-
+.bgHatchingTop {
+   width: 100%;
+   height: 4rem;
+   position: relative;
+   bottom: 1rem;
+   transform: rotateX(180deg);
+}
 /* ====== style bg archive-recipe > */
 .archiveRecipe {
    background-color: $bg-posts-recipes;
-   padding-top: 5rem;
-   margin-bottom: -3rem;}
+   margin-top: -1rem;
+   margin-bottom: -3rem;
+}
 /* ====== style post-recipe > */
 .postRecipe {
    @include box-shadow-posts();
@@ -301,7 +351,6 @@ $bg-posts-recipes: #f5f5f5;
 .navTaxonomy {
    display: flex;
    padding-left: 0;
-   margin-top: 3rem;
    &__item {
       list-style-type: none;
       margin-right: 1rem;
@@ -361,7 +410,7 @@ $bg-posts-recipes: #f5f5f5;
 }
 
 /* ===================================== taxonomy-recipe > ======================================= */
-.taxonomyRecipe{
+.taxonomyRecipe {
    background-color: $bg-posts-recipes;
    padding-top: 5rem;
    margin-bottom: -3rem;
@@ -584,14 +633,14 @@ $bg-posts-recipes: #f5f5f5;
    .linkRow {
       display: flex;
       justify-content: flex-end;
-      &__before{
+      &__before {
          width: 50%;
          border-bottom: 1px dotted black;
          flex-grow: 1;
          align-self: center;
          margin-right: 1rem;
       }
-      &__link{
+      &__link {
          flex-shrink: 0;
          color: black;
          text-transform: uppercase;

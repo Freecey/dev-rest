@@ -10965,7 +10965,95 @@ nav {
 }
 
 /* ====== KevKsar START >>>>>>> */
-/* ============================================= posst recipas > ===================================================*/
+/* ============================================= post recipes > ===================================================*/
+/* ===================================== hero banner > ======================================= */
+/* ====== style 4 hero banner > */
+.heroBanner {
+  position: relative;
+  height: 600px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.heroBanner::before {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(assets/images/resto1.jpg);
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+}
+
+.heroBanner__inside {
+  position: relative;
+}
+
+.heroBanner__subTitle {
+  font-size: 50px;
+  font-weight: regular;
+}
+
+.heroBanner__title {
+  font-size: 90px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.heroBanner__linkRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 4rem;
+}
+
+.heroBanner__linkRow--link {
+  color: white;
+  display: inline-block;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.heroBanner__linkRow--link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: white;
+  opacity: 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.heroBanner__linkRow--link:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  opacity: 1;
+}
+
+.heroBanner__linkRow--link:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.heroBanner__linkRow--before {
+  width: 3rem;
+  border-bottom: 1px solid white;
+  margin-right: 1rem;
+  place-self: center;
+}
+
+/* ============================================= archive-recipe > ===================================================*/
 .bgHatching {
   width: 100%;
   height: 4rem;
@@ -10973,11 +11061,19 @@ nav {
   top: 2rem;
 }
 
-/* ============================================= archive-recipe > ===================================================*/
+.bgHatchingTop {
+  width: 100%;
+  height: 4rem;
+  position: relative;
+  bottom: 1rem;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
 /* ====== style bg archive-recipe > */
 .archiveRecipe {
   background-color: #f5f5f5;
-  padding-top: 5rem;
+  margin-top: -1rem;
   margin-bottom: -3rem;
 }
 
@@ -11054,7 +11150,6 @@ nav {
   display: -ms-flexbox;
   display: flex;
   padding-left: 0;
-  margin-top: 3rem;
 }
 
 .navTaxonomy__item {

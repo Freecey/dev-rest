@@ -16,6 +16,7 @@ function devrest_supports()
     add_image_size('latest-recipes-img', 260, 200, true);
     add_image_size('rest700', 700, 700, true);
     add_image_size('ourmenu280', 280, 280, true);
+    add_image_size('top-banner-img', 1850, 800, true);
     add_image_size('recipe-thumbnail', 350, 215, true);
     add_image_size('frontimg', 810, 820, true);
     add_image_size('reservation-img', 1060, 940, true);
@@ -59,10 +60,9 @@ function devrest_init()
         'hierarchical' => true,
         'show_admin_column' => true,
         'public' => true,
+        'has_archive' => true,
     ]);
-
     register_post_type('restaurants', [
-
         'label' => 'Restaurants',
         'public' => true,
         'menu_position' => 4,
@@ -122,12 +122,11 @@ function my_acf_init() {
 	acf_update_setting('google_api_key', 'AIzaSyA47vijiVRgmG0KOlrFxU98bR66HCWIa-Q');
 }
 
-
-
 function my_register_fields()
 {
     include_once('acf-image-crop / acf-image-crop.php');
 }
+
 
 add_action('init', 'devrest_init');
 add_action('after_setup_theme', 'devrest_supports');
