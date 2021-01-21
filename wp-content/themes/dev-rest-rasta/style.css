@@ -10997,7 +10997,6 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
-
 @media screen and (max-width: 325x) {
   .item-nav {
     background-color: #2e2d2d;
@@ -11017,7 +11016,43 @@ a.text-dark:hover, a.text-dark:focus {
   .item-nav .liste-nav .active {
     padding: 0px;
   }
+}
 
+.liste-nav {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+}
+
+.liste-nav.active {
+  display: block;
+}
+
+.item-nav {
+  background-color: #2e2d2d;
+  height: 50px;
+  border-radius: 5px;
+  width: 150px;
+  -webkit-box-shadow: 0 0 5px white;
+          box-shadow: 0 0 5px white;
+  opacity: 0.92;
+}
+
+.item-nav a {
+  margin: 0;
+  text-align: center;
+  text-shadow: 3px 3px 4px black;
+}
+
+.item-nav:nth-child(1) {
+  margin-top: 70px;
+}
+
+.menu-ghost {
+  display: block;
 }
 
 /* ===================================== hero banner archive recipes> ======================================= */
@@ -11537,16 +11572,13 @@ a.text-dark:hover, a.text-dark:focus {
 .mainContainer {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "networksIcons ingredients"
- "     .        preparation";
+      grid-template-areas: "networksIcons ingredients" "     .        preparation";
   padding-right: 96px;
 }
 
 @media (max-width: 767.98px) {
   .mainContainer {
-        grid-template-areas: "ingredients"
- "preparation"
- "networksIcons";
+        grid-template-areas: "ingredients" "preparation" "networksIcons";
     padding: 0 1rem;
   }
 }
@@ -11658,6 +11690,7 @@ a.text-dark:hover, a.text-dark:focus {
   text-align: center;
   background-color: #f5f5f5;
   padding-top: 5rem;
+  padding-bottom: 15rem !important;
 }
 
 .latestRecipe__bgHatching {
@@ -12245,10 +12278,6 @@ a.text-dark:hover, a.text-dark:focus {
   margin-left: 0px !important;
 }
 
-.footer-posi {
-  margin-top: 15rem !important;
-}
-
 .cont-content {
   max-width: 1410px;
 }
@@ -12499,6 +12528,24 @@ a.text-dark:hover, a.text-dark:focus {
   background-size: 100% 100%;
 }
 
+.top-hash-gray {
+  background-image: url(assets/images/hachures-grises.png);
+  width: 100%;
+  height: 73px;
+  z-index: 4 !important;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.top-hash-black {
+  background-image: url(assets/images/hachures-noires.png);
+  width: 100%;
+  height: 73px;
+  z-index: 4 !important;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
 .test-top-hash {
   background-image: url(assets/images/hachures-blanches.png);
   width: 100%;
@@ -12510,6 +12557,16 @@ a.text-dark:hover, a.text-dark:focus {
 
 .test-bottom-hash {
   background-image: url(assets/images/hachures-blanches.png);
+  width: 100%;
+  height: 73px;
+  z-index: 4 !important;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  position: relative;
+}
+
+.test-bottom-hash-gray {
+  background-image: url(assets/images/hachures-grises.png);
   width: 100%;
   height: 73px;
   z-index: 4 !important;

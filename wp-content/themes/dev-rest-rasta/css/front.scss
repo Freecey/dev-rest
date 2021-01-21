@@ -222,6 +222,23 @@ $bg-gris: #292929;
   }
 }
 
+.top-hash-gray {
+  background-image: url(assets/images/hachures-grises.png);
+  width: 100%;
+  height: 73px;
+  z-index: 4 !important;
+  transform: rotate(360deg);
+}
+
+
+.top-hash-black {
+  background-image: url(assets/images/hachures-noires.png);
+  width: 100%;
+  height: 73px;
+  z-index: 4 !important;
+  transform: rotate(360deg);
+}
+
 .test-top-hash {
   background-image: url(assets/images/hachures-blanches.png);
   width: 100%;
@@ -229,9 +246,17 @@ $bg-gris: #292929;
   z-index: 4 !important;
   transform: rotate(360deg);
 }
-
 .test-bottom-hash {
   background-image: url(assets/images/hachures-blanches.png);
+  width: 100%;
+  height: 73px;
+  z-index: 4 !important;
+  transform: rotate(180deg);
+  position: relative;
+}
+
+.test-bottom-hash-gray {
+  background-image: url(assets/images/hachures-grises.png);
   width: 100%;
   height: 73px;
   z-index: 4 !important;

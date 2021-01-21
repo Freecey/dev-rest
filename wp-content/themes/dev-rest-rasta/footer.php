@@ -3,7 +3,7 @@
 
 <footer class="footer-posi">
 
-    <div class="test-top-hash pt-5 mb-n5"></div>
+    <div class="top-hash-gray pt-5 mb-n5"></div>
     <?php
 
 
@@ -26,7 +26,7 @@
 
 
             <div class="mx-auto cont-content newslt-bg">
-    <div class="test-top-hash pt-5 mb-n5"></div>
+    <div class="top-hash-gray pt-5 mb-n5"></div>
         <div class="row">
             <div class="col-md-6 my-auto">
                 <div class="page-title">
