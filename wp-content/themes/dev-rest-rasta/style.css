@@ -11165,8 +11165,8 @@ a.text-dark:hover, a.text-dark:focus {
 
 /* ====== style post-recipe > */
 .postRecipe {
-  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.445);
-          box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.445);
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.466);
+          box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.466);
   margin-bottom: 2.5rem;
 }
 
@@ -11566,8 +11566,8 @@ a.text-dark:hover, a.text-dark:focus {
   width: 100%;
   height: auto;
   margin-bottom: 1rem;
-  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.445);
-          box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.445);
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.466);
+          box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.466);
 }
 
 /* ====== style 4 main content (ingredients & descriptionn) > */
@@ -11582,7 +11582,7 @@ a.text-dark:hover, a.text-dark:focus {
 @media (max-width: 767.98px) {
   .mainContainer {
         grid-template-areas: "ingredients" "preparation" "networksIcons";
-    padding: 0 1rem;
+    padding: 3rem 1rem 5rem 1rem;
   }
 }
 
@@ -11679,7 +11679,8 @@ a.text-dark:hover, a.text-dark:focus {
 .latestRecipe {
   text-align: center;
   background-color: #f5f5f5;
-  padding-bottom: 15rem;
+  padding-top: 5rem;
+  padding-bottom: 12rem !important;
 }
 
 .latestRecipe__bgHatching {
@@ -11691,11 +11692,11 @@ a.text-dark:hover, a.text-dark:focus {
           transform: rotateX(180deg);
 }
 
-.latestRecipe__bgHatchingBottom {
+.latestRecipe__bgHatchingNewsLetters {
   width: 100%;
   height: 4rem;
   position: relative;
-  bottom: -20rem;
+  top: 6rem;
   z-index: 10;
 }
 
@@ -11742,8 +11743,8 @@ a.text-dark:hover, a.text-dark:focus {
 
 /* ====== style 4 cards > */
 .latestCard {
-  -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.445);
-          box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.445);
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.466);
+          box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.466);
   text-align: left;
   background-color: white;
   display: -webkit-box;
@@ -12277,10 +12278,6 @@ a.text-dark:hover, a.text-dark:focus {
   margin-left: 0px !important;
 }
 
-.footer-posi {
-  margin-top: 15rem !important;
-}
-
 .cont-content {
   max-width: 1410px;
 }
@@ -12358,8 +12355,8 @@ a.text-dark:hover, a.text-dark:focus {
   max-width: 450px;
   min-width: 310px;
   border-radius: 35px 35px 0px 0px;
-  -webkit-box-shadow: 2px 2px 2px #D5D5D5;
-          box-shadow: 2px 2px 2px #D5D5D5;
+  -webkit-box-shadow: 2px 2px 2px #d5d5d5;
+          box-shadow: 2px 2px 2px #d5d5d5;
   z-index: 3;
 }
 
@@ -12411,8 +12408,8 @@ a.text-dark:hover, a.text-dark:focus {
 .intro-part .intro-block {
   position: relative;
   z-index: 3;
-  -webkit-box-shadow: 5px 10px 5px #D5D5D5;
-          box-shadow: 5px 10px 5px #D5D5D5;
+  -webkit-box-shadow: 5px 10px 5px #d5d5d5;
+          box-shadow: 5px 10px 5px #d5d5d5;
   margin-left: -15rem;
   background-color: white !important;
 }
@@ -12450,6 +12447,25 @@ a.text-dark:hover, a.text-dark:focus {
   padding-top: 4rem;
   padding-bottom: 6rem;
   line-height: 2rem;
+}
+
+@media screen and (max-width: 640px) {
+  .font-title-top {
+    font-size: 75px !important;
+  }
+  .font-subtitle-top {
+    font-size: 40px !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .font-title-top {
+    font-size: 50px !important;
+    margin-top: 2rem;
+  }
+  .font-subtitle-top {
+    font-size: 35px !important;
+  }
 }
 
 @media screen and (max-width: 990px) {
@@ -12512,6 +12528,32 @@ a.text-dark:hover, a.text-dark:focus {
   background-size: 100% 100%;
 }
 
+.top-hash-gray {
+  background-image: url(assets/images/hachures-grises.png);
+  width: 100%;
+  height: 73px;
+  z-index: 4 !important;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.top-hash-white {
+  background-image: url(assets/images/hachures-blanches.png);
+  width: 100%;
+  height: 73px;
+  z-index: 4 !important;
+  position: relative;
+}
+
+.top-hash-black {
+  background-image: url(assets/images/hachures-noires.png);
+  width: 100%;
+  height: 73px;
+  z-index: 4 !important;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
 .test-top-hash {
   background-image: url(assets/images/hachures-blanches.png);
   width: 100%;
@@ -12531,6 +12573,16 @@ a.text-dark:hover, a.text-dark:focus {
   position: relative;
 }
 
+.test-bottom-hash-gray {
+  background-image: url(assets/images/hachures-grises.png);
+  width: 100%;
+  height: 73px;
+  z-index: 4 !important;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  position: relative;
+}
+
 .ZZZcont-restautants {
   background: url("assets/images/burger-party.png") #f5f5f538 !important;
 }
@@ -12541,7 +12593,7 @@ a.text-dark:hover, a.text-dark:focus {
   margin-bottom: 6rem;
   padding-bottom: 6rem;
   position: relative;
-  background: #F5F5F5;
+  background: #f5f5f5;
   overflow: hidden;
 }
 
@@ -12562,8 +12614,8 @@ a.text-dark:hover, a.text-dark:focus {
 .cont-restautants .o-rest-part .intro-block {
   position: relative;
   z-index: 3;
-  -webkit-box-shadow: 5px 10px 5px #D5D5D5;
-          box-shadow: 5px 10px 5px #D5D5D5;
+  -webkit-box-shadow: 5px 10px 5px #d5d5d5;
+          box-shadow: 5px 10px 5px #d5d5d5;
   margin-left: -15rem;
   background-color: white !important;
 }
@@ -12590,8 +12642,8 @@ a.text-dark:hover, a.text-dark:focus {
 .cont-restautants .o-rest-part .intro-block-left {
   position: relative;
   z-index: 3;
-  -webkit-box-shadow: 5px 10px 5px #D5D5D5;
-          box-shadow: 5px 10px 5px #D5D5D5;
+  -webkit-box-shadow: 5px 10px 5px #d5d5d5;
+          box-shadow: 5px 10px 5px #d5d5d5;
   margin-right: -15rem;
   background-color: white !important;
 }
@@ -12616,7 +12668,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .cont-restautants:before {
-  content: ' ';
+  content: " ";
   display: block;
   position: absolute;
   left: 0;
@@ -12678,5 +12730,35 @@ a.text-dark:hover, a.text-dark:focus {
 .responsive-img {
   width: 100%;
   height: auto;
+}
+
+@media screen and (max-width: 640px) {
+  .newslt-bg .row {
+    padding: 6rem 1rem !important;
+    padding-top: 9rem;
+  }
+  .newslt-bg .row .page-title {
+    font-size: 36px;
+  }
+  .o-rest-part .page-subtitles {
+    font-size: 36px;
+    font-weight: regular;
+  }
+  .o-rest-part .page-title {
+    font-size: 42px;
+  }
+}
+
+.sectionDiscoverMenu {
+  padding-top: 10rem;
+  padding-bottom: 11rem;
+}
+
+.hashNewsLetterArchive {
+  width: 100%;
+  height: 4rem;
+  position: relative;
+  bottom: 6rem;
+  z-index: 10;
 }
 /*# sourceMappingURL=style.css.map */

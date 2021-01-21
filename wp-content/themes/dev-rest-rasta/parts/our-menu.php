@@ -19,7 +19,7 @@ if ( $query->have_posts() ) {
  
         // Contents of the queried post results go here.
         ?>
-<div class="container-fluid bg-white-sec">
+<div class="container-fluid bg-white-sec sectionDiscoverMenu">
 <div class="our-menu mx-auto">
   <div class="row">
     <?php
@@ -58,11 +58,10 @@ if ( $query->have_posts() ) {
           <div class="o-menu-txt-block my-auto text-center">
             <div class="page-subtitles"><?= get_sub_field('subtitle'); ?></div>
             <div class="page-title"><?= get_sub_field('title'); ?></div>
-            <div class="intro-b-txt"><?= get_sub_field('text'); ?> </div>
+            <div class="intro-b-txt px-5"><?= get_sub_field('text'); ?> </div>
             <div class="'o-menu-btn-sect">
               <a href="/the-menu/" class="btn btn-dark">View the full menu</a>
             </div>
-
           </div>
         </div>
 
@@ -87,4 +86,5 @@ if ( $query->have_posts() ) {
 wp_reset_postdata();
  
 ?>
+    <img class="hashNewsLetterArchive" src="/wp-content/themes/dev-rest-rasta/assets/images/hachures-blanches.png" alt="">
 </section>

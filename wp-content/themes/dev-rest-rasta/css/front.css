@@ -75,8 +75,8 @@
   max-width: 450px;
   min-width: 310px;
   border-radius: 35px 35px 0px 0px;
-  -webkit-box-shadow: 2px 2px 2px #D5D5D5;
-          box-shadow: 2px 2px 2px #D5D5D5;
+  -webkit-box-shadow: 2px 2px 2px #d5d5d5;
+          box-shadow: 2px 2px 2px #d5d5d5;
   z-index: 3;
 }
 
@@ -128,8 +128,8 @@
 .intro-part .intro-block {
   position: relative;
   z-index: 3;
-  -webkit-box-shadow: 5px 10px 5px #D5D5D5;
-          box-shadow: 5px 10px 5px #D5D5D5;
+  -webkit-box-shadow: 5px 10px 5px #d5d5d5;
+          box-shadow: 5px 10px 5px #d5d5d5;
   margin-left: -15rem;
   background-color: white !important;
 }
@@ -167,6 +167,25 @@
   padding-top: 4rem;
   padding-bottom: 6rem;
   line-height: 2rem;
+}
+
+@media screen and (max-width: 640px) {
+  .font-title-top {
+    font-size: 75px !important;
+  }
+  .font-subtitle-top {
+    font-size: 40px !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .font-title-top {
+    font-size: 50px !important;
+    margin-top: 2rem;
+  }
+  .font-subtitle-top {
+    font-size: 35px !important;
+  }
 }
 
 @media screen and (max-width: 990px) {
@@ -229,6 +248,32 @@
   background-size: 100% 100%;
 }
 
+.top-hash-gray {
+  background-image: url(assets/images/hachures-grises.png);
+  width: 100%;
+  height: 73px;
+  z-index: 4 !important;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.top-hash-white {
+  background-image: url(assets/images/hachures-blanches.png);
+  width: 100%;
+  height: 73px;
+  z-index: 4 !important;
+  position: relative;
+}
+
+.top-hash-black {
+  background-image: url(assets/images/hachures-noires.png);
+  width: 100%;
+  height: 73px;
+  z-index: 4 !important;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
 .test-top-hash {
   background-image: url(assets/images/hachures-blanches.png);
   width: 100%;
@@ -248,6 +293,16 @@
   position: relative;
 }
 
+.test-bottom-hash-gray {
+  background-image: url(assets/images/hachures-grises.png);
+  width: 100%;
+  height: 73px;
+  z-index: 4 !important;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  position: relative;
+}
+
 .ZZZcont-restautants {
   background: url("assets/images/burger-party.png") #f5f5f538 !important;
 }
@@ -258,7 +313,7 @@
   margin-bottom: 6rem;
   padding-bottom: 6rem;
   position: relative;
-  background: #F5F5F5;
+  background: #f5f5f5;
   overflow: hidden;
 }
 
@@ -279,8 +334,8 @@
 .cont-restautants .o-rest-part .intro-block {
   position: relative;
   z-index: 3;
-  -webkit-box-shadow: 5px 10px 5px #D5D5D5;
-          box-shadow: 5px 10px 5px #D5D5D5;
+  -webkit-box-shadow: 5px 10px 5px #d5d5d5;
+          box-shadow: 5px 10px 5px #d5d5d5;
   margin-left: -15rem;
   background-color: white !important;
 }
@@ -307,8 +362,8 @@
 .cont-restautants .o-rest-part .intro-block-left {
   position: relative;
   z-index: 3;
-  -webkit-box-shadow: 5px 10px 5px #D5D5D5;
-          box-shadow: 5px 10px 5px #D5D5D5;
+  -webkit-box-shadow: 5px 10px 5px #d5d5d5;
+          box-shadow: 5px 10px 5px #d5d5d5;
   margin-right: -15rem;
   background-color: white !important;
 }
@@ -333,7 +388,7 @@
 }
 
 .cont-restautants:before {
-  content: ' ';
+  content: " ";
   display: block;
   position: absolute;
   left: 0;
@@ -395,5 +450,35 @@
 .responsive-img {
   width: 100%;
   height: auto;
+}
+
+@media screen and (max-width: 640px) {
+  .newslt-bg .row {
+    padding: 6rem 1rem !important;
+    padding-top: 9rem;
+  }
+  .newslt-bg .row .page-title {
+    font-size: 36px;
+  }
+  .o-rest-part .page-subtitles {
+    font-size: 36px;
+    font-weight: regular;
+  }
+  .o-rest-part .page-title {
+    font-size: 42px;
+  }
+}
+
+.sectionDiscoverMenu {
+  padding-top: 10rem;
+  padding-bottom: 11rem;
+}
+
+.hashNewsLetterArchive {
+  width: 100%;
+  height: 4rem;
+  position: relative;
+  bottom: 6rem;
+  z-index: 10;
 }
 /*# sourceMappingURL=front.css.map */

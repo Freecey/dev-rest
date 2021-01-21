@@ -36,6 +36,6 @@
         else : ?>
         <?php endif; ?>
     </div>
-    <img class="latestRecipe__bgHatchingBottom" src="/wp-content/themes/dev-rest-rasta/assets/images/hachures-grises.png" alt="">
-
+    <img class="latestRecipe__bgHatchingNewsLetters" src="/wp-content/themes/dev-rest-rasta/assets/images/hachures-grises.png" alt="">
 </section>
+<?php wp_reset_postdata(); ?>
