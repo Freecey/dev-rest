@@ -16,7 +16,7 @@
 
 
 
-	<nav class="navigaton">
+	<nav id="navigation" class="navigaton">
 		<div class="cont-content navigation-box" >
 			<h3 class="nav-restaurant-name">Dev Restaurant</h3>
 			<div class="ecartement"></div>
@@ -24,7 +24,7 @@
 			<?php wp_nav_menu(); ?>
 
 			<ul class="liste-nav">
-				<li class="item-nav"><a href="/"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/home-minimal.svg" alt="" style="width: 10px;"></a></li>
+				<li class="item-nav"><a href="/"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/home-minimal.svg" alt="" style="width: 15px;"></a></li>
 				<li class="item-nav"><a href="/#OursRestaurants">Ours Restaurants</a></li>
 				<li class="item-nav"><a href="#Menu">Menu</a></li>
 				<li class="item-nav"><a href="/recipes/">Recipes</a></li>
@@ -64,19 +64,13 @@ allLinks.forEach(function(item) {
 
 <!--================ SCRIPT BURGER-MENU END ==================== -->
 
+<script>
+document.getElementById("navigation").addEventListener("wheel", myFunction);
 
-
-
-
-
-
-
-
-
-
-
-
-
+function myFunction() {
+  this.style.backgroundColor = "#00000064";
+}
+</script>
 
 
 

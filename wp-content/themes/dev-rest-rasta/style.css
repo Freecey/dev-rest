@@ -10823,24 +10823,18 @@ a.text-dark:hover, a.text-dark:focus {
   display: none;
 }
 
-nav {
+#navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: fixed;
   height: 70px;
   width: 100%;
-  background-color: black;
-  z-index: 10;
-}
-
-.navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  background-color: transparent;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 10;
 }
 
 .navigation-box {
@@ -10849,6 +10843,7 @@ nav {
   display: -ms-flexbox;
   display: flex;
   margin: auto;
+  height: 50px;
 }
 
 .ecartement {
@@ -10876,6 +10871,7 @@ nav {
 }
 
 .liste-nav {
+  padding-left: 0px;
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10990,7 +10986,7 @@ nav {
     text-shadow: 3px 3px 4px black;
   }
   .item-nav:nth-child(1) {
-    margin-top: 70px;
+    margin-top: 50px;
   }
   .menu-ghost {
     display: block;
@@ -11001,41 +10997,27 @@ nav {
   }
 }
 
-.liste-nav {
-  display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: auto;
-}
 
-.liste-nav.active {
-  display: block;
-}
+@media screen and (max-width: 325x) {
+  .item-nav {
+    background-color: #2e2d2d;
+    height: 50px;
+    border-radius: 5px;
+    width: 150px;
+    -webkit-box-shadow: 0 0 5px white;
+            box-shadow: 0 0 5px white;
+    opacity: 0.92;
+    margin-right: 50px;
+  }
+  .item-nav a {
+    margin: 0;
+    text-align: center;
+    text-shadow: 3px 3px 4px black;
+  }
+  .item-nav .liste-nav .active {
+    padding: 0px;
+  }
 
-.item-nav {
-  background-color: #2e2d2d;
-  height: 50px;
-  border-radius: 5px;
-  width: 150px;
-  -webkit-box-shadow: 0 0 5px white;
-          box-shadow: 0 0 5px white;
-  opacity: 0.92;
-}
-
-.item-nav a {
-  margin: 0;
-  text-align: center;
-  text-shadow: 3px 3px 4px black;
-}
-
-.item-nav:nth-child(1) {
-  margin-top: 70px;
-}
-
-.menu-ghost {
-  display: block;
 }
 
 /* ===================================== hero banner archive recipes> ======================================= */
@@ -11555,13 +11537,16 @@ nav {
 .mainContainer {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "networksIcons ingredients" "     .        preparation";
+      grid-template-areas: "networksIcons ingredients"
+ "     .        preparation";
   padding-right: 96px;
 }
 
 @media (max-width: 767.98px) {
   .mainContainer {
-        grid-template-areas: "ingredients" "preparation" "networksIcons";
+        grid-template-areas: "ingredients"
+ "preparation"
+ "networksIcons";
     padding: 0 1rem;
   }
 }
