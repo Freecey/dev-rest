@@ -43,7 +43,7 @@ if ( $query->have_posts() ) {
                                             else : echo 'text-right';
                                             endif;  ?>">
                   <a href="<?php echo esc_url($image['url']); ?>">
-                    <img src="<?php echo esc_url($image['sizes']['ourmenu280']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                    <img class="responsive-img" src="<?php echo esc_url($image['sizes']['ourmenu280']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                   </a>
                   <p><?php echo esc_html($image['caption']); ?></p>
                 </div>
