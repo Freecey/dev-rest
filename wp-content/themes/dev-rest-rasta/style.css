@@ -10994,6 +10994,10 @@ nav {
   }
   .menu-ghost {
     display: block;
+    margin-right: 80px;
+  }
+  .nav-restaurant-name {
+    margin-left: 25px;
   }
 }
 
@@ -12041,6 +12045,16 @@ nav {
 
 .open-email {
   padding-top: 15px;
+}
+
+.open-email .open-email-link {
+  text-decoration: none;
+  color: #f1f1f1;
+  font-weight: bold;
+}
+
+.open-email .open-email-link:hover {
+  color: #156cb6;
 }
 
 .instagram-galery {
