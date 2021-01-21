@@ -127,6 +127,7 @@ function add_links_themenu()
         remove_menu_page('edit.php?post_type=acf-field-group');
         remove_menu_page('edit.php?post_type=page');
         remove_submenu_page('index.php', 'update-core.php');
+        remove_menu_page('tools.php');
     }
 }
 
