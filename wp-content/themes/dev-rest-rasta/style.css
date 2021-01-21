@@ -11001,6 +11001,43 @@ nav {
   }
 }
 
+.liste-nav {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+}
+
+.liste-nav.active {
+  display: block;
+}
+
+.item-nav {
+  background-color: #2e2d2d;
+  height: 50px;
+  border-radius: 5px;
+  width: 150px;
+  -webkit-box-shadow: 0 0 5px white;
+          box-shadow: 0 0 5px white;
+  opacity: 0.92;
+}
+
+.item-nav a {
+  margin: 0;
+  text-align: center;
+  text-shadow: 3px 3px 4px black;
+}
+
+.item-nav:nth-child(1) {
+  margin-top: 70px;
+}
+
+.menu-ghost {
+  display: block;
+}
+
 /* ===================================== hero banner archive recipes> ======================================= */
 /* ====== style 4 hero banner > */
 .heroBanner {
@@ -11518,16 +11555,13 @@ nav {
 .mainContainer {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "networksIcons ingredients"
- "     .        preparation";
+      grid-template-areas: "networksIcons ingredients" "     .        preparation";
   padding-right: 96px;
 }
 
 @media (max-width: 767.98px) {
   .mainContainer {
-        grid-template-areas: "ingredients"
- "preparation"
- "networksIcons";
+        grid-template-areas: "ingredients" "preparation" "networksIcons";
     padding: 0 1rem;
   }
 }
@@ -12078,11 +12112,9 @@ nav {
   margin-bottom: 20px;
 }
 
-.rest-info-main {
+.rest-info-main-box {
   background-color: #292929;
   margin-top: 3rem !important;
-  // margin-top: 100px;
-
 }
 
 .rest_description,
