@@ -256,7 +256,7 @@ endif; ?>
 
 
           </div>
-          <div class="test-bottom-hash mt-n5"></div>
+          <div class="test-bottom-hash-gray"></div>
         </div>
 
     <?php
