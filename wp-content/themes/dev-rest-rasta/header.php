@@ -17,7 +17,7 @@
 
 
 	<nav class="navigaton">
-		<div class="container navigation-box" >
+		<div class="cont-content navigation-box" >
 			<h3 class="nav-restaurant-name">Dev Restaurant</h3>
 			<div class="ecartement"></div>
 
