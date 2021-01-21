@@ -1,4 +1,5 @@
 <section class="latestRecipe">
+<img class="latestRecipe__bgHatching" src="/wp-content/themes/dev-rest-rasta/assets/images/hachures-grises.png" alt="">
     <h3 class="latestRecipe__subtitle">Latest updates</h3>
     <h2 class="latestRecipe__title">Recipes Blog</h2>
     <div class="container cardsContainer">
@@ -35,6 +36,6 @@
         else : ?>
         <?php endif; ?>
     </div>
-    <!-- <img class="latestRecipe__bgHatching" src="/wp-content/themes/dev-rest-rasta/assets/images/hachures-grises.png" alt=""> -->
+    <img class="latestRecipe__bgHatchingNewsLetters" src="/wp-content/themes/dev-rest-rasta/assets/images/hachures-grises.png" alt="">
 </section>
 <?php wp_reset_postdata(); ?>

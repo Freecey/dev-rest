@@ -257,6 +257,14 @@
           transform: rotate(360deg);
 }
 
+.top-hash-white {
+  background-image: url(assets/images/hachures-blanches.png);
+  width: 100%;
+  height: 73px;
+  z-index: 4 !important;
+  position: relative;
+}
+
 .top-hash-black {
   background-image: url(assets/images/hachures-noires.png);
   width: 100%;
@@ -459,5 +467,18 @@
   .o-rest-part .page-title {
     font-size: 42px;
   }
+}
+
+.sectionDiscoverMenu {
+  padding-top: 10rem;
+  padding-bottom: 11rem;
+}
+
+.hashNewsLetterArchive {
+  width: 100%;
+  height: 4rem;
+  position: relative;
+  bottom: 6rem;
+  z-index: 10;
 }
 /*# sourceMappingURL=front.css.map */

@@ -65,7 +65,6 @@
    <?php endwhile;
    endif; ?>
 </div>
-<img class="bgHatchingSingle" src="/wp-content/themes/dev-rest-rasta/assets/images/hachures-blanches.png" alt="">
 </section>
 
 <?php get_template_part('parts/latest-updates-recipes'); ?>
