@@ -10848,6 +10848,7 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: auto;
 }
 
 .ecartement {
@@ -10993,6 +10994,10 @@ nav {
   }
   .menu-ghost {
     display: block;
+    margin-right: 80px;
+  }
+  .nav-restaurant-name {
+    margin-left: 25px;
   }
 }
 
@@ -11981,6 +11986,7 @@ nav {
 .rest-info-main {
   background-color: #292929;
   margin-top: 3rem !important;
+  // margin-top: 100px;
 }
 
 .rest_description,
@@ -12037,6 +12043,16 @@ nav {
 
 .open-email {
   padding-top: 15px;
+}
+
+.open-email .open-email-link {
+  text-decoration: none;
+  color: #f1f1f1;
+  font-weight: bold;
+}
+
+.open-email .open-email-link:hover {
+  color: #156cb6;
 }
 
 .instagram-galery {
@@ -12108,6 +12124,7 @@ nav {
   text-align: center;
   margin-top: 30px;
   color: #f1f1f1;
+  padding-bottom: 30px;
 }
 
 .row {

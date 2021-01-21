@@ -93,7 +93,8 @@ nav {
 
 .navigation-box {
 	width: 100%;
-	display: flex;
+   display: flex;
+   margin: auto;
 }
 
 .ecartement {
@@ -226,7 +227,12 @@ nav {
     }
 
     .menu-ghost {
-	   display: block;
+      display: block;
+      margin-right: 80px;
+    }
+
+    .nav-restaurant-name {
+       margin-left: 25px;
     }
 }
 
@@ -887,9 +893,10 @@ $bg-posts-recipes: #f5f5f5;
    }
 }
 
-.rest-info-main {
+.rest-info-main-box {
    background-color: #292929;
    margin-top: 3rem !important;
+   // margin-top: 100px;
 }
 
 
@@ -958,6 +965,15 @@ $bg-posts-recipes: #f5f5f5;
 
 .open-email {
    padding-top: 15px;
+
+   .open-email-link {
+      text-decoration: none;
+      color: #f1f1f1;
+      font-weight: bold;
+      &:hover {
+         color: #156cb6;
+      }
+   }
 }
 
 // ==== INSTAGRAM IMAGES ====
@@ -1008,6 +1024,7 @@ $bg-posts-recipes: #f5f5f5;
    text-align: center;
    margin-top: 30px;
    color: #f1f1f1;
+   padding-bottom: 30px;
 }
 .row{
    margin-right: 0px !important;
