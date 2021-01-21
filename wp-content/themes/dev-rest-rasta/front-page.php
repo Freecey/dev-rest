@@ -21,9 +21,7 @@ if (have_rows('banner_top')) :
             </div>
           </div>
         </div>
-
       </div>
-
     </section>
 
     <div class="banner-top-hash mt-n5"></div>
