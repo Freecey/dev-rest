@@ -1,5 +1,5 @@
 
-
+<section>
 <?php
 
 
@@ -19,7 +19,7 @@ if ( $query->have_posts() ) {
  
         // Contents of the queried post results go here.
         ?>
-
+<div class="container-fluid bg-white-sec">
 <div class="our-menu mx-auto">
   <div class="row">
     <?php
@@ -60,7 +60,7 @@ if ( $query->have_posts() ) {
             <div class="page-title"><?= get_sub_field('title'); ?></div>
             <div class="intro-b-txt"><?= get_sub_field('text'); ?> </div>
             <div class="'o-menu-btn-sect">
-              <a href="the-menu/" class="btn btn-dark">View the full menu</a>
+              <a href="/the-menu/" class="btn btn-dark">View the full menu</a>
             </div>
 
           </div>
@@ -77,7 +77,7 @@ if ( $query->have_posts() ) {
     endif; ?>
   </div>
 </div>
-
+</div>
 <?php
 }
  
@@ -87,3 +87,4 @@ if ( $query->have_posts() ) {
 wp_reset_postdata();
  
 ?>
+</section>

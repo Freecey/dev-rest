@@ -3,6 +3,100 @@
     "title": "The Menu",
     "fields": [
         {
+            "key": "field_60083f65c9ed2",
+            "label": "Banner top",
+            "name": "banner_top",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_60083f83c9ed3",
+                    "label": "Subtitle",
+                    "name": "subtitle",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_60083f92c9ed4",
+                    "label": "Main Title",
+                    "name": "main_title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_60083fa3c9ed5",
+                    "label": "Banner Link",
+                    "name": "banner_link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_60083fc2c9ed6",
+                    "label": "Banner Image",
+                    "name": "banner_image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                }
+            ]
+        },
+        {
             "key": "field_5ffdb65ba7cdb",
             "label": "Sections",
             "name": "menu_sections",
@@ -66,7 +160,6 @@
                             "type": "text",
                             "instructions": "",
                             "required": 1,
-
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "20",
@@ -118,7 +211,6 @@
                             "min": "",
                             "max": "",
                             "step": ""
-
                         },
                         {
                             "key": "field_600001dadba8b",
@@ -138,7 +230,6 @@
                             "ui": 1,
                             "ui_on_text": "",
                             "ui_off_text": ""
-
                         }
                     ]
                 }
@@ -176,5 +267,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1610629290
+    "modified": 1611153381
 }

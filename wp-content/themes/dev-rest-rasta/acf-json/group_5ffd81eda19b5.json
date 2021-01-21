@@ -38,7 +38,7 @@
                 "id": ""
             },
             "crop_type": "hard",
-            "target_size": "thumbnail",
+            "target_size": "single-recipe-img",
             "width": "",
             "height": "",
             "preview_size": "medium",
@@ -187,5 +187,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1610994725
+    "modified": 1611159816
 }

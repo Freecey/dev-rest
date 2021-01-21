@@ -8,7 +8,7 @@ if (have_rows('banner_top')) :
   while (have_rows('banner_top')) : the_row();
     $bannertop_img = get_sub_field('banner_image');
 ?>
-    <div class="banner-top" style="background-image: url(' <?= $bannertop_img['url']; ?> ');">
+    <section class="banner-top" style="background-image: url(' <?= $bannertop_img['url']; ?> ');">
       <div class="cont-banner">
         <div class="col-12 col-sm-12 col-md-12 col-lg-6">
           <div class="font-subtitle-top"><?= get_sub_field('subtitle'); ?></div>
@@ -24,7 +24,7 @@ if (have_rows('banner_top')) :
 
       </div>
 
-    </div>
+    </section>
 
     <div class="banner-top-hash mt-n5"></div>
 
@@ -82,7 +82,7 @@ if (have_rows('intro')) :
   while (have_rows('intro')) : the_row();
     $intro_img = get_sub_field('intro_image');
 ?>
-    <div class="intro-part mx-auto">
+    <section class="intro-part mx-auto">
       <div class="row">
         <div class="col-12 col-lg-7 img-block-intro">
           <img src="<?= $intro_img['sizes']["frontimg"]; ?>" alt="The chef">
@@ -103,7 +103,7 @@ if (have_rows('intro')) :
         </div>
       </div>
 
-    </div>
+    </section>
 
 
 
@@ -120,7 +120,7 @@ endif; ?>
 
 
 <!-- START RESTAURANTS PART -->
-<div class="cont-restautants">
+<section class="cont-restautants" id="OursRestaurants">
   <?php if (have_rows('our_restaurants')) : while (have_rows('our_restaurants')) : the_row(); ?>
 
       <div class="page-subtitles text-center"><?= get_sub_field('title'); ?></div>
@@ -209,7 +209,7 @@ endif; ?>
   <?php endwhile;
   endif; ?>
 
-</div>
+</section>
 <!-- END RESTAURANTS PART -->
 
 
@@ -224,7 +224,7 @@ endif; ?>
 
 <!-- START testimony -->
 
-<div id="carouseltestimony" class="carousel slide" data-ride="carousel">
+<section id="carouseltestimony" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <?php
     if (have_rows('testimony')) :
@@ -278,10 +278,10 @@ endif; ?>
     </a>
   </div>
 
-  <script src="http://www.wordpress.lan/wp-content/themes/dev-rest-rasta/js/popper.min.js"></script>
-  <script src="http://www.wordpress.lan/wp-content/themes/dev-rest-rasta/js/bootstrap.min.js"></script>
+  <!-- <script src="http://www.wordpress.lan/wp-content/themes/dev-rest-rasta/js/popper.min.js"></script>
+  <script src="http://www.wordpress.lan/wp-content/themes/dev-rest-rasta/js/bootstrap.min.js"></script> -->
 
-</div>
+</section>
 
   <!-- END testimony -->
 
