@@ -10831,6 +10831,7 @@ nav {
   height: 70px;
   width: 100%;
   background-color: black;
+  z-index: 10;
 }
 
 .navigation {
@@ -10843,7 +10844,7 @@ nav {
 }
 
 .navigation-box {
-  width: 100%;
+  width: 150%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10950,11 +10951,18 @@ nav {
     display: block;
   }
   .item-nav {
-    background-color: black;
+    background-color: #2e2d2d;
     height: 50px;
+    border-radius: 5px;
+    width: 150px;
+    -webkit-box-shadow: 0 0 5px white;
+            box-shadow: 0 0 5px white;
+    opacity: 0.92;
   }
   .item-nav a {
     margin: 0;
+    text-align: center;
+    text-shadow: 3px 3px 4px black;
   }
   .item-nav:nth-child(1) {
     margin-top: 70px;
@@ -11052,6 +11060,7 @@ nav {
 }
 
 /* ============================================= archive-recipe > ===================================================*/
+
 .bgHatching {
   width: 100%;
   height: 4rem;
@@ -11943,14 +11952,28 @@ nav {
           justify-content: space-between;
 }
 
-.rest-info-main-box h3,
-.rest-info-main-box h5 {
+.rest-info-main-box h3, .rest-info-main-box h5 {
   font-weight: 900;
   margin-bottom: 20px;
 }
 
 .rest-info-main {
   background-color: #292929;
+}
+
+.rest_description {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: #ffff;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.rest_description h3,
+.rest_description h5 {
+  font-weight: 900;
+  margin-bottom: 20px;
 }
 
 .rest_description,

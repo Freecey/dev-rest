@@ -128,7 +128,7 @@
 
                     <div class="under-line"></div>
                     <!-- <div class="mx-auto"> -->
-                    <span class="copyright">@ 2021 All Rights Reserved. Designed by Devdesign Studio</span>
+                    <span class="copyright">@ 2021 All Rights Reserved. Designed by Rasta-Rocket Team</span>
                     <!-- </div> -->
                 </div>
             </div>

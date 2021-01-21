@@ -30,8 +30,10 @@
 				<li class="item-nav"><a href="/recipes/">Recipes</a></li>
 			</ul>
 			
-
+			
 			<span class="menu-ghost">Menu</span>
+			
+			
 			<img src="/wp-content/themes/dev-rest-rasta/assets/svg/bullet-list-67.svg" alt="logo-menu" class="btn logo-menu" style="width: 60px;">
 		</div>	
 	</nav>
