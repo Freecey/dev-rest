@@ -76,25 +76,22 @@ Version: 1.0
    display: none;
 }
 
-nav {
+#navigation {
 
 	display: flex;	
 	position:fixed;
 	height: 70px;
 	width: 100%;
-	background-color: black;
-	z-index: 10;	
-}
-
-.navigation {
-   display: flex;
+	background-color: transparent;
    justify-content: center;
+	z-index: 10;	
 }
 
 .navigation-box {
 	width: 100%;
    display: flex;
    margin: auto;
+   height: 50px;
 }
 
 .ecartement {
@@ -128,6 +125,7 @@ nav {
 // }
 
 .liste-nav {
+   padding-left: 0px;
    list-style-type: none;
    display: flex;
    margin-bottom: 0;
@@ -223,7 +221,7 @@ nav {
 		}
     }
     .item-nav:nth-child(1){
-        margin-top: 70px;
+        margin-top: 50px;
     }
 
     .menu-ghost {
@@ -233,6 +231,27 @@ nav {
 
     .nav-restaurant-name {
        margin-left: 25px;
+    }
+}
+
+@media screen and (max-width: 325x) {
+   .item-nav {
+		background-color: #2e2d2d;
+		height: 50px;
+		border-radius: 5px;
+		width: 150px;
+		box-shadow: 0 0 5px white;
+      opacity: 0.92;
+      margin-right: 50px;
+		a {
+			margin: 0;
+			text-align: center;
+			text-shadow: 3px 3px 4px black;
+      }
+      
+      .liste-nav .active{
+         padding: 0px;
+      }
     }
 }
 
