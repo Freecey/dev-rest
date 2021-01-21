@@ -45,7 +45,6 @@ function devrest_init()
         'menu_position' => 4,
         'menu_icon' => 'dashicons-carrot',
         'supports' => ['title', 'thumbnail'],
-        //'show_in_reste' => true,
         'has_archive' => true,
     ]);
     register_taxonomy('category-recipe', 'recipes', [

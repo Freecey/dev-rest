@@ -10844,7 +10844,7 @@ nav {
 }
 
 .navigation-box {
-  width: 150%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10936,6 +10936,30 @@ nav {
 }
 
 @media screen and (max-width: 999px) {
+  .logo-menu {
+    display: block;
+  }
+  .liste-nav {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+  }
+  .liste-nav.active {
+    display: block;
+  }
+  .item-nav {
+    background-color: black;
+    height: 50px;
+  }
+  .item-nav a {
+    margin: 0;
+  }
+  .item-nav:nth-child(1) {
+    margin-top: 70px;
+  }
   .logo-menu {
     display: block;
   }
@@ -11060,7 +11084,6 @@ nav {
 }
 
 /* ============================================= archive-recipe > ===================================================*/
-
 .bgHatching {
   width: 100%;
   height: 4rem;
@@ -11261,19 +11284,59 @@ nav {
 }
 
 /* ===================================== single-recipe > ======================================= */
+.heroBannerSingle {
+  position: relative;
+  height: 600px;
+  background-color: #292929;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.heroBannerSingle__bgHatching {
+  width: 100%;
+  height: 4rem;
+  position: relative;
+  top: 1rem;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
 .singleRecipe {
   padding: 0;
+  background-color: white;
+  margin-bottom: -32rem;
+}
+
+@media (max-width: 767.98px) {
+  .singleRecipe {
+    margin-bottom: -40rem;
+  }
+}
+
+.containerSingleRecipe {
+  position: relative;
+  bottom: 500px;
+  padding: 0;
+}
+
+@media (max-width: 767.98px) {
+  .containerSingleRecipe {
+    bottom: 610px;
+  }
 }
 
 .topContainer {
   padding: 0;
-  background: #525252 30%;
   color: white;
 }
 
 @media (max-width: 767.98px) {
   .topContainer {
     padding: 0 1rem;
+    padding-top: 5rem;
   }
 }
 
@@ -11281,6 +11344,12 @@ nav {
   font-size: 46px;
   font-weight: bold;
   margin: 3rem 0;
+}
+
+@media (max-width: 575.98px) {
+  .topContainer__titleRecipe {
+    margin: 1.5rem 0;
+  }
 }
 
 .topContainer__descRecipe {
@@ -11295,7 +11364,7 @@ nav {
       grid-template-columns: auto auto 1fr auto;
   padding-top: 3rem;
   color: white;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: bold;
 }
 
@@ -11303,15 +11372,16 @@ nav {
   .navSingle {
     -ms-grid-rows: 1fr auto;
         grid-template-rows: 1fr auto;
+    margin: 1rem 0;
   }
 }
 
-.navSingle__return, .navSingle__term {
+.navSingle__return {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
-.navSingle__return::after, .navSingle__term::after {
+.navSingle__return::after {
   content: "";
   display: block;
   width: 100%;
@@ -11324,27 +11394,32 @@ nav {
   transition: all 0.3s ease-in-out;
 }
 
-.navSingle__return:hover::after, .navSingle__term:hover::after {
+.navSingle__return:hover::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
   opacity: 1;
 }
 
-.navSingle__return:hover, .navSingle__term:hover {
+.navSingle__return:hover {
   color: white;
   text-decoration: none;
 }
 
-.navSingle__return:visited, .navSingle__term:visited {
+@media (max-width: 767.98px) {
+  .navSingle__return {
+    margin-bottom: 1rem;
+  }
+}
+
+.navSingle__return:visited {
   color: white;
 }
 
 @media (max-width: 575.98px) {
-  .navSingle__return, .navSingle__term {
+  .navSingle__return {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1/2;
-    margin-bottom: 2rem;
   }
 }
 
@@ -11373,11 +11448,38 @@ nav {
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2/3;
+    opacity: 0;
   }
 }
 
 .navSingle__term {
   text-align: end;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.navSingle__term::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: white;
+  opacity: 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.navSingle__term:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  opacity: 1;
+}
+
+.navSingle__term:hover {
+  color: white;
+  text-decoration: none;
 }
 
 .navSingle__term > a {
@@ -11393,7 +11495,6 @@ nav {
   }
 }
 
-/* ====== style 4 */
 .additional-info {
   font-weight: bold;
   margin-bottom: 2rem;
@@ -11415,19 +11516,13 @@ nav {
 .mainContainer {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "networksIcons ingredients" "     .        preparation";
+      grid-template-areas: "networksIcons ingredients" "     .        preparation";
   padding-right: 96px;
 }
 
 @media (max-width: 767.98px) {
   .mainContainer {
-        grid-template-areas: "ingredients" "preparation" "networksIcons";
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .mainContainer {
+        grid-template-areas: "ingredients" "preparation" "networksIcons";
     padding: 0 1rem;
   }
 }
@@ -11520,12 +11615,32 @@ nav {
   height: auto;
 }
 
+.bgHatchingSingle {
+  width: 100%;
+  height: 4rem;
+  position: relative;
+  bottom: 30rem;
+}
+
+@media (max-width: 767.98px) {
+  .bgHatchingSingle {
+    bottom: 38rem;
+  }
+}
+
 /* ===================================== latest-updates-recipe > ======================================= */
 /* ====== style 4 section latest-update > */
 .latestRecipe {
   text-align: center;
   background-color: #f5f5f5;
   padding-top: 5rem;
+}
+
+.latestRecipe__bgHatching {
+  width: 100%;
+  height: 4rem;
+  position: relative;
+  top: 2rem;
 }
 
 .latestRecipe__title {
@@ -11943,24 +12058,6 @@ nav {
   padding-top: 4rem !important;
 }
 
-.rest-info-main-box {
-  padding-top: 100px;
-  padding-bottom: 30px;
-  border-bottom: #ffff;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.rest-info-main-box h3, .rest-info-main-box h5 {
-  font-weight: 900;
-  margin-bottom: 20px;
-}
-
-.rest-info-main {
-  background-color: #292929;
-}
-
 .rest_description {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -11974,6 +12071,10 @@ nav {
 .rest_description h5 {
   font-weight: 900;
   margin-bottom: 20px;
+}
+
+.rest-info-main {
+  background-color: #292929;
 }
 
 .rest_description,

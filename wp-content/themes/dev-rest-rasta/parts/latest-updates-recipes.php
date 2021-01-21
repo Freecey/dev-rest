@@ -35,5 +35,5 @@
         else : ?>
         <?php endif; ?>
     </div>
-    <img class="bgHatching" src="/wp-content/themes/dev-rest-rasta/assets/images/hachures-grises.png" alt="">
+    <img class="latestRecipe__bgHatching" src="/wp-content/themes/dev-rest-rasta/assets/images/hachures-grises.png" alt="">
 </section>

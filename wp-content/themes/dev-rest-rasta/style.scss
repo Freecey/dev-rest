@@ -70,6 +70,46 @@ Version: 1.0
    font-weight: bold;
 }
 
+$color-secondary: #808080;
+$bg-posts-recipes: #f5f5f5;
+
+@mixin box-shadow-posts {
+   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.445);
+}
+@mixin underline-animate($color: black) {
+   &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: $color;
+      opacity: 0;
+      transform: scaleX(0);
+      transition: all 0.3s ease-in-out;
+   }
+   &:hover::after {
+      transform: scaleX(1);
+      opacity: 1;
+   }
+}
+@mixin hover-tax-nav($color: black) {
+   transition: all 0.3s ease-in-out;
+   @include underline-animate($color);
+   &:hover {
+      color: $color;
+      text-decoration: none;
+   }
+}
+@mixin hover-networks-icons() {
+   transition: all 0.3s ease-in-out;
+   transform: scale(1);
+   &:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.445);
+   }
+}
+
+
 // ============ NAVBAR START =================
 
 #menu-navbar {
@@ -77,13 +117,12 @@ Version: 1.0
 }
 
 nav {
-
-	display: flex;	
-	position:fixed;
-	height: 70px;
-	width: 100%;
-	background-color: black;
-	z-index: 10;	
+   display: flex;
+   position: fixed;
+   height: 70px;
+   width: 100%;
+   background-color: black;
+   z-index: 10;
 }
 
 .navigation {
@@ -92,8 +131,8 @@ nav {
 }
 
 .navigation-box {
-	width: 100%;
-	display: flex;
+   width: 100%;
+   display: flex;
 }
 
 .ecartement {
@@ -172,7 +211,6 @@ nav {
    display: none;
 }
 
-
 @media screen and (max-width: 999px) {
    .logo-menu {
       display: block;
@@ -197,79 +235,40 @@ nav {
       margin-top: 70px;
    }
 
-    .logo-menu {
-        display: block;
-    }
-    .liste-nav {
-      	display: none;
-      	flex-direction: column;
-		height: auto;
-    }
-    .liste-nav.active {
-		display: block;
-    }
-    .item-nav {
-		background-color: #2e2d2d;
-		height: 50px;
-		border-radius: 5px;
-		width: 150px;
-		box-shadow: 0 0 5px white;
-		opacity: 0.92;
-		a {
-			margin: 0;
-			text-align: center;
-			text-shadow: 3px 3px 4px black;
-		}
-    }
-    .item-nav:nth-child(1){
-        margin-top: 70px;
-    }
+   .logo-menu {
+      display: block;
+   }
+   .liste-nav {
+      display: none;
+      flex-direction: column;
+      height: auto;
+   }
+   .liste-nav.active {
+      display: block;
+   }
+   .item-nav {
+      background-color: #2e2d2d;
+      height: 50px;
+      border-radius: 5px;
+      width: 150px;
+      box-shadow: 0 0 5px white;
+      opacity: 0.92;
+      a {
+         margin: 0;
+         text-align: center;
+         text-shadow: 3px 3px 4px black;
+      }
+   }
+   .item-nav:nth-child(1) {
+      margin-top: 70px;
+   }
 
-    .menu-ghost {
-	   display: block;
-    }
+   .menu-ghost {
+      display: block;
+   }
 }
 
 // ============ NAVBAR END =================
-
-$color-secondary: #808080;
-$bg-posts-recipes: #f5f5f5;
-
-@mixin box-shadow-posts {
-   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.445);
-}
-@mixin underline-animate($color: black) {
-   &::after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 1px;
-      background: $color;
-      opacity: 0;
-      transform: scaleX(0);
-      transition: all 0.3s ease-in-out;
-   }
-   &:hover::after {
-      transform: scaleX(1);
-      opacity: 1;
-   }
-}
-@mixin hover-tax-nav($color: black) {
-   transition: all 0.3s ease-in-out;
-   @include underline-animate($color);
-   &:hover {
-      color: $color;
-      text-decoration: none;
-   }
-}
-@mixin hover-networks-icons() {
-   transition: all 0.3s ease-in-out;
-   transform: scale(1);
-   &:hover {
-      transform: scale(1.1);
-      box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.445);
-   }
-}
 
 /* ===================================== hero banner archive recipes> ======================================= */
 /* ====== style 4 hero banner > */
@@ -442,19 +441,50 @@ $bg-posts-recipes: #f5f5f5;
 }
 
 /* ===================================== single-recipe > ======================================= */
+
+.heroBannerSingle {
+   position: relative;
+   height: 600px;
+   background-color: #292929;
+   display: flex;
+   &__bgHatching {
+      width: 100%;
+      height: 4rem;
+      position: relative;
+      top: 1rem;
+      transform: rotateX(180deg);
+      align-self: flex-end;
+   }
+}
 .singleRecipe {
    padding: 0;
+   background-color: white;
+   margin-bottom: -32rem;
+   @include media-breakpoint-down(sm) {
+      margin-bottom: -40rem;
+   }
+}
+.containerSingleRecipe {
+   position: relative;
+   bottom: 500px;
+   padding: 0;
+   @include media-breakpoint-down(sm) {
+      bottom: 610px;
+   }
 }
 .topContainer {
    padding: 0;
-   background: rgb(82, 82, 82) 30%; /////////RMV BG > ITS JST HERE 4 DEV//////////
    color: white;
    @include media-breakpoint-down(sm) {
       padding: 0 1rem;
+      padding-top: 5rem
    }
    &__titleRecipe {
       @include font-title-page();
       margin: 3rem 0;
+      @include media-breakpoint-down(xs) {
+         margin: 1.5rem 0;
+      }
    }
    &__descRecipe {
       margin-bottom: 2rem;
@@ -467,19 +497,22 @@ $bg-posts-recipes: #f5f5f5;
    grid-template-columns: auto auto 1fr auto;
    padding-top: 3rem;
    color: white;
-   font-size: 14px;
+   font-size: 1rem;
    font-weight: bold;
    @include media-breakpoint-down(xs) {
       grid-template-rows: 1fr auto;
+      margin: 1rem 0;
    }
    &__return {
       @include hover-tax-nav(white);
+      @include media-breakpoint-down(sm) {
+         margin-bottom: 1rem;
+      }
       &:visited {
          color: white;
       }
       @include media-breakpoint-down(xs) {
          grid-row: 1/2;
-         margin-bottom: 2rem;
       }
    }
    &__date {
@@ -494,11 +527,13 @@ $bg-posts-recipes: #f5f5f5;
       @include media-breakpoint-down(xs) {
          grid-column: 2/3;
          grid-row: 2/3;
+         opacity: 0;
       }
    }
    &__term {
       text-align: end;
-      @extend .navSingle__return;
+      @include hover-tax-nav(white);
+
       > a {
          text-decoration: none;
          color: white;
@@ -508,7 +543,7 @@ $bg-posts-recipes: #f5f5f5;
       }
    }
 }
-/* ====== style 4 */
+
 .additional-info {
    font-weight: bold;
    margin-bottom: 2rem;
@@ -534,9 +569,6 @@ $bg-posts-recipes: #f5f5f5;
          "ingredients"
          "preparation"
          "networksIcons";
-      padding: 0 1rem;
-   }
-   @include media-breakpoint-down(sm) {
       padding: 0 1rem;
    }
 }
@@ -594,6 +626,15 @@ $bg-posts-recipes: #f5f5f5;
       }
    }
 }
+.bgHatchingSingle {
+   width: 100%;
+   height: 4rem;
+   position: relative;
+   bottom: 30rem;
+   @include media-breakpoint-down(sm) {
+      bottom: 38rem;
+   }   
+}
 
 /* ===================================== latest-updates-recipe > ======================================= */
 /* ====== style 4 section latest-update > */
@@ -601,6 +642,12 @@ $bg-posts-recipes: #f5f5f5;
    text-align: center;
    background-color: $bg-posts-recipes;
    padding-top: 5rem;
+   &__bgHatching {
+      width: 100%;
+      height: 4rem;
+      position: relative;
+      top: 2rem;
+   }
 
    &__title {
       @include font-title-page();
@@ -712,7 +759,7 @@ $bg-posts-recipes: #f5f5f5;
    padding-left: 2rem;
    padding-right: 2rem;
 }
-.menu-w{
+.menu-w {
    max-width: 900px;
 }
 
@@ -724,7 +771,6 @@ $bg-posts-recipes: #f5f5f5;
    align-items: normal;
    align-content: normal;
    margin-bottom: 1rem;
-
 }
 
 .flex-menu-section-items:nth-child(1) {
@@ -874,8 +920,7 @@ $bg-posts-recipes: #f5f5f5;
    padding-top: 4rem !important;
 }
 
-
-.rest_description{
+.rest_description {
    padding-top: 30px;
    padding-bottom: 30px;
    border-bottom: #ffff;
@@ -890,7 +935,6 @@ $bg-posts-recipes: #f5f5f5;
 .rest-info-main {
    background-color: #292929;
 }
-
 
 // .rest_description {
 
