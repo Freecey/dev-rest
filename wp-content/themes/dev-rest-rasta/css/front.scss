@@ -387,15 +387,19 @@ $bg-gris : #292929;
 
 .newslt-bg{
     position: relative;
-    margin-top: -12rem !important;
+    margin-top: -200px !important;
     background-color: $bg-gris !important;
     color: white !important;
     z-index: 5 !important;
     box-shadow: 0px 21px 20px -5px rgba(0,0,0,0.75);
     .row{
-        padding: 7rem 4rem;
+        padding: 6rem 4rem;
         padding-top: 9rem;
         z-index: 7;
     
     }
 }
+.responsive-img {
+    width: 100%;
+    height: auto;
+  }

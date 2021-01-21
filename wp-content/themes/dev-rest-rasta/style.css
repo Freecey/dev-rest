@@ -10844,7 +10844,7 @@ nav {
 }
 
 .navigation-box {
-  width: 150%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10951,6 +10951,30 @@ nav {
     display: block;
   }
   .item-nav {
+    background-color: black;
+    height: 50px;
+  }
+  .item-nav a {
+    margin: 0;
+  }
+  .item-nav:nth-child(1) {
+    margin-top: 70px;
+  }
+  .logo-menu {
+    display: block;
+  }
+  .liste-nav {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+  }
+  .liste-nav.active {
+    display: block;
+  }
+  .item-nav {
     background-color: #2e2d2d;
     height: 50px;
     border-radius: 5px;
@@ -10994,9 +11018,6 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(assets/images/resto1.jpg);
-  -webkit-filter: brightness(50%);
-          filter: brightness(50%);
 }
 
 .heroBanner__inside {
@@ -11060,7 +11081,6 @@ nav {
 }
 
 /* ============================================= archive-recipe > ===================================================*/
-
 .bgHatching {
   width: 100%;
   height: 4rem;
@@ -11943,24 +11963,6 @@ nav {
   padding-top: 4rem !important;
 }
 
-.rest-info-main-box {
-  padding-top: 100px;
-  padding-bottom: 30px;
-  border-bottom: #ffff;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.rest-info-main-box h3, .rest-info-main-box h5 {
-  font-weight: 900;
-  margin-bottom: 20px;
-}
-
-.rest-info-main {
-  background-color: #292929;
-}
-
 .rest_description {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -11974,6 +11976,11 @@ nav {
 .rest_description h5 {
   font-weight: 900;
   margin-bottom: 20px;
+}
+
+.rest-info-main {
+  background-color: #292929;
+  margin-top: 3rem !important;
 }
 
 .rest_description,
@@ -12101,6 +12108,15 @@ nav {
   text-align: center;
   margin-top: 30px;
   color: #f1f1f1;
+}
+
+.row {
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+}
+
+.footer-posi {
+  margin-top: 15rem !important;
 }
 
 .cont-content {
@@ -12483,7 +12499,7 @@ nav {
 
 .newslt-bg {
   position: relative;
-  margin-top: -12rem !important;
+  margin-top: -200px !important;
   background-color: #292929 !important;
   color: white !important;
   z-index: 5 !important;
@@ -12492,8 +12508,13 @@ nav {
 }
 
 .newslt-bg .row {
-  padding: 7rem 4rem;
+  padding: 6rem 4rem;
   padding-top: 9rem;
   z-index: 7;
+}
+
+.responsive-img {
+  width: 100%;
+  height: auto;
 }
 /*# sourceMappingURL=style.css.map */
