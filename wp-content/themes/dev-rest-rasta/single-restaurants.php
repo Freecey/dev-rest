@@ -129,7 +129,7 @@ endif; ?>
     <div class="sect-space"></div>
 
     <!-- START restaurant_reservation PART -->
-    <section>
+    <section id="Reserve">
 
         <?php if (have_rows('restaurant_reservation')) : ?>
 
@@ -163,7 +163,7 @@ endif; ?>
 
 <!-- END restaurant_reservation PART -->
 
-<div class="sect-space" id="Reserve"></div>
+<div class="sect-space"></div>
 
 <!-- START OUR MENU -->
 <?php get_template_part('parts/our-menu'); ?>

@@ -26,7 +26,7 @@
 			<ul class="liste-nav">
 				<li class="item-nav"><a href="/"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/home-minimal.svg" alt="" style="width: 10px;"></a></li>
 				<li class="item-nav"><a href="/#OursRestaurants">Ours Restaurants</a></li>
-				<li class="item-nav"><a href="#Menu">Menu</a></li>
+				<li class="item-nav"><a href="/the-menu/">Menu</a></li>
 				<li class="item-nav"><a href="/recipes/">Recipes</a></li>
 			</ul>
 			
