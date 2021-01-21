@@ -1,6 +1,7 @@
 <?php get_header(); ?>
-
-<div class="container singleRecipe col-sm-12 col-md-10 col-lg-7">
+<?php get_template_part('parts/top-banner-single-recipes');?>
+<section class="singleRecipe">
+<div class="container containerSingleRecipe col-sm-12 col-md-10 col-lg-7">
    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
          <div class="topContainer">
             <div class="navSingle">
@@ -64,8 +65,8 @@
    <?php endwhile;
    endif; ?>
 </div>
-<img class="bgHatching" src="/wp-content/themes/dev-rest-rasta/assets/images/hachures-blanches.png" alt="">
-
+<img class="bgHatchingSingle" src="/wp-content/themes/dev-rest-rasta/assets/images/hachures-blanches.png" alt="">
+</section>
 
 <?php get_template_part('parts/latest-updates-recipes'); ?>
 
