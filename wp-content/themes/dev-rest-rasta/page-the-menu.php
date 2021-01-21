@@ -4,40 +4,40 @@
 <!-- START BANNER TOP -->
 <?php
 if (have_rows('banner_top')) :
-    while (have_rows('banner_top')) : the_row();
-        $bannertop_img = get_sub_field('banner_image');
+  while (have_rows('banner_top')) : the_row();
+    $bannertop_img = get_sub_field('banner_image');
 ?>
-        <div class="banner-top banner-top-s-rest" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' <?= $bannertop_img['url']; ?> ');">
-            <div class="cont-banner">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-8">
-                    <div class="font-subtitle-top"><?= get_sub_field('subtitle'); ?></div>
-                    <div class="font-title-top"><?= get_sub_field('main_title'); ?></div>
-                    <div class="banner-link banner-link-menu">
-                        <div class="link-barre"></div>
-                        <div class="link-text">
-                            <?php $banlink = get_sub_field('banner_link'); ?>
-                            <a class="banner-link-a" href="<?= $banlink['url']; ?>" class=""><?= $banlink['title']; ?></a>
-                        </div>
-                    </div>
-                </div>
-
+    <section class="banner-top banner-top-s-rest" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' <?= $bannertop_img['url']; ?> ');">
+      <div class="cont-banner">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-8">
+          <div class="font-subtitle-top"><?= get_sub_field('subtitle'); ?></div>
+          <div class="font-title-top"><?= get_sub_field('main_title'); ?></div>
+          <div class="banner-link banner-link-menu">
+            <div class="link-barre"></div>
+            <div class="link-text">
+              <?php $banlink = get_sub_field('banner_link'); ?>
+              <a class="banner-link-a" href="<?= $banlink['url']; ?>" class=""><?= $banlink['title']; ?></a>
             </div>
-
+          </div>
         </div>
 
-        <div class="banner-top-hash mt-n5"></div>
+      </div>
+
+    </section>
+
+    <div class="banner-top-hash mt-n5"></div>
 <?php
-    endwhile;
+  endwhile;
 else :
 // no rows found
 endif; ?>
 <!-- END BANNER TOP -->
 
 
-<div class="rows">
-<div class="text-center page-subtitles my-4">Welcome</div>
+<section class="rows">
+  <div class="text-center page-subtitles my-4">Welcome</div>
 
-<div class="text-center page-title"><?php the_title(); ?></div>
+  <div class="text-center page-title"><?php the_title(); ?></div>
 
 
   <div class="col-12 col-sm-12 col-md-12 col-lg-8 mx-auto menu-w">
@@ -60,11 +60,11 @@ endif; ?>
 
         <?php while (have_rows('section_items')) : the_row(); ?>
 
-        <?php if (get_sub_field('chef_selection')) :  ?>
-        <div class="chef-select-label">CHEF SELECTION</div>
-          <div class="chef-select-cont">
-       <?php endif; ?>
-          
+          <?php if (get_sub_field('chef_selection')) :  ?>
+            <div class="chef-select-label">CHEF SELECTION</div>
+            <div class="chef-select-cont">
+            <?php endif; ?>
+
 
             <div class="container-dish">
               <div class="flex-menu-dish">
@@ -78,7 +78,7 @@ endif; ?>
               </div>
             </div>
             <?php if (get_sub_field('chef_selection')) :  ?>
-          </div>
+            </div>
           <?php endif; ?>
         <?php endwhile; ?>
     <?php
@@ -87,7 +87,7 @@ endif; ?>
     // no rows found
     endif; ?>
   </div>
-</div>
+</section>
 <div class="sect-space"></div>
 <!-- ADD HERE LAST RECIPES PART -->
 <?php get_template_part('parts/latest-updates-recipes'); ?>
