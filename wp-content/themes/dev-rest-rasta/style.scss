@@ -854,6 +854,9 @@ $bg-posts-recipes: #f5f5f5;
 .open-phone-number {
    padding-bottom: 15px;
 }
+.contact-us-icon {
+   padding-bottom: 3px;
+}
 
 .open-email {
    padding-top: 15px;
@@ -863,7 +866,7 @@ $bg-posts-recipes: #f5f5f5;
       color: #f1f1f1;
       font-weight: bold;
       &:hover {
-         color: #156cb6;
+         color: #DD9B9B;
       }
    }
 }
@@ -917,7 +920,16 @@ $bg-posts-recipes: #f5f5f5;
    margin-top: 30px;
    color: #f1f1f1;
    padding-bottom: 30px;
+      a {
+      text-decoration: none;
+      color: #f1f1f1;
+      font-weight: bold;
+      &:hover {
+         color: #DD9B9B;
+      }
+   }
 }
+
 .row {
    margin-right: 0px !important;
    margin-left: 0px !important;
