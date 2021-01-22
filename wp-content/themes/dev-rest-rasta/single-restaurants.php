@@ -16,7 +16,7 @@ if (have_rows('banner_top')) :
                         <div class="link-barre"></div>
                         <div class="link-text">
                             <?php $banlink = get_sub_field('banner_link'); ?>
-                            <a class="banner-link-a" href="<?= $banlink['url']; ?>" class=""><?= $banlink['title']; ?></a>
+                            <a class="banner-link-a" href="<?= $banlink['url']; ?>"><?= $banlink['title']; ?></a>
                         </div>
                     </div>
                 </div>
