@@ -171,6 +171,20 @@ function hide_editor() {
 
 
 
+function remove_higher_levels($all_roles) {
+    $user = wp_get_current_user();
+    $next_level = 'level_' . ($user->user_level + 1);
+ 
+    foreach ( $all_roles as $name => $role ) {
+        if (isset($role['capabilities'][$next_level])) {
+            unset($all_roles[$name]);
+        }
+    }
+ 
+    return $all_roles;
+}
+
+
 add_action('init', 'devrest_init');
 add_action('after_setup_theme', 'devrest_supports');
 add_action('wp_enqueue_scripts', 'devrest_assets');
@@ -180,6 +194,8 @@ add_action('acf / register_fields', 'my_register_fields');
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 add_action('acf/init', 'my_acf_init');
 add_action( 'admin_init', 'hide_editor' );
+add_filter('editable_roles', 'remove_higher_levels');
+
 
 // filter to change class of the navbar menu
 
