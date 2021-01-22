@@ -65,7 +65,7 @@ allLinks.forEach(function(item) {
 <!--================ SCRIPT BURGER-MENU END ==================== -->
 
 <script>
-document.getElementById("navigation").addEventListener("wheel", myFunction);
+document.getElementById("navigation").addEventListener("scroll", myFunction);
 
 function myFunction() {
   this.style.backgroundColor = "#00000064";
