@@ -1,10 +1,7 @@
 <!-- footer.php -->
 
-
-<footer class="footer-posi">
-    <div class="<?php echo ($post->ID === 484 ? 'top-hash-white' : 'top-hash-gray');  ;?> pt-5 mb-n5"></div>
+    <div class="<?php echo (is_archive() ? 'top-hash-white' : 'top-hash-gray');  ;?> pt-5 mb-n5"></div>
     <?php
-
 
     $args = array(
         'page_id' => '224'
