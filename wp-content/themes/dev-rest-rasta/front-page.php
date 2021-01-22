@@ -11,8 +11,8 @@ if (have_rows('banner_top')) :
     <section class="banner-top" style="background-image: url(' <?= $bannertop_img['url']; ?> ');">
       <div class="cont-banner">
         <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-          <div class="font-subtitle-top"><?= get_sub_field('subtitle'); ?></div>
-          <div><h1 class="font-title-top"><?= get_sub_field('main_title'); ?></h1></div>
+          <div class="font-subtitle-top animeSubtitle"><?= get_sub_field('subtitle'); ?></div>
+          <div><h1 class="font-title-top animeTitle"><?= get_sub_field('main_title'); ?></h1></div>
           <div class="banner-link">
             <div class="link-barre"></div>
             <div class="link-text">

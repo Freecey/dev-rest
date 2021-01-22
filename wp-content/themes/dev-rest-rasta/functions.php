@@ -36,6 +36,8 @@ function devrest_assets()
         wp_enqueue_script('Popper_min', get_template_directory_uri() . '/js/popper.min.js', array(), '0.1', true);
         wp_enqueue_script('BS_min', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '0.1', true);
     };
+    wp_enqueue_script( 'animejs', get_template_directory_uri() . '/js/anime.min.js', array(), false, true );
+    wp_enqueue_script( 'script', get_template_directory_uri() . '/js/scriptAnime.js', array(), false, true );
 }
 
 function devrest_init()
