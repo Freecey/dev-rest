@@ -32,7 +32,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 my-auto">
-                            <form class="form-inline" method="post" action="http://www.wordpress.lan/?na=s">
+                            <form class="form-inline" method="post" action="/?na=s">
                                 <input type="hidden" name="nlang" value="">
                                 <div class="form-group mx-sm-3 -my2">
                                     <label for="inputSubscribe" class="sr-only">Your Email Address</label>
