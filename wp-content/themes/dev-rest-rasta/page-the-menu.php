@@ -11,7 +11,7 @@ if (have_rows('banner_top')) :
       <div class="cont-banner">
         <div class="col-12 col-sm-12 col-md-12 col-lg-8">
           <div class="font-subtitle-top"><?= get_sub_field('subtitle'); ?></div>
-          <div class="font-title-top"><?= get_sub_field('main_title'); ?></div>
+          <div><h1 class="font-title-top"><?= get_sub_field('main_title'); ?></h1></div>
           <div class="banner-link banner-link-menu">
             <div class="link-barre"></div>
             <div class="link-text">

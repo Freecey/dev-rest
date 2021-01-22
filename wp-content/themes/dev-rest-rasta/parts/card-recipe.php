@@ -13,14 +13,14 @@
                             <?php $image = get_field('image');
                             $size = 'archive-recipe-img';
                             if ($image) { ?>
-                                <img class="card-img postRecipe__image" src="<?php echo $image['sizes']["single-recipe-img"]; ?>" alt="">
+                                <img class="card-img postRecipe__image" src="<?php echo $image['sizes']["single-recipe-img"]; ?>" alt="recipe dish">
                             <?php
                             } ?>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-5 order-lg-1">
                             <div class="card-body postRecipeBody ">
-                                <div class="card-text postRecipeBody__date"><img class="postRecipeBody__date-before" src="/wp-content/themes/dev-rest-rasta/assets/svg/clock.svg" alt=""> <?php echo get_the_date(); ?></div>
-                                <div class="card-text postRecipeBody__terms"><?php the_terms(get_the_ID(), 'category-recipe', '<img class="navTaxonomy__before" src="/wp-content/themes/dev-rest-rasta/assets/svg/cutelry.svg" alt="">', ''); ?></div>
+                                <div class="card-text postRecipeBody__date"><img class="postRecipeBody__date-before" src="/wp-content/themes/dev-rest-rasta/assets/svg/clock.svg" alt="clock"> <?php echo get_the_date(); ?></div>
+                                <div class="card-text postRecipeBody__terms"><?php the_terms(get_the_ID(), 'category-recipe', '<img class="navTaxonomy__before" src="/wp-content/themes/dev-rest-rasta/assets/svg/cutelry.svg" alt="cutelry">', ''); ?></div>
                                 <h5 class="card-title postRecipeBody__title"><?php the_title(); ?></h5>
                                 <div class="card-text postRecipeBody__text"><?php echo archive_custom_excerpt(get_field('description')); ?></div>
                                 <a href="<?php the_permalink(); ?> " class="btn btn-dark">Read More</a>
@@ -31,14 +31,14 @@
                             <?php $image = get_field('image');
                             $size = 'archive-recipe-img';
                             if ($image) { ?>
-                                <img class="card-img postRecipe__image" src="<?php echo $image['sizes']["single-recipe-img"]; ?>" alt="">
+                                <img class="card-img postRecipe__image" src="<?php echo $image['sizes']["single-recipe-img"]; ?>" alt="recipe dish">
                             <?php
                             } ?>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-5 order-lg-2">
                             <div class="card-body postRecipeBody ">
-                                <div class="card-text postRecipeBody__date"><img class="postRecipeBody__date-before" src="/wp-content/themes/dev-rest-rasta/assets/svg/clock.svg" alt=""> <?php echo get_the_date(); ?></div>
-                                <div class="card-text postRecipeBody__terms"><?php the_terms(get_the_ID(), 'category-recipe', '<img class="navTaxonomy__before" src="/wp-content/themes/dev-rest-rasta/assets/svg/cutelry.svg" alt="">', ''); ?></div>
+                                <div class="card-text postRecipeBody__date"><img class="postRecipeBody__date-before" src="/wp-content/themes/dev-rest-rasta/assets/svg/clock.svg" alt="clock"> <?php echo get_the_date(); ?></div>
+                                <div class="card-text postRecipeBody__terms"><?php the_terms(get_the_ID(), 'category-recipe', '<img class="navTaxonomy__before" src="/wp-content/themes/dev-rest-rasta/assets/svg/cutelry.svg" alt="cutelry">', ''); ?></div>
                                 <h5 class="card-title postRecipeBody__title"><?php the_title(); ?></h5>
                                 <div class="card-text postRecipeBody__text"><?php echo archive_custom_excerpt(get_field('description')); ?></div>
                                 <a href="<?php the_permalink(); ?> " class="btn btn-dark">Read More</a>

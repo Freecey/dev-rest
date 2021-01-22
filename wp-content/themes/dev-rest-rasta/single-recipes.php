@@ -8,31 +8,31 @@
                <a href="<?php echo get_post_type_archive_link('recipes'); ?>" class="navSingle__return"><span>&#8592;</span> Return</a>
                <div class="navSingle__separator">|</div>
                <p class="navSingle__date"><?php the_date(); ?></p>
-               <div class="navSingle__term navSingle__link"><?php the_terms(get_the_ID(), 'category-recipe', '<img class="navTaxonomy__before" src="/wp-content/themes/dev-rest-rasta/assets/svg/cutelry-white.svg" alt="">', ''); ?></div>
+               <div class="navSingle__term navSingle__link"><?php the_terms(get_the_ID(), 'category-recipe', '<img class="navTaxonomy__before" src="/wp-content/themes/dev-rest-rasta/assets/svg/cutelry-white.svg" alt="cutelry">', ''); ?></div>
             </div>
-            <h2 class="topContainer__titleRecipe"><?php the_title(); ?></h2>
+            <h1 class="topContainer__titleRecipe"><?php the_title(); ?></h1>
             <div class="topContainer__descRecipe"><?php echo get_field('description'); ?></div>
          </div>
          <?php
          $image = get_field('image');
          $size = 'archive-recipe-img';
          if ($image) { ?>
-            <img class="imgSingleRecipe" src="<?php echo $image['sizes']["single-recipe-img"]; ?>" alt="">
+            <img class="imgSingleRecipe" src="<?php echo $image['sizes']["single-recipe-img"]; ?>" alt="<?php the_title(); ?>">
          <?php
          } ?>
          <div class="mainContainer">
             <div class="networkSingleRecipe">
                <div class="network-icon btn">
-                  <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/facebook.svg" alt=""></a>
+                  <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/facebook.svg" alt="Facebook"></a>
                </div>
                <div class="network-icon btn">
-                  <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/twitter.svg" alt=""></a>
+                  <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/twitter.svg" alt="twitter"></a>
                </div>
                <div class="network-icon btn">
-                  <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/instagram.svg" alt=""></a>
+                  <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/instagram.svg" alt="instagram"></a>
                </div>
                <div class="network-icon btn">
-                  <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/linkedin.svg" alt=""></a>
+                  <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/linkedin.svg" alt="linkedin"></a>
                </div>
             </div>
             <div class="sectionIngredients">
@@ -53,7 +53,7 @@
                      </div>
                      <?php $image = get_sub_field('step_illustration');
                      if ($image) { ?>
-                        <img class="imgSingleRecipe" src="<?php echo $image['sizes']["step-recipe-img"]; ?>" alt="">
+                        <img class="imgSingleRecipe" src="<?php echo $image['sizes']["step-recipe-img"]; ?>" alt="Recipe Step">
                      <?php
                      }; ?>
                <?php endwhile;

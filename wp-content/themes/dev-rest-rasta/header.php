@@ -3,6 +3,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+	<link rel="icon" href="/favicon.ico">
+	<link rel="preload" href="/wp-content/themes/dev-rest-rasta/assets/fonts/Poppins-Light.ttf" as="font" type="font/ttf">
+	<link rel="preload" href="/wp-content/themes/dev-rest-rasta/assets/fonts/Poppins-Regular.ttf" as="font" type="font/ttf">
+	<link rel="preload" href="/wp-content/themes/dev-rest-rasta/style.css" as="style">
+	<meta name="description" content="The Chef has a pleasant restaurant with a very revolutionary concept. His concept is to combine the two extreme types of food: junk food and very healthy food!">
+	<meta name="keywords" content="Restaurant, food, diner, order, reservation, chef, revolutionary, concept, namur, liege, fresh, junk food, junk, healthy food, rybank, casey, appel">
+	<meta name="author" content="R-Rocket team, https://github.com/r-rocket-team/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head([
 		'theme_location' => 'TOP NAVBAR',
@@ -24,9 +31,9 @@
 			<?php wp_nav_menu(); ?>
 
 			<ul class="liste-nav">
-				<li class="item-nav"><a href="/"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/home-minimal.svg" alt="" style="width: 15px;"></a></li>
+				<li class="item-nav"><a href="/"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/home-minimal.svg" alt="home" style="width: 15px;"></a></li>
 				<li class="item-nav"><a href="/#OursRestaurants">Ours Restaurants</a></li>
-				<li class="item-nav"><a href="#Menu">Menu</a></li>
+				<li class="item-nav"><a href="/the-menu/">Menu</a></li>
 				<li class="item-nav"><a href="/recipes/">Recipes</a></li>
 			</ul>
 			
