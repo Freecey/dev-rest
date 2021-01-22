@@ -10,9 +10,9 @@ if (have_rows('banner_top')) :
     <section class="banner-top banner-top-s-rest" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' <?= $bannertop_img['url']; ?> ');">
       <div class="cont-banner">
         <div class="col-12 col-sm-12 col-md-12 col-lg-8">
-          <div class="font-subtitle-top"><?= get_sub_field('subtitle'); ?></div>
+          <div class="font-subtitle-top animeSubtitle"><?= get_sub_field('subtitle'); ?></div>
           <div>
-            <h1 class="font-title-top"><?= get_sub_field('main_title'); ?></h1>
+            <h1 class="font-title-top animeTitle"><?= get_sub_field('main_title'); ?></h1>
           </div>
           <div class="banner-link banner-link-menu">
             <div class="link-barre"></div>
