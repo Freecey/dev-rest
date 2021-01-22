@@ -86,9 +86,20 @@
 	<!--================ SCRIPT BURGER-MENU END ==================== -->
 
 	<script>
-		document.getElementById("navigation").addEventListener("wheel", myFunction);
+		jQuery(window).scroll(function() {
 
-		function myFunction() {
-			this.style.backgroundColor = "#00000064";
-		}
+			function myFunction() {
+				divnav.style.backgroundColor = "#00000064";
+			}
+
+			var divnav = document.getElementById("navigation");
+			var scrollPercent = 100 * jQuery(window).scrollTop() / (jQuery(document).height() - jQuery(window).height());
+
+
+			if (scrollPercent > 5) {
+				myFunction()
+			} else {
+				divnav.style.backgroundColor = "";
+			}
+		});
 	</script>
