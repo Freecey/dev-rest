@@ -63,7 +63,7 @@
 
 	<!-- =========== SCRIPT BURGER-MENU START =============== -->
 
-	<script type="text/javascript">
+	<script>
 		const btnMenu = document.querySelector('.logo-menu');
 		const menu = document.querySelector('.liste-nav');
 

@@ -4,6 +4,7 @@ $GOOGLEAPIKEY = 'AIzaSyA47vijiVRgmG0KOlrFxU98bR66HCWIa-Q'; //${{ secrets.GOOGLEA
 
 function devrest_supports()
 {
+    add_theme_support( 'html5', [ 'script', 'style' ] );
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
     add_theme_support('menus');

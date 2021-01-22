@@ -70,7 +70,7 @@ endif; ?>
                                         <div class="card-body text-center">
                                             <h5 class="card-title"><?php the_sub_field('restaurant_presentation_block_subtitle'); ?> </h5>
                                             <h5 class="card-title"><?php the_sub_field('restaurant_presentation_block_title'); ?> </h5>
-                                            <p class="card-text"><?php the_sub_field('restaurant_presentation_block_wysiwig'); ?> </p>
+                                            <div class="card-text"><?php the_sub_field('restaurant_presentation_block_wysiwig'); ?> </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 order-1 order-md-1 order-lg-2">
@@ -89,7 +89,7 @@ endif; ?>
                                         <div class="card-body text-center">
                                             <h5 class="card-title"><?php the_sub_field('restaurant_presentation_block_subtitle'); ?> </h5>
                                             <h5 class="card-title"><?php the_sub_field('restaurant_presentation_block_title'); ?> </h5>
-                                            <p class="card-text"><?php the_sub_field('restaurant_presentation_block_wysiwig'); ?> </p>
+                                            <div class="card-text"><?php the_sub_field('restaurant_presentation_block_wysiwig'); ?> </div>
                                         </div>
                                     </div>
                                 </div>
@@ -164,7 +164,7 @@ endif; ?>
 <!-- END restaurant_reservation PART -->
 
 <div class="sect-space"></div>
-
+</div>
 <!-- START OUR MENU -->
 <?php get_template_part('parts/our-menu'); ?>
 <!-- END OUR MENU -->
