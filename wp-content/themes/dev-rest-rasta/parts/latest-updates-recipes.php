@@ -1,5 +1,5 @@
 <section class="latestRecipe">
-<img class="latestRecipe__bgHatching" src="/wp-content/themes/dev-rest-rasta/assets/images/hachures-grises.png" alt="">
+<img class="latestRecipe__bgHatching" src="/wp-content/themes/dev-rest-rasta/assets/images/hachures-grises.png" alt="hachures">
     <h3 class="latestRecipe__subtitle">Latest updates</h3>
     <h2 class="latestRecipe__title">Recipes Blog</h2>
     <div class="container cardsContainer">
@@ -20,9 +20,9 @@
                 <?php $image = get_field('image'); ?>
                 <?php $size = 'latest-recipes-img'; ?>
                 <div class="latestCard">
-                    <img src="<?php echo $image['sizes']["latest-recipes-img"]; ?>" class="latestCard__image" alt="...">
+                    <img src="<?php echo $image['sizes']["latest-recipes-img"]; ?>" class="latestCard__image" alt="recipes Dish">
                     <div class="latestCard__body">
-                        <div class="card-text latestCard__date"><img class="latestCard__date-before" src="/wp-content/themes/dev-rest-rasta/assets/svg/clock.svg" alt=""> <?php echo get_the_date(); ?></div>
+                        <div class="card-text latestCard__date"><img class="latestCard__date-before" src="/wp-content/themes/dev-rest-rasta/assets/svg/clock.svg" alt="clock"> <?php echo get_the_date(); ?></div>
                         <h5 class="latestCard__title"><?php the_title(); ?></h5>
                         <div class="latestCard__text"><?php echo archive_custom_excerpt(get_field('description')); ?></div>
                         <div class="linkRow">
@@ -36,6 +36,6 @@
         else : ?>
         <?php endif; ?>
     </div>
-    <img class="latestRecipe__bgHatchingNewsLetters" src="/wp-content/themes/dev-rest-rasta/assets/images/hachures-grises.png" alt="">
+    <img class="latestRecipe__bgHatchingNewsLetters" src="/wp-content/themes/dev-rest-rasta/assets/images/hachures-grises.png" alt="hachures">
 </section>
 <?php wp_reset_postdata(); ?>

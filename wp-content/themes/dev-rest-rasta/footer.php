@@ -1,10 +1,7 @@
 <!-- footer.php -->
 
-
-<footer class="footer-posi">
-    <div class="<?php echo ($post->ID === 484 ? 'top-hash-white' : 'top-hash-gray');  ;?> pt-5 mb-n5"></div>
+    <div class="<?php echo (is_archive() ? 'top-hash-white' : 'top-hash-gray');  ;?> pt-5 mb-n5"></div>
     <?php
-
 
     $args = array(
         'page_id' => '224'
@@ -71,16 +68,16 @@
                                         <div class="col-12 col-md-6 col-lg-12">
                                             <div class="flex d-flex network">
                                                 <div class="btn network-icon">
-                                                    <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/facebook.svg" alt=""></a>
+                                                    <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/facebook.svg" alt="facebook"></a>
                                                 </div>
                                                 <div class="btn network-icon">
-                                                    <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/twitter.svg" alt=""></a>
+                                                    <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/twitter.svg" alt="twitter"></a>
                                                 </div>
                                                 <div class="btn network-icon">
-                                                    <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/instagram.svg" alt=""></a>
+                                                    <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/instagram.svg" alt="instagram"></a>
                                                 </div>
                                                 <div class="btn network-icon">
-                                                    <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/linkedin.svg" alt=""></a>
+                                                    <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/linkedin.svg" alt="linkedin"></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -95,7 +92,7 @@
                                     <?php if (have_rows('open_hours')) : while (have_rows('open_hours')) : the_row(); ?>
                                             <div class="div">
                                                 <div class="opening d-flex">
-                                                    <img src="/wp-content/themes/dev-rest-rasta/assets/svg/time-clock.svg" alt="" class="time-clock">
+                                                    <img src="/wp-content/themes/dev-rest-rasta/assets/svg/time-clock.svg" alt="clock" class="time-clock">
                                                     <div class="opening-days-and-hours d-flex">
                                                         <div class="days">
                                                             <?= get_sub_field('opening_days'); ?>
@@ -123,11 +120,11 @@
                                         <div class="contact-us-box">
                                             <table class="array">
                                                 <tr>
-                                                    <td><img class="open-phone-number" src="/wp-content/themes/dev-rest-rasta/assets/svg/call (10).svg" alt=""></td>
+                                                    <td><img class="open-phone-number" src="/wp-content/themes/dev-rest-rasta/assets/svg/call (10).svg" alt="call"></td>
                                                     <td class="open open-phone-number"><?= get_sub_field('phone_number'); ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><img src="/wp-content/themes/dev-rest-rasta/assets/svg/place (14).svg" alt=""> </td>
+                                                    <td><img src="/wp-content/themes/dev-rest-rasta/assets/svg/place (14).svg" alt="place"> </td>
                                                     <td class="open"><?= get_sub_field('street_and_number'); ?></td>
                                                 </tr>
                                                 <tr>
@@ -139,8 +136,10 @@
                                                     <td class="open open-country"><?= get_sub_field('country'); ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="open-email"><img class="contact-us-icon" src="/wp-content/themes/dev-rest-rasta/assets/svg/mail-1.svg" alt=""> </td>
+
+                                                    <td class="open-email"><img class="contact-us-icon" src="/wp-content/themes/dev-rest-rasta/assets/svg/mail-1.svg" alt="contact us"> </td>
                                                     <td class="open open-email"><a href="mailto:<?php get_sub_field('e-mail'); ?>" class="open-email-link"><?= get_sub_field('e-mail'); ?></a></td>
+
                                                 </tr>
                                             </table>
                                         </div>
@@ -161,7 +160,7 @@
                                             <div class="instagram-galery mx-auto mx-lg-0">
                                                 <?php foreach ($images as $image) : ?>
                                                     <div class="'instagram-galery-images">
-                                                        <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" style="width: 75px;" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                                        <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" style="width: 75px;" alt="instagram galery" />
                                                     </div>
                                                 <?php endforeach; ?>
                                             </div>
