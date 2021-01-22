@@ -68,9 +68,9 @@ endif; ?>
 
                                     <div class="col-lg-6 order-2 order-md-2 order-lg-1 my-auto">
                                         <div class="card-body text-center">
-                                            <h5 class="card-title"><?php the_sub_field('restaurant_presentation_block_subtitle'); ?> </h5>
-                                            <h5 class="card-title"><?php the_sub_field('restaurant_presentation_block_title'); ?> </h5>
-                                            <div class="card-text"><?php the_sub_field('restaurant_presentation_block_wysiwig'); ?> </div>
+                                            <h4 class="card-title page-subtitles"><?php the_sub_field('restaurant_presentation_block_subtitle'); ?> </h4>
+                                            <h5 class="card-title page-title"><?php the_sub_field('restaurant_presentation_block_title'); ?> </h5>
+                                            <div class="card-text mx-1 mx-md-3 mx-lg-5 intro-b-txt rest-card-text"><?php the_sub_field('restaurant_presentation_block_wysiwig'); ?> </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 order-1 order-md-1 order-lg-2">
@@ -87,9 +87,9 @@ endif; ?>
                                     </div>
                                     <div class="col-lg-6 my-auto">
                                         <div class="card-body text-center">
-                                            <h5 class="card-title"><?php the_sub_field('restaurant_presentation_block_subtitle'); ?> </h5>
-                                            <h5 class="card-title"><?php the_sub_field('restaurant_presentation_block_title'); ?> </h5>
-                                            <div class="card-text"><?php the_sub_field('restaurant_presentation_block_wysiwig'); ?> </div>
+                                            <h4 class="card-title page-subtitles"><?php the_sub_field('restaurant_presentation_block_subtitle'); ?> </h4>
+                                            <h5 class="card-title page-title"><?php the_sub_field('restaurant_presentation_block_title'); ?> </h5>
+                                            <div class="card-text mx-1 mx-md-3  mx-lg-5 intro-b-txt rest-card-text"><?php the_sub_field('restaurant_presentation_block_wysiwig'); ?> </div>
                                         </div>
                                     </div>
                                 </div>
