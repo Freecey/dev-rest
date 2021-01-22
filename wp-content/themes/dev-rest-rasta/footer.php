@@ -138,7 +138,7 @@
                                                 <tr>
 
                                                     <td class="open-email"><img class="contact-us-icon" src="/wp-content/themes/dev-rest-rasta/assets/svg/mail-1.svg" alt="contact us"> </td>
-                                                    <td class="open open-email"><a href="mailto:<?php get_sub_field('e-mail'); ?>" class="open-email-link"><?= get_sub_field('e-mail'); ?></a></td>
+                                                    <td class="open open-email"><a href="mailto:<?= get_sub_field('e-mail'); ?>" class="open-email-link"><?= get_sub_field('e-mail'); ?></a></td>
 
                                                 </tr>
                                             </table>
