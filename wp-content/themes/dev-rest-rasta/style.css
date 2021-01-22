@@ -11951,6 +11951,10 @@ a.text-dark:hover, a.text-dark:focus {
   padding-bottom: 15px;
 }
 
+.contact-us-icon {
+  padding-bottom: 3px;
+}
+
 .open-email {
   padding-top: 15px;
 }
@@ -11962,7 +11966,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .open-email .open-email-link:hover {
-  color: #156cb6;
+  color: #DD9B9B;
 }
 
 .instagram-galery {
@@ -12035,6 +12039,16 @@ a.text-dark:hover, a.text-dark:focus {
   margin-top: 30px;
   color: #f1f1f1;
   padding-bottom: 30px;
+}
+
+.copyright a {
+  text-decoration: none;
+  color: #f1f1f1;
+  font-weight: bold;
+}
+
+.copyright a:hover {
+  color: #DD9B9B;
 }
 
 .row {

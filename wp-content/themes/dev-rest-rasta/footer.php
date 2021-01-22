@@ -1,6 +1,7 @@
 <!-- footer.php -->
 
-    <div class="<?php echo (is_archive() ? 'top-hash-white' : 'top-hash-gray');  ;?> pt-5 mb-n5"></div>
+<footer>
+    <div class="<?php echo (is_archive() ? 'top-hash-white' : 'top-hash-gray');; ?> pt-5 mb-n5"></div>
     <?php
 
     $args = array(
@@ -21,28 +22,28 @@
             <div class="container-fluid p-0 super-box">
 
 
-            <div class="mx-auto cont-content newslt-bg">
-    <div class="pt-5 mb-n5"></div>
-        <div class="row">
-            <div class="col-md-6 my-auto">
-                <div class="page-title">
-                    JOIN OUR<br>
-                    NEWSLETTER
-                </div>
-            </div>
-            <div class="col-md-6 my-auto">
-                <form class="form-inline" method="post" action="http://www.wordpress.lan/?na=s">
-                    <input type="hidden" name="nlang" value="">
-                    <div class="form-group mx-sm-3 -my2">
-                        <label for="inputSubscribe" class="sr-only">Your Email Address</label>
-                        <input type="email" class="form-control" id="inputSubscribe" name="ne" value="" required placeholder="Your Email Address">
+                <div class="mx-auto cont-content newslt-bg">
+                    <div class="pt-5 mb-n5"></div>
+                    <div class="row">
+                        <div class="col-md-6 my-auto">
+                            <div class="page-title">
+                                JOIN OUR<br>
+                                NEWSLETTER
+                            </div>
+                        </div>
+                        <div class="col-md-6 my-auto">
+                            <form class="form-inline" method="post" action="/?na=s">
+                                <input type="hidden" name="nlang" value="">
+                                <div class="form-group mx-sm-3 -my2">
+                                    <label for="inputSubscribe" class="sr-only">Your Email Address</label>
+                                    <input type="email" class="form-control" id="inputSubscribe" name="ne" value="" required placeholder="Your Email Address">
+                                </div>
+                                <input type="submit" class="btn btn-light my-2" value="Subscribe">
+                            </form>
+                        </div>
                     </div>
-                    <input type="submit" class="btn btn-light my-2" value="Subscribe">
-                </form>
-            </div>
-        </div>
 
-    </div>
+                </div>
 
                 <?php
                 if (have_rows('infos_footer')) :
@@ -68,16 +69,16 @@
                                         <div class="col-12 col-md-6 col-lg-12">
                                             <div class="flex d-flex network">
                                                 <div class="btn network-icon">
-                                                    <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/facebook.svg" alt=""></a>
+                                                    <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/facebook.svg" alt="facebook"></a>
                                                 </div>
                                                 <div class="btn network-icon">
-                                                    <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/twitter.svg" alt=""></a>
+                                                    <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/twitter.svg" alt="twitter"></a>
                                                 </div>
                                                 <div class="btn network-icon">
-                                                    <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/instagram.svg" alt=""></a>
+                                                    <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/instagram.svg" alt="instagram"></a>
                                                 </div>
                                                 <div class="btn network-icon">
-                                                    <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/linkedin.svg" alt=""></a>
+                                                    <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/linkedin.svg" alt="linkedin"></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -92,7 +93,7 @@
                                     <?php if (have_rows('open_hours')) : while (have_rows('open_hours')) : the_row(); ?>
                                             <div class="div">
                                                 <div class="opening d-flex">
-                                                    <img src="/wp-content/themes/dev-rest-rasta/assets/svg/time-clock.svg" alt="" class="time-clock">
+                                                    <img src="/wp-content/themes/dev-rest-rasta/assets/svg/time-clock.svg" alt="clock" class="time-clock">
                                                     <div class="opening-days-and-hours d-flex">
                                                         <div class="days">
                                                             <?= get_sub_field('opening_days'); ?>
@@ -120,11 +121,11 @@
                                         <div class="contact-us-box">
                                             <table class="array">
                                                 <tr>
-                                                    <td><img class="open-phone-number" src="/wp-content/themes/dev-rest-rasta/assets/svg/call (10).svg" alt=""></td>
+                                                    <td><img class="open-phone-number" src="/wp-content/themes/dev-rest-rasta/assets/svg/call-(10).svg" alt="call"></td>
                                                     <td class="open open-phone-number"><?= get_sub_field('phone_number'); ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><img src="/wp-content/themes/dev-rest-rasta/assets/svg/place (14).svg" alt=""> </td>
+                                                    <td><img src="/wp-content/themes/dev-rest-rasta/assets/svg/place-(14).svg" alt="place"> </td>
                                                     <td class="open"><?= get_sub_field('street_and_number'); ?></td>
                                                 </tr>
                                                 <tr>
@@ -136,8 +137,10 @@
                                                     <td class="open open-country"><?= get_sub_field('country'); ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="open-email"><img class="contact-us-icon" src="/wp-content/themes/dev-rest-rasta/assets/svg/mail-1.svg" alt=""> </td>
-                                                    <td class="open open-email"><?= get_sub_field('e-mail'); ?></td>
+
+                                                    <td class="open-email"><img class="contact-us-icon" src="/wp-content/themes/dev-rest-rasta/assets/svg/mail-1.svg" alt="contact us"> </td>
+                                                    <td class="open open-email"><a href="mailto:<?= get_sub_field('e-mail'); ?>" class="open-email-link"><?= get_sub_field('e-mail'); ?></a></td>
+
                                                 </tr>
                                             </table>
                                         </div>
@@ -158,7 +161,7 @@
                                             <div class="instagram-galery mx-auto mx-lg-0">
                                                 <?php foreach ($images as $image) : ?>
                                                     <div class="'instagram-galery-images">
-                                                        <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" style="width: 75px;" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                                        <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" style="width: 75px;" alt="instagram galery" />
                                                     </div>
                                                 <?php endforeach; ?>
                                             </div>
@@ -169,7 +172,7 @@
 
                                 <div class="under-line"></div>
                                 <!-- <div class="mx-auto"> -->
-                                <span class="copyright">@ 2021 All Rights Reserved. Designed by Devdesign Studio</span>
+                                <span class="copyright">@ 2021 All Rights Reserved. Designed by <a href="https://github.com/r-rocket-team/dev-rest" target="_blank">Rasta-Rocket Team</a></span>
                                 <!-- </div> -->
                             </div>
                         </div>
@@ -178,9 +181,6 @@
                 endif; ?>
             </div>
 
-
-
-
     <?php
         }
     }
@@ -188,9 +188,7 @@
     wp_reset_postdata();
 
     ?>
-
+    <?php wp_footer() ?>
 </footer>
-<?php wp_footer() ?>
 </body>
-
 </html>

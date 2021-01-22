@@ -43,7 +43,7 @@ if ( $query->have_posts() ) {
                                             else : echo 'text-right';
                                             endif;  ?>">
                   <a href="<?php echo esc_url($image['url']); ?>">
-                    <img class="responsive-img" src="<?php echo esc_url($image['sizes']['ourmenu280']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                    <img class="responsive-img" src="<?php echo esc_url($image['sizes']['ourmenu280']); ?>" alt="sample of our dish" />
                   </a>
                   <p><?php echo esc_html($image['caption']); ?></p>
                 </div>
@@ -86,5 +86,5 @@ if ( $query->have_posts() ) {
 wp_reset_postdata();
  
 ?>
-    <img class="hashNewsLetterArchive" src="/wp-content/themes/dev-rest-rasta/assets/images/hachures-blanches.png" alt="">
+    <img class="hashNewsLetterArchive" src="/wp-content/themes/dev-rest-rasta/assets/images/hachures-blanches.png" alt="hatching">
 </section>

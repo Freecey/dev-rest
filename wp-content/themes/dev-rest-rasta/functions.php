@@ -4,6 +4,7 @@ $GOOGLEAPIKEY = 'AIzaSyA47vijiVRgmG0KOlrFxU98bR66HCWIa-Q'; //${{ secrets.GOOGLEA
 
 function devrest_supports()
 {
+    add_theme_support( 'html5', [ 'script', 'style' ] );
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
     add_theme_support('menus');
@@ -39,6 +40,7 @@ function devrest_assets()
 
 function devrest_init()
 {
+    wp_deregister_script('heartbeat');
     register_post_type('recipes', [
         'label' => 'Recipes',
         'public' => true,
@@ -166,6 +168,8 @@ function hide_editor() {
         remove_post_type_support('page', 'editor');
     // }
 }
+
+
 
 add_action('init', 'devrest_init');
 add_action('after_setup_theme', 'devrest_supports');

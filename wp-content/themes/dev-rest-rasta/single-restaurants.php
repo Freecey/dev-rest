@@ -11,12 +11,12 @@ if (have_rows('banner_top')) :
             <div class="cont-banner">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-8">
                     <div class="font-subtitle-top"><?= get_sub_field('subtitle'); ?></div>
-                    <div class="font-title-top"><?= get_sub_field('main_title'); ?></div>
+                    <div ><h1 class="font-title-top"><?= get_sub_field('main_title'); ?></h1></div>
                     <div class="banner-link">
                         <div class="link-barre"></div>
                         <div class="link-text">
                             <?php $banlink = get_sub_field('banner_link'); ?>
-                            <a class="banner-link-a" href="<?= $banlink['url']; ?>" class=""><?= $banlink['title']; ?></a>
+                            <a class="banner-link-a" href="<?= $banlink['url']; ?>"><?= $banlink['title']; ?></a>
                         </div>
                     </div>
                 </div>
@@ -70,11 +70,11 @@ endif; ?>
                                         <div class="card-body text-center">
                                             <h5 class="card-title"><?php the_sub_field('restaurant_presentation_block_subtitle'); ?> </h5>
                                             <h5 class="card-title"><?php the_sub_field('restaurant_presentation_block_title'); ?> </h5>
-                                            <p class="card-text"><?php the_sub_field('restaurant_presentation_block_wysiwig'); ?> </p>
+                                            <div class="card-text"><?php the_sub_field('restaurant_presentation_block_wysiwig'); ?> </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 order-1 order-md-1 order-lg-2">
-                                        <img src="<?php echo $rest_prez_img['sizes']["rest700"]; ?>" class="card-img" alt="...">
+                                        <img src="<?php echo $rest_prez_img['sizes']["rest700"]; ?>" class="card-img" alt="Our Restaurant">
                                     </div>
                                 </div>
                             </div>
@@ -83,13 +83,13 @@ endif; ?>
                             <div class="card mx-auto cont-content">
                                 <div class="row no-gutters">
                                     <div class="col-lg-6">
-                                        <img src="<?php echo $rest_prez_img['sizes']["rest700"]; ?>" class="card-img" alt="...">
+                                        <img src="<?php echo $rest_prez_img['sizes']["rest700"]; ?>" class="card-img" alt="Our Restaurant">
                                     </div>
                                     <div class="col-lg-6 my-auto">
                                         <div class="card-body text-center">
                                             <h5 class="card-title"><?php the_sub_field('restaurant_presentation_block_subtitle'); ?> </h5>
                                             <h5 class="card-title"><?php the_sub_field('restaurant_presentation_block_title'); ?> </h5>
-                                            <p class="card-text"><?php the_sub_field('restaurant_presentation_block_wysiwig'); ?> </p>
+                                            <div class="card-text"><?php the_sub_field('restaurant_presentation_block_wysiwig'); ?> </div>
                                         </div>
                                     </div>
                                 </div>
@@ -164,7 +164,7 @@ endif; ?>
 <!-- END restaurant_reservation PART -->
 
 <div class="sect-space"></div>
-
+</div>
 <!-- START OUR MENU -->
 <?php get_template_part('parts/our-menu'); ?>
 <!-- END OUR MENU -->

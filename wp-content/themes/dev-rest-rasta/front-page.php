@@ -17,7 +17,7 @@ if (have_rows('banner_top')) :
             <div class="link-barre"></div>
             <div class="link-text">
             <?php $banlink = get_sub_field('banner_link') ; ?>
-              <a class="banner-link-a" href="<?= $banlink['url']; ?>" class=""><?= $banlink['title']; ?></a>
+              <a class="banner-link-a" href="<?= $banlink['url']; ?>"><?= $banlink['title']; ?></a>
             </div>
           </div>
         </div>
@@ -161,7 +161,7 @@ endif; ?>
                       <div class="intro-block">
                         <div class="intro-block-pad">
                           <div class="page-subtitles"><?= get_sub_field('restaurant_presentation_block_subtitle'); ?></div>
-                          <div class="page-title"><?= get_sub_field('restaurant_presentation_block_title'); ?></div>
+                          <div class="page-title"><h1><?= get_sub_field('restaurant_presentation_block_title'); ?></h1></div>
                           <div class="intro-b-txt"><?= get_sub_field('restaurant_presentation_block_wysiwig'); ?> </div>
                           <div class="'o-menu-btn-sect">
                             <a href="<?php the_permalink(); ?>" class="btn btn-dark">More infos</a>
