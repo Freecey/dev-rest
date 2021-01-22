@@ -140,7 +140,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td class="open-email"><img class="contact-us-icon" src="/wp-content/themes/dev-rest-rasta/assets/svg/mail-1.svg" alt=""> </td>
-                                                    <td class="open open-email"><?= get_sub_field('e-mail'); ?></td>
+                                                    <td class="open open-email"><a href="mailto:<?php get_sub_field('e-mail'); ?>" class="open-email-link"><?= get_sub_field('e-mail'); ?></a></td>
                                                 </tr>
                                             </table>
                                         </div>
@@ -172,7 +172,7 @@
 
                                 <div class="under-line"></div>
                                 <!-- <div class="mx-auto"> -->
-                                <span class="copyright">@ 2021 All Rights Reserved. Designed by Devdesign Studio</span>
+                                <span class="copyright">@ 2021 All Rights Reserved. Designed by <a href="https://github.com/r-rocket-team/dev-rest" target="_blank" >Rasta-Rocket Team</a></span>
                                 <!-- </div> -->
                             </div>
                         </div>

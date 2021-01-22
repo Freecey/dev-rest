@@ -1,3 +1,3 @@
 <!-- 404.php -->
 
-<h1>Page not fund</h1>
+<h1>Page not found</h1>
