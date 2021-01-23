@@ -1,4 +1,4 @@
-# dev-rest-rasta
+# dev-rest-rasta theme
 Theme for Wordpress 5.6 CMS for restaurant. All Part of site editable by admin section
 
 ___
@@ -12,7 +12,15 @@ ___
 ## Features
 ### Generals
 - Full Responsive design (Tablet portrait (768px) and Mobile (320px))
-- contact form
+- reservation:
+  - send a mail 
+  - stored in admin section
+- Newsletter:
+  - subscribe
+  - unsubscribe possibility
+  - modify email address by user
+- Image gallery
+- Carousel gallery
 - Links social
 - 404 Page
 - Google Map (with API Key)
@@ -22,12 +30,21 @@ ___
 ### Content
 - HOMEPAGE (single page > front-page)
 - the menu (single page)
-- Reciepes post (archive post, single post, part)
+- Reciepes post (archive post, single post, part and category)
 - Restaurants (single post, part)
 - Navbar Header
-- Footer
+- Footer (full editable)
 
 ### Admin Section
+- Permission adjusting
+- remove/hidden unnecessary part
+- See reservation table
+- Newsletter:
+  - Manage subscipter
+  - create mailing contenant
+  - send newsletter (now or scheduced)
+
+### User Permission
 - Author:
   - add/edit posts and page
   - See/edit reservation
@@ -36,7 +53,7 @@ ___
   - see/edit page
   - See/edit reservation
   - create/send newsletter
- - Admin:
+- Admin:
   - Full
 
 ___
@@ -51,8 +68,8 @@ ___
 - sass
 - bootstrap (only used module actived)
 - Javascript
+- JQuery
 - wordpress
-- jquery
 
 ___
 
