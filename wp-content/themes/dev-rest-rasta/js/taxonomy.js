@@ -11,7 +11,7 @@ jQuery(window).scroll(function() {
     const scrollPercent = 100 * jQuery(window).scrollTop() / (jQuery(document).height() - jQuery(window).height());
     if (scrollPercent >= 1 && scrollPercent <= 2) {
         myFunction()
-    } // else {
-       // animation.remove('.navTaxonomy__item');
-    // }
+    } else {
+        return;
+    }
 });

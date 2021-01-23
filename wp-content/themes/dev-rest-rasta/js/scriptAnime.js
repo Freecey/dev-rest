@@ -30,8 +30,6 @@ anime({
     delay: 1500,
 });
 
-
-
 // animations 4 others >>
 document.querySelector(".heroBanner__linkRow--link").addEventListener("mouseover", () => {
     anime({
