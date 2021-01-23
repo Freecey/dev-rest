@@ -73,7 +73,7 @@ if ( $query->have_posts() ) {
       endwhile;
     else :
     // no rows found
-    endif; ?>
+    endif; wp_reset_postdata(); ?>
   </div>
 </div>
 </div>
