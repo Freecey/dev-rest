@@ -51,6 +51,8 @@
 				<li class="item-nav"><a href="/#OursRestaurants">Ours Restaurants</a></li>
 				<li class="item-nav"><a href="/the-menu/">Menu</a></li>
 				<li class="item-nav"><a href="/recipes/">Recipes</a></li>
+				<li class="item-nav"><a href="/restaurants/liege/#Reserve">ORDER</a></li>
+				<li class="item-nav"><a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/supermarket.svg" alt="cady" style="width: 15px"></a></li>
 			</ul>
 
 
