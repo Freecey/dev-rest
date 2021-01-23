@@ -84,7 +84,7 @@ $bgc-secondary: #f5f5f5;
    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.466);
 }
 @mixin underline-animate($color: black) {
-   &::after {
+   &::after { 
       content: "";
       display: block;
       width: 100%;
@@ -1052,7 +1052,7 @@ $bgc-secondary: #f5f5f5;
       animation: text 1s 0.1s 1 ease-in forwards;
       @media (max-width: 700px) {
          font-size: 5.9rem;
-         top: 4.9rem;
+         top: 4.9rem; 
       }
       @media (max-width: 580px) {
          font-size: 4.4rem;
@@ -1179,35 +1179,6 @@ $bgc-secondary: #f5f5f5;
       transform: translateY(-3px);
    }
 }
-
-// ============================================= titles animation >>> =================================== >>>
-// .subtitleTop {
-//    transform: translateX(50rem);
-
-// }
-// .titleTop {
-//    transform: translateX(1rem);
-
-// }
-
-// @keyframes subtitleTop {
-//    from {
-//       transform: translateY(-3px);
-//    }
-//    to {
-//       transform: translateY(-3px);
-//    }
-// }
-// @keyframes titleTop {
-//    from {
-//       transform: translateX(-)
-//    }
-//    to {
-//       transform: translateY(-3px);
-//    }
-// }
-
-// << ============================================= << titles animation ===================================
 
 @import "css/front.scss";
 @import "css/navbar.scss";

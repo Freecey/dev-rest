@@ -44,7 +44,7 @@ jQuery(window).scroll(function() {
     if (scrollPercent >= 1 && scrollPercent <= 2) {
         myFunction()
     } else {
-        animation.remove('.navTaxonomy__item');
+        return;
     }
 });
 
