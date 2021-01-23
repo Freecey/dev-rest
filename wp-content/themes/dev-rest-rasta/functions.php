@@ -119,7 +119,7 @@ function add_links_themenu()
     add_menu_page('recipe_banner', 'Recipe Banner', 'edit_posts', 'post.php?post=504&action=edit&classic-editor', '', 'dashicons-carrot', 5);
     add_menu_page('restaurant_infos', 'Restaurant infos', 'edit_posts', 'post.php?post=224&action=edit&classic-editor', '', 'dashicons-store', 9);
     add_menu_page('homepage', 'Home Page', 'edit_posts', 'post.php?post=336&action=edit&classic-editor', '', 'dashicons-admin-home', 9);
-    // add_menu_page('navbar', 'Navbar', 'edit_posts', 'nav-menus.php', '', 'dashicons-menu-alt', 9);
+    add_menu_page('navbar', 'Navbar', 'edit_posts', 'post.php?post=554&action=edit&classic-editor', '', 'dashicons-menu-alt', 9);
     remove_menu_page('edit.php');
     remove_menu_page('edit-comments.php');
     remove_submenu_page('edit.php?post_type=restaurants', 'post-new.php?post_type=restaurants');
