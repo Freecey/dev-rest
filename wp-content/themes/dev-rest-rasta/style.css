@@ -8293,10 +8293,10 @@ a.text-dark:hover, a.text-dark:focus {
   opacity: 0;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
-  -webkit-transition: color 0.3s ease-in-out,  opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: color 0.3s ease-in-out,  opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out,  opacity 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out,  opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 .heroBanner__linkRow--link:hover::after {
@@ -8389,10 +8389,10 @@ a.text-dark:hover, a.text-dark:focus {
   opacity: 0;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
-  -webkit-transition: color 0.3s ease-in-out,  opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: color 0.3s ease-in-out,  opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out,  opacity 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out,  opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 .postRecipeBody__terms:hover::after {
@@ -8427,13 +8427,19 @@ a.text-dark:hover, a.text-dark:focus {
 .navTaxonomy__item {
   list-style-type: none;
   margin-right: 1rem;
+}
+
+.navTaxonomy__link {
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
   -webkit-transition: color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   transition: color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-.navTaxonomy__item::after {
+.navTaxonomy__link::after {
   content: "";
   display: block;
   width: 100%;
@@ -8442,32 +8448,21 @@ a.text-dark:hover, a.text-dark:focus {
   opacity: 0;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
-  -webkit-transition: color 0.3s ease-in-out,  opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: color 0.3s ease-in-out,  opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out,  opacity 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out,  opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-.navTaxonomy__item:hover::after {
+.navTaxonomy__link:hover::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
   opacity: 1;
 }
 
-.navTaxonomy__item:hover {
-  color: black;
-  text-decoration: none;
-}
-
-.navTaxonomy__link {
-  color: black;
-  font-size: 16px;
-  font-weight: bold;
-}
-
 .navTaxonomy__link:hover {
-  text-decoration: none;
   color: black;
+  text-decoration: none;
 }
 
 .navTaxonomy__link--active {
@@ -8478,6 +8473,32 @@ a.text-dark:hover, a.text-dark:focus {
   width: 1rem;
   margin-right: 0.3rem;
   vertical-align: baseline;
+}
+
+@-webkit-keyframes underline {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+@keyframes underline {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    opacity: 1;
+  }
 }
 
 /* ====== style 4 pagination > */
@@ -8636,10 +8657,10 @@ a.text-dark:hover, a.text-dark:focus {
   opacity: 0;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
-  -webkit-transition: color 0.3s ease-in-out,  opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: color 0.3s ease-in-out,  opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out,  opacity 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out,  opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 .navSingle__return:hover::after {
@@ -8717,10 +8738,10 @@ a.text-dark:hover, a.text-dark:focus {
   opacity: 0;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
-  -webkit-transition: color 0.3s ease-in-out,  opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: color 0.3s ease-in-out,  opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out,  opacity 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out,  opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 .navSingle__term:hover::after {
@@ -9032,10 +9053,10 @@ a.text-dark:hover, a.text-dark:focus {
   opacity: 0;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
-  -webkit-transition: color 0.3s ease-in-out,  opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: color 0.3s ease-in-out,  opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out,  opacity 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out,  opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 .latestCard .linkRow__link:hover::after {
@@ -9563,10 +9584,10 @@ a.text-dark:hover, a.text-dark:focus {
   opacity: 0;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
-  -webkit-transition: color 0.3s ease-in-out,  opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: color 0.3s ease-in-out,  opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out,  opacity 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out,  opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 .section404__link:hover::after {
@@ -10595,10 +10616,10 @@ a.text-dark:hover, a.text-dark:focus {
   opacity: 0;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
-  -webkit-transition: color 0.3s ease-in-out,  opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: color 0.3s ease-in-out,  opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out,  opacity 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out,  opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 .item-nav a:hover::after {
