@@ -28,6 +28,7 @@ function devrest_assets()
     wp_register_style('Dev_Rest', get_template_directory_uri() . '/style.css');
     wp_enqueue_style('normalize');
     wp_enqueue_style('Dev_Rest');
+    wp_enqueue_script('navbar', get_template_directory_uri() . '/js/navbar.js', array(), false, true );
     if (is_singular('restaurants')) {
         wp_enqueue_script('google-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyA47vijiVRgmG0KOlrFxU98bR66HCWIa-Q', array(), '3', true);
         wp_enqueue_script('map', get_template_directory_uri() . '/js/map.js', array('google-map', 'jquery'), '0.1', true);
@@ -37,7 +38,12 @@ function devrest_assets()
         wp_enqueue_script('BS_min', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '0.1', true);
     };
     wp_enqueue_script( 'animejs', get_template_directory_uri() . '/js/anime.min.js', array(), false, true );
-    wp_enqueue_script( 'script', get_template_directory_uri() . '/js/scriptAnime.js', array(), false, true );
+    if ( !is_single()) {
+        wp_enqueue_script( 'script', get_template_directory_uri() . '/js/scriptAnime.js', array(), false, true );
+    }
+    if ( (is_archive()) or (is_category()) or (is_tax())) {
+        wp_enqueue_script( 'taxonomy', get_template_directory_uri() . '/js/taxonomy.js', array(), false, true );
+    }
 }
 
 function devrest_init()
