@@ -22,18 +22,30 @@
          } ?>
          <div class="mainContainer">
             <div class="networkSingleRecipe">
-               <div class="network-icon btn">
-                  <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/facebook.svg" alt="Facebook"></a>
-               </div>
-               <div class="network-icon btn">
-                  <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/twitter.svg" alt="twitter"></a>
-               </div>
-               <div class="network-icon btn">
-                  <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/instagram.svg" alt="instagram"></a>
-               </div>
-               <div class="network-icon btn">
-                  <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/linkedin.svg" alt="linkedin"></a>
-               </div>
+            <?php
+$args = array('page_id' => '224' );
+$query = new WP_Query($args);
+if ($query->have_posts()) : while ($query->have_posts()) :
+    $query->the_post();
+                if (have_rows('infos_footer')) :
+                    while (have_rows('infos_footer')) : the_row();
+                        if (have_rows('social_link')) : while (have_rows('social_link')) : the_row(); ?>
+                            <div class="network-icon btn">
+                                <a href="<?= get_sub_field('facebook') ; ?>"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/facebook.svg" alt="facebook"></a>
+                            </div>
+                            <div class="network-icon btn">
+                                <a href="<?= get_sub_field('twitter') ; ?>"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/twitter.svg" alt="twitter"></a>
+                            </div>
+                            <div class="network-icon btn">
+                                <a href="<?= get_sub_field('instagram') ; ?>"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/instagram.svg" alt="instagram"></a>
+                            </div>
+                            <div class="network-icon btn">
+                                <a href="<?= get_sub_field('linkedin') ; ?>"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/linkedin.svg" alt="linkedin"></a>
+                            </div>
+                        <?php endwhile; endif; ?>
+                <?php endwhile; endif; ?>
+<?php endwhile; endif; ?>
+<?php wp_reset_postdata(); ?>
             </div>
             <div class="sectionIngredients">
                <h3 class="subtitlesRecipe">Ingredients</h3>

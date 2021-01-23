@@ -32,11 +32,15 @@
 }
 
 .nav-restaurant-name {
-  color: #fff;
   margin: 0;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+.nav-restaurant-name > a {
+  text-decoration: none;
+  color: #fff;
 }
 
 .logo-menu {
@@ -92,7 +96,7 @@
   display: block;
   margin: 0 auto;
   width: 0%;
-  height: 2px;
+  height: 1px;
   background-color: #fff;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;

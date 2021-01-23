@@ -1,3 +1,5 @@
+
+// animations 4 title >>
 if (screen.width >= 600) {
     anime({
         targets: '.animeTitle',
@@ -21,7 +23,6 @@ if (screen.width >= 600) {
         duration: 3000,
     });
 }
-
 anime({
     targets: '.animeSubtitle',
     rotateX: [90, 0],
@@ -29,4 +30,34 @@ anime({
     duration: 2000,
     delay: 1500,
 });
+
+// animations 4 navs taxonomy >>
+
+// anime({
+//     targets: '.navTaxonomy__item',
+//     translateY: [90, 0],
+//     // duration: 700,
+//     delay: anime.stagger(100, {from: 'center'})
+// });
+
+
+// animations 4 others >>
+
+document.querySelector(".heroBanner__linkRow--link").addEventListener("mouseover", () => {
+    anime({
+        targets: '.lineBefore',
+        scaleX: [1, 0],
+        opacity: [1, 0],
+        duration: 500
+    });
+})
+document.querySelector(".heroBanner__linkRow--link").addEventListener("mouseout", () => {
+    anime({
+        targets: '.lineBefore',
+        scaleX: [0, 1],
+        opacity: [0, 1],
+        duration: 500
+    });
+})
+
 

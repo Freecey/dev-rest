@@ -66,22 +66,24 @@
                                         </div>
 
                                         <!-- Networks icons -->
+                                        <?php if (have_rows('social_link')) : while (have_rows('social_link')) : the_row(); ?>
                                         <div class="col-12 col-md-6 col-lg-12">
                                             <div class="flex d-flex network">
                                                 <div class="btn network-icon">
-                                                    <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/facebook.svg" alt="facebook"></a>
+                                                    <a href="<?= get_sub_field('facebook') ; ?>"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/facebook.svg" alt="facebook"></a>
                                                 </div>
                                                 <div class="btn network-icon">
-                                                    <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/twitter.svg" alt="twitter"></a>
+                                                    <a href="<?= get_sub_field('twitter') ; ?>"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/twitter.svg" alt="twitter"></a>
                                                 </div>
                                                 <div class="btn network-icon">
-                                                    <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/instagram.svg" alt="instagram"></a>
+                                                    <a href="<?= get_sub_field('instagram') ; ?>"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/instagram.svg" alt="instagram"></a>
                                                 </div>
                                                 <div class="btn network-icon">
-                                                    <a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/linkedin.svg" alt="linkedin"></a>
+                                                    <a href="<?= get_sub_field('linkedin') ; ?>"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/linkedin.svg" alt="linkedin"></a>
                                                 </div>
                                             </div>
                                         </div>
+                                        <?php endwhile; endif; ?>
                                     </div>
                                 </div>
 
