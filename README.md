@@ -1,5 +1,6 @@
 # dev-rest-rasta theme
 Theme for Wordpress 5.6 CMS for restaurant. All Part of site editable in admin section
+client interface with full custom fields
 
 ___
 
@@ -12,6 +13,7 @@ ___
 ## Features
 ### Generals
 - Full Responsive design (Tablet portrait (768px) and Mobile (320px))
+- Custom fields full management
 - reservation:
   - send a mail 
   - stored in admin section
