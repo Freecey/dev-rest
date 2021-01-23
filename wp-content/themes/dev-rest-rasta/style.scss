@@ -177,6 +177,7 @@ $bgc-secondary: #f5f5f5;
 .postRecipe {
    @include box-shadow-posts();
    margin-bottom: 2.5rem;
+   width: 100%;
 }
 .postRecipeBody {
    &__date-before {
