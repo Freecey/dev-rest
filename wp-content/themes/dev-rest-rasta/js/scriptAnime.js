@@ -41,13 +41,9 @@ anime({
 // });
 
 
-
-
-
-
 // animations 4 others >>
 
-document.querySelector(".linkOur").addEventListener("mouseover", () => {
+document.querySelector(".heroBanner__linkRow--link").addEventListener("mouseover", () => {
     anime({
         targets: '.lineBefore',
         scaleX: [1, 0],
@@ -55,7 +51,7 @@ document.querySelector(".linkOur").addEventListener("mouseover", () => {
         duration: 500
     });
 })
-document.querySelector(".linkOur").addEventListener("mouseout", () => {
+document.querySelector(".heroBanner__linkRow--link").addEventListener("mouseout", () => {
     anime({
         targets: '.lineBefore',
         scaleX: [0, 1],

@@ -27,7 +27,7 @@ if ($query->have_posts()) {
                         <div class="heroBanner__linkRow">
                             <div class="heroBanner__linkRow--before lineBefore"></div>
                             <?php $banlink = get_sub_field('banner_link'); ?>
-                            <a class="heroBanner__linkRow--link linkOur" href="<?= $banlink['url']; ?>"><?= $banlink['title']; ?></a>
+                            <a class="heroBanner__linkRow--link" href="<?= $banlink['url']; ?>"><?= $banlink['title']; ?></a>
                         </div>
                     </div>
                 </div>
