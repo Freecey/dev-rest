@@ -51,8 +51,8 @@
 				<li class="item-nav"><a href="/#OursRestaurants">Ours Restaurants</a></li>
 				<li class="item-nav"><a href="/the-menu/">Menu</a></li>
 				<li class="item-nav"><a href="/recipes/">Recipes</a></li>
-				<li class="item-nav"><a href="/restaurants/liege/#Reserve">ORDER</a></li>
-				<li class="item-nav"><a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/supermarket.svg" alt="cady" style="width: 15px"></a></li>
+				<li class="item-nav"><a href="/restaurants/liege/#Reserve" class="btn btn-light text-white" id="reserve-btn" style="color : #212529 !important; text-shadow: none !important;">RESERVE TABLE</a></li>
+				<!-- <li class="item-nav"><a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/supermarket.svg" alt="cady" style="width: 15px"></a></li> -->
 			</ul>
 
 
@@ -92,9 +92,12 @@
 
 			function myFunction() {
 				divnav.style.backgroundColor = "#00000064";
+				// reservebtn.style.setProperty("color", "#00000064", "important");
 			}
 
 			var divnav = document.getElementById("navigation");
+			var reservebtn = document.getElementById("reserve-btn");
+			
 			var scrollPercent = 100 * jQuery(window).scrollTop() / (jQuery(document).height() - jQuery(window).height());
 
 
@@ -102,6 +105,8 @@
 				myFunction()
 			} else {
 				divnav.style.backgroundColor = "";
+				// reservebtn.style.setProperty("color", "#212529", "important");
+				
 			}
 		});
 	</script>
