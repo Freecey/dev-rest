@@ -92,7 +92,7 @@ $bgc-secondary: #f5f5f5;
       background: $color;
       opacity: 0;
       transform: scaleX(0);
-      transition: transform 0.3s ease-in-out, color 0.3s ease-in-out,  opacity 0.3s ease-in-out;
+      transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, opacity 0.3s ease-in-out;
    }
    &:hover::after {
       transform: scaleX(1);
@@ -128,7 +128,7 @@ $bgc-secondary: #f5f5f5;
    }
    &__subtitle {
       @include font-subtitle-top();
-      padding-top: 8rem
+      padding-top: 8rem;
    }
    &__title {
       @include font-title-top();
@@ -217,16 +217,12 @@ $bgc-secondary: #f5f5f5;
    padding-top: 3rem;
    &__item {
       list-style-type: none;
-      margin-right: 1rem; 
-      @include hover-tax-nav();
+      margin-right: 1rem;
    }
    &__link {
-      color: black; 
+      color: black;
       @include font-nav();
-      &:hover {
-         text-decoration: none;
-         color: black;
-      }
+      @include hover-tax-nav();
       &--active {
          border-bottom: 1px solid black;
       }
@@ -235,6 +231,17 @@ $bgc-secondary: #f5f5f5;
       width: 1rem;
       margin-right: 0.3rem;
       vertical-align: baseline;
+   }
+}
+
+@keyframes underline {
+   0% {
+      transform: scaleX(0);
+      opacity: 0;
+   }
+   100% {
+      transform: scaleX(1);
+      opacity: 1;
    }
 }
 /* ====== style 4 pagination > */

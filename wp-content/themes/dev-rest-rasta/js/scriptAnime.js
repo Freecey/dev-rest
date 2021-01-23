@@ -1,4 +1,3 @@
-
 // animations 4 title >>
 if (screen.width >= 600) {
     anime({
@@ -32,17 +31,24 @@ anime({
 });
 
 // animations 4 navs taxonomy >>
-
-// anime({
-//     targets: '.navTaxonomy__item',
-//     translateY: [90, 0],
-//     // duration: 700,
-//     delay: anime.stagger(100, {from: 'center'})
-// });
-
+jQuery(window).scroll(function() {
+    function myFunction() {
+        anime({
+            targets: '.navTaxonomy__item',
+            translateY: [90, 0],
+            duration: 2000,
+            delay: anime.stagger(100, { from: 'center' })
+        });
+    }
+    const scrollPercent = 100 * jQuery(window).scrollTop() / (jQuery(document).height() - jQuery(window).height());
+    if (scrollPercent >= 1 && scrollPercent <= 2) {
+        myFunction()
+    } else {
+        animation.remove('.navTaxonomy__item');
+    }
+});
 
 // animations 4 others >>
-
 document.querySelector(".heroBanner__linkRow--link").addEventListener("mouseover", () => {
     anime({
         targets: '.lineBefore',
@@ -50,7 +56,7 @@ document.querySelector(".heroBanner__linkRow--link").addEventListener("mouseover
         opacity: [1, 0],
         duration: 500
     });
-})
+});
 document.querySelector(".heroBanner__linkRow--link").addEventListener("mouseout", () => {
     anime({
         targets: '.lineBefore',
@@ -58,6 +64,6 @@ document.querySelector(".heroBanner__linkRow--link").addEventListener("mouseout"
         opacity: [0, 1],
         duration: 500
     });
-})
+});
 
 
