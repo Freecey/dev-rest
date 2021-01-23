@@ -1,5 +1,5 @@
 # dev-rest-rasta theme
-Theme for Wordpress 5.6 CMS for restaurant. All Part of site editable by admin section
+Theme for Wordpress 5.6 CMS for restaurant. All Part of site editable in admin section
 
 ___
 
