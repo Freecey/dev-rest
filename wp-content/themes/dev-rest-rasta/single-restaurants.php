@@ -11,13 +11,20 @@ if (have_rows('banner_top')) :
             <div class="cont-banner">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-8">
                     <div class="font-subtitle-top"><?= get_sub_field('subtitle'); ?></div>
-                    <div ><h1 class="font-title-top"><?= get_sub_field('main_title'); ?></h1></div>
-                    <div class="banner-link">
+                    <div>
+                        <h1 class="font-title-top"><?= get_sub_field('main_title'); ?></h1>
+                    </div>
+                    <!-- <div class="banner-link">
                         <div class="link-barre"></div>
                         <div class="link-text">
                             <?php $banlink = get_sub_field('banner_link'); ?>
                             <a class="banner-link-a" href="<?= $banlink['url']; ?>"><?= $banlink['title']; ?></a>
                         </div>
+                    </div> -->
+                    <div class="heroBanner__linkRow">
+                        <div class="heroBanner__linkRow--before lineBefore"></div>
+                        <?php $banlink = get_sub_field('banner_link'); ?>
+                        <a class="heroBanner__linkRow--link " href="<?= $banlink['url']; ?>"><?= $banlink['title']; ?></a>
                     </div>
                 </div>
 

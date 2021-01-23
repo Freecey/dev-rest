@@ -41,7 +41,7 @@
 
 	<nav id="navigation" class="navigaton">
 		<div class="cont-content navigation-box">
-			<h3 class="nav-restaurant-name">Dev Restaurant</h3>
+			<h3 class="nav-restaurant-name"><a href="<?php echo home_url() ;?>">Dev Restaurant</a></h3>
 			<div class="ecartement"></div>
 
 			<?php wp_nav_menu(); ?>
