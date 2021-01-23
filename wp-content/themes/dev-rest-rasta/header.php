@@ -35,24 +35,39 @@
 </head>
 
 <body>
-
-
-
-
 	<nav id="navigation" class="navigaton">
 		<div class="cont-content navigation-box">
 			<h3 class="nav-restaurant-name"><a href="<?php echo home_url() ;?>">Dev Restaurant</a></h3>
 			<div class="ecartement"></div>
 
-			<?php wp_nav_menu(); ?>
+			<?php // wp_nav_menu(); ?>
 
 			<ul class="liste-nav">
 				<li class="item-nav"><a href="/"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/home-minimal.svg" alt="home" style="width: 15px;"></a></li>
-				<li class="item-nav"><a href="/#OursRestaurants">Ours Restaurants</a></li>
-				<li class="item-nav"><a href="/the-menu/">Menu</a></li>
-				<li class="item-nav"><a href="/recipes/">Recipes</a></li>
-				<li class="item-nav"><a href="/restaurants/liege/#Reserve" class="btn btn-light text-white" id="reserve-btn" style="color : #212529 !important; text-shadow: none !important;">RESERVE TABLE</a></li>
-				<!-- <li class="item-nav"><a href="#"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/supermarket.svg" alt="cady" style="width: 15px"></a></li> -->
+			<?php
+$args = array('page_id' => '554');
+$query = new WP_Query($args);
+if ($query->have_posts()) : while ($query->have_posts()) :
+        $query->the_post();
+        if (have_rows('nav_item')) :
+            while (have_rows('nav_item')) : the_row(); ?>
+                <?php $navbarlink = get_sub_field('nav_link'); ?>
+                <li class="item-nav"><a href="<?= $navbarlink['url']; ?>"><?= $navbarlink['title']; ?></a></li>
+        <?php endwhile; endif; ?>
+        <?php $navbarbtn = get_field('nav_button'); ?>
+        <li class="item-nav"><a href="<?= $navbarbtn['url']; ?>" class="btn btn-light text-white" id="reserve-btn" style="color : #212529 !important; text-shadow: none !important;"><?= $navbarbtn['title']; ?></a></li>
+        <?php
+        if (have_rows('nav_caddy')) :
+            while (have_rows('nav_caddy')) : the_row(); ?>
+                <?php if (get_sub_field('enable') == 1) : ?>
+                <?php $caddylink = get_sub_field('caddy_link'); ?>
+                <li class="item-nav"><a href="<?= $caddylink['url']; ?>"><img src="/wp-content/themes/dev-rest-rasta/assets/svg/supermarket.svg" alt="Caddy to <?= $caddylink['title']; ?>" style="width: 15px"></a></li>
+                <?php endif; ?>
+        <?php endwhile;
+        endif; ?>
+<?php endwhile;
+endif; ?>
+<?php wp_reset_postdata(); ?>
 			</ul>
 
 
