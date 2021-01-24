@@ -79,13 +79,15 @@ ___
 
 - Advanced Custom Fields PRO By Elliot Condon
 - Advanced Custom Fields: Image Crop Add-on By Anders Thorborg
-- Contact Form 7 By WordPress Contributors
-- Contact Form Entries by By CRM Perks
+- Contact Form 7 By Takayuki Miyoshi
+- Contact Form Entries By CRM Perks
 - Disable Gutenberg By Jeff Starr
-- Newsletter By Stefano Lissa & The Newsletter Team
+- Google XML Sitemaps By Auctollo 
+- Newsletter By Stefano Lissa & The Newsletter Team 
 - Regenerate Thumbnails By Alex Mills (Viper007Bond)
-- Safe SVG By Daryll Doyle
+- Safe SVG By Daryll Doyle 
 - User Role Editor By Vladimir Garagulya
+- WebP Converter for Media By Mateusz Gbiorczyk
 - WP Crontrol By John Blackbourn & crontributors
 - WP Mail SMTP By WPForms
 
