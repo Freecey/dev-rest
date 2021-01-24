@@ -15,13 +15,6 @@ if (have_rows('banner_top')) :
           <div>
             <h1 class="font-title-top animeTitle"><?= get_sub_field('main_title'); ?></h1>
           </div>
-          <!-- <div class="banner-link">
-            <div class="link-barre"></div>
-            <div class="link-text">
-            <?php $banlink = get_sub_field('banner_link'); ?>
-              <a class="banner-link-a" href="<?= $banlink['url']; ?>"><?= $banlink['title']; ?></a>
-            </div>
-          </div> -->
           <div class="heroBanner__linkRow">
             <div class="heroBanner__linkRow--before lineBefore"></div>
             <?php $banlink = get_sub_field('banner_link'); ?>
