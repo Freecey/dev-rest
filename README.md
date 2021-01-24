@@ -28,6 +28,8 @@ ___
 - Google Map (with API Key)
 - Google Analytics
 - w3c validator OK
+- robots.txt
+- sitemap.xml auto generator
 
 ### Content
 - HOMEPAGE (single page > front-page)
