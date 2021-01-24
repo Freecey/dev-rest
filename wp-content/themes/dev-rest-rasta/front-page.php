@@ -37,8 +37,9 @@ if (have_rows('banner_top')) :
       <div class="d-flex justify-content-center flex-wrap flex-lg-nowrap">
 
         <?php if (have_rows('card_banner_1')) : while (have_rows('card_banner_1')) : the_row(); ?>
+        <?php $cardimg_ban = get_sub_field('card_icon'); ?>
             <div class="text-center card-intro mt-4 mt-lg-n5">
-              <div class="c-intro-img card-img1 mt-5 mb-3"></div>
+              <div class="c-intro-img mt-5 mb-3" style="background-image: url('<?= $cardimg_ban['url']; ?>');"></div>
               <div class="c-intro-tt py-2"><?= get_sub_field('card_title'); ?></div>
               <div class="c-intro-txt d-none d-sm-none d-md-block d-lg-block px-5  py-2">
                 <p><?= get_sub_field('card_text'); ?></p>
@@ -48,8 +49,9 @@ if (have_rows('banner_top')) :
         endif; ?>
 
         <?php if (have_rows('card_banner_2')) : while (have_rows('card_banner_2')) : the_row(); ?>
+        <?php $cardimg_ban = get_sub_field('card_icon'); ?>
             <div class="text-center card-intro mx-0 mx-lg-3  mt-4 mt-lg-n5">
-              <div class="c-intro-img card-img2 mt-5 mb-3"></div>
+              <div class="c-intro-img mt-5 mb-3" style="background-image: url('<?= $cardimg_ban['url']; ?>');"></div>
               <div class="c-intro-tt py-2"><?= get_sub_field('card_title'); ?></div>
               <div class="c-intro-txt d-none d-sm-none d-md-block d-lg-block  px-5  py-2"><?= get_sub_field('card_text'); ?></div>
             </div>
@@ -57,8 +59,9 @@ if (have_rows('banner_top')) :
         endif; ?>
 
         <?php if (have_rows('card_banner_3')) : while (have_rows('card_banner_3')) : the_row(); ?>
+        <?php $cardimg_ban = get_sub_field('card_icon'); ?>
             <div class="text-center card-intro  mt-4 mt-lg-n5 ">
-              <div class="c-intro-img card-img3 mt-5 mb-3"></div>
+              <div class="c-intro-img mt-5 mb-3" style="background-image: url('<?= $cardimg_ban['url']; ?>');"></div>
               <div class="c-intro-tt  py-2"><?= get_sub_field('card_title'); ?></div>
               <div class="c-intro-txt d-none d-sm-none d-md-block d-lg-block  px-5  py-2"><?= get_sub_field('card_text'); ?></div>
             </div>

@@ -10117,18 +10117,6 @@ a.text-dark:hover, a.text-dark:focus {
   width: 100px;
 }
 
-.banner-card .card-intro .card-img1 {
-  background-image: url("assets/svg/quality-food.svg");
-}
-
-.banner-card .card-intro .card-img2 {
-  background-image: url("assets/svg/fastest-delivery.svg");
-}
-
-.banner-card .card-intro .card-img3 {
-  background-image: url("assets/svg/original-recipes.svg");
-}
-
 .banner-card .card-intro .c-intro-tt {
   font-size: 1.25rem;
   color: #292929;

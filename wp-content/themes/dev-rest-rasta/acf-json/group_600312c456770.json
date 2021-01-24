@@ -227,7 +227,7 @@
                             "new_lines": ""
                         },
                         {
-                            "key": "field_600409084d99e",
+                            "key": "field_600dba7efb4dc",
                             "label": "Card icon",
                             "name": "card_icon",
                             "type": "image",
@@ -239,9 +239,9 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "",
+                            "return_format": "array",
                             "preview_size": "thumbnail",
-                            "library": "",
+                            "library": "all",
                             "min_width": "",
                             "min_height": "",
                             "min_size": "",
@@ -777,5 +777,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1611075214
+    "modified": 1611512509
 }
