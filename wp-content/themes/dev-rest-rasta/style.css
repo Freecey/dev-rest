@@ -8914,7 +8914,7 @@ a.text-dark:hover, a.text-dark:focus {
   height: 4rem;
   position: relative;
   top: 6rem;
-  z-index: 10;
+  z-index: 6;
 }
 
 .latestRecipe__title {
@@ -10507,7 +10507,7 @@ a.text-dark:hover, a.text-dark:focus {
   height: 4rem;
   position: relative;
   bottom: 6rem;
-  z-index: 10;
+  z-index: 6;
 }
 
 #menu-navbar {
